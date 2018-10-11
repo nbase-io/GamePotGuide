@@ -47,6 +47,11 @@ GamePotFacebook.framework | [ Google Sign In ]<br />SafariServices.framework<br 
 GamePotAdFacebook.framework<br />[ Adbirx ]<br />AdBrix.framework<br/>GamePotAdAdbrix.framework
 IgaworksCore.framework<br /><br />[ Adjust ] <br />AdjustSdk.framework<br/>GamePotAdAdjust.framework | [ Facebook ]<br /><br />[ Adbrix ]<br />MessageUI.framework<br />libxml2.tbd<br />iAd.framework<br />CoreTelephony.framework<br />UIKit.framework<br />CoreGraphics.framework<br />CoreText.framework<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br /><br />[ Adjust ] <br />AdSupport.framework |                                                   |
 | GameCenter    | GamePotGameCenter.framework                                  |                                                              |                                                   |
+| NaverCafe     | AFNetworking.framework<br/>GamePotNavarCafe.framework
+NaverCafeSDK.framework | AVKit.framework<br />AVFoundation.framework<br />MediaPlayer.framework<br />CoreMedia.framework<br />AssetsLibrary.framework<br />ImageIO.framework<br />QuartzCore.framework<br />ReplayKit.framework(Optional로 설정)<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br />WebKit.framework<br />libNaverLogin.a<br/>NaverThirdPartyConstantsForApp.h
+NaverThirdPartyLoginConnection.h
+NLoginThirdPartyOAuth20InAppBrowserViewController.h
+NLoginThirdPartyOAuth20InAppBrowserViewController.m | NaverAuth.bundle<br/>NaverCafeSDK.bundle          |
 
 ![image-20181010214938074](./assets_ios/system02.png)
 
@@ -440,6 +445,61 @@ NSString* linkedList = [[GamePotChannelManager getInstance] getLinkedListJsonStr
 ```
 
 # 7. 기타 API
+
+## 네이버 카페 SDK
+
+> 해당 기능을 사용하려면 네이버 카페 SDK와 선행해서 연동에 필요한 값을 획득해야 합니다.
+
+GamePotConfig-Info.plist 파일에 사용에 필요 한 값을 추가해주세요.
+
+```objective-c
+gamepot_naver_cafeid // 네이버 카페 아이디
+gamepot_naver_clientid // 네아로에서 사용할 client 아이디
+gamepot_naver_secretid // 네아로에서 사용할 secret 아이디
+gamepot_naver_urlscheme // 네아로에서 사용할 urlscheme
+```
+
+![image-20181011212936439](./assets_ios/navercafe001.png)
+
+서비스 별 Dependencies 항목의 Naver Cafe 항목을 참고하여 Framework 및 Dependencies를 추가합니다.
+
+```objective-c
+// AppDelegate.m
+#import <GamePotNavarCafe/GamePotNavarCafe.h>
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    ...
+    // 네이버 카페 초기화
+    [[GamePotNaverCafe getInstance] setup];
+    ...
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    BOOL nChannelManagerResult = [[GamePotChannelManager getInstance] application:app openURL:url options:options];
+    BOOL nNaverCafeResult = [[GamePotNaverCafe getInstance] application:app openURL:url options:options];
+    
+    return nChannelManagerResult || nNaverCafeResult;
+}
+```
+
+네이버 카페 SDK 호출은 아래와 같이 합니다.
+
+```objective-c
+#import <GamePotNavarCafe/GamePotNavarCafe.h>
+
+[[GamePotNaverCafe getInstance] start:self];
+```
+
+로그인에 성공 후, 아래 코드를 추가하면 네이버 카페 관리자 메뉴에서 회원을 식별할 수 있습니다.
+
+```objective-c
+#import <GamePotNavarCafe/GamePotNavarCafe.h>
+
+[[GamePotNaverCafe getInstance] setUserId:[userInfo memberid]];
+```
+
+
 
 ## 쿠폰
 
