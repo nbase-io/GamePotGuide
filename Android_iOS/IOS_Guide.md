@@ -220,6 +220,8 @@ fbshareextension
     // 로그인 시도 중 유저가 취소 하였을 때
 } fail:^(NSError *error) {
     // 로그인 중 오류 발생
+    // TODO : 게임 팝업으로 실패 원인에 대한 문구를 노출시켜 주세요.
+    // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
 }];
 
 ```
@@ -246,7 +248,8 @@ if(type != NONE)
     } cancel:^{
 
     } fail:^(NSError *error) {
-
+        // TODO : 게임 팝업으로 실패 원인에 대한 문구를 노출시켜 주세요.
+        // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
     }];
 }
 else
@@ -268,6 +271,8 @@ else
 	// 로그아웃 완료 후에는 초기화면으로 이동 합니다.
 } fail:^(NSError *error) {
     // 로그아웃 실패 오류 메시지를 보여줍니다.
+    // TODO : 게임 팝업으로 실패 원인에 대한 문구를 노출시켜 주세요.
+    // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
 }];
 ```
 
@@ -284,6 +289,8 @@ else
 	// 회원 탈퇴 성공 로그인 화면으로 이동
 } fail:^(NSError *error) {
     // 회원 탈퇴 실패
+    // TODO : 게임 팝업으로 실패 원인에 대한 문구를 노출시켜 주세요.
+    // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
 }];
 
 ```
@@ -424,11 +431,14 @@ NSString* linkedList = [[GamePotChannelManager getInstance] getLinkedListJsonStr
 - (void)GamePotPurchaseFail:(NSError *)_error
 {
     // 결제 오류
+    // TODO : 게임 팝업으로 실패 원인에 대한 문구를 노출시켜 주세요.
+    // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
 }
 
 - (void)GamePotPurchaseCancel
 {
     // 결제 시동 중 취소
+    // 결제가 취소 되었습니다. 라는 문구를 게임팝업으로 노출 합니다.
 }
 @end
 ```
@@ -572,6 +582,7 @@ gamepot_naver_urlscheme // 네아로에서 사용할 urlscheme
     if(error)
     {
         // Error 발생
+       
         return;
     }
 
