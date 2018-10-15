@@ -29,29 +29,15 @@ IOS에서 GamePot을 사용하기 위한 시스템 환경은 다음과 같습니
 
 | Service       | Framework                                                    | Dependencies                                                 | bundle                                            |
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------- |
-| 기본(Base)    | AFNetworking.framework<br />FirebaseAnalytics.framework<br />FirebaseCore.framework
-FirebaseCoreDiagnostics.framework
-FirebaseInstanceID.framework
-FirebaseMessaging.framework
-FirebaseNanoPB.framework
-GamePot.framework
-GoogleToolboxForMac.framework
-nanopb.framework
-Protobuf.framework | libz.tbd<br />WebKit.framework<br />                         | GamePot.bundle                                    |
-| 로그인(Login) | [ Base ]<br />GamePotChannel.framework<br /><br />[ Google Sign In ]<br />GamePotGoogleSignIn.framework<br/>GoogleSignIn.framework
-GTMOAuth2.framework
-GTMSessionFetcher.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework
-FBSDKLoginKit.framework
-GamePotFacebook.framework | [ Google Sign In ]<br />SafariServices.framework<br />[ Facebook ]<br />SafariServices.framework | [ Google Sign In ]<br />GoogleSignIn.bundle<br /> |
+| 기본(Base)    | AFNetworking.framework<br />FirebaseAnalytics.framework<br />FirebaseCore.framework<br />FirebaseCoreDiagnostics.framework<br />FirebaseInstanceID.framework<br />FirebaseMessaging.framework<br />FirebaseNanoPB.framework<br />GamePot.framework<br />GoogleToolboxForMac.framework<br />nanopb.framework<br />Protobuf.framework<br /> | libz.tbd<br />WebKit.framework<br />                         | GamePot.bundle<br />                              |
+| 로그인(Login) | [ Base ]<br />GamePotChannel.framework<br /><br />[ Google Sign In ]<br />GamePotGoogleSignIn.framework<br/>GoogleSignIn.framework<br />GTMOAuth2.framework<br />GTMSessionFetcher.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework<br />FBSDKLoginKit.framework<br />GamePotFacebook.framework<br /> | [ Google Sign In ]<br />SafariServices.framework<br />[ Facebook ]<br />SafariServices.framework<br /> | [ Google Sign In ]<br />GoogleSignIn.bundle<br /> |
 | 광고(AD)      | [ Base ]<br />GamePotAd.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework
-GamePotAdFacebook.framework<br />[ Adbirx ]<br />AdBrix.framework<br/>GamePotAdAdbrix.framework
-IgaworksCore.framework<br /><br />[ Adjust ] <br />AdjustSdk.framework<br/>GamePotAdAdjust.framework | [ Facebook ]<br /><br />[ Adbrix ]<br />MessageUI.framework<br />libxml2.tbd<br />iAd.framework<br />CoreTelephony.framework<br />UIKit.framework<br />CoreGraphics.framework<br />CoreText.framework<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br /><br />[ Adjust ] <br />AdSupport.framework |                                                   |
+GamePotAdFacebook.framework<br /><br />[ Adbirx ]<br />AdBrix.framework<br />GamePotAdAdbrix.framework<br />IgaworksCore.framework<br /><br />[ Adjust ] <br />AdjustSdk.framework<br />GamePotAdAdjust.framework<br /> | [ Facebook ]<br /><br />[ Adbrix ]<br />MessageUI.framework<br />libxml2.tbd<br />iAd.framework<br />CoreTelephony.framework<br />UIKit.framework<br />CoreGraphics.framework<br />CoreText.framework<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br /><br />[ Adjust ] <br />AdSupport.framework<br /> |                                                   |
 | GameCenter    | GamePotGameCenter.framework                                  |                                                              |                                                   |
-| NaverCafe     | AFNetworking.framework<br/>GamePotNavarCafe.framework
-NaverCafeSDK.framework | AVKit.framework<br />AVFoundation.framework<br />MediaPlayer.framework<br />CoreMedia.framework<br />AssetsLibrary.framework<br />ImageIO.framework<br />QuartzCore.framework<br />ReplayKit.framework(Optional로 설정)<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br />WebKit.framework<br />libNaverLogin.a<br/>NaverThirdPartyConstantsForApp.h
-NaverThirdPartyLoginConnection.h
-NLoginThirdPartyOAuth20InAppBrowserViewController.h
-NLoginThirdPartyOAuth20InAppBrowserViewController.m | NaverAuth.bundle<br/>NaverCafeSDK.bundle          |
+| NaverCafe     | AFNetworking.framework<br/>GamePotNavarCafe.framework<br />NaverCafeSDK.framework<br /> | AVKit.framework<br />AVFoundation.framework<br />MediaPlayer.framework<br />CoreMedia.framework<br />AssetsLibrary.framework<br />ImageIO.framework<br />QuartzCore.framework<br />ReplayKit.framework(Optional로 설정)<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br />WebKit.framework<br />libNaverLogin.a<br/>NaverThirdPartyConstantsForApp.h<br />NaverThirdPartyLoginConnection.h<br />NLoginThirdPartyOAuth20InAppBrowserViewController.h<br />NLoginThirdPartyOAuth20InAppBrowserViewController.m<br /> | NaverAuth.bundle<br/>NaverCafeSDK.bundle<br />    |
+|               |                                                              |                                                              |                                                   |
+
+
 
 ![image-20181010214938074](./assets_ios/system02.png)
 
@@ -71,7 +57,20 @@ GoogleService-Info.plist를 프로젝트에 추가 합니다.
 
 GamePot SDK의 기본설정 값을 포함하고 있는 GamePotConfig-Info.plist 파일도 추가 합니다.
 
+GamePotConfig-Info.plist 파일이 없다면 동일한 파일명으로 생성 후 해당 키에 해당하는 값을 넣습니다.
+
 ![image-20181010220948581](./assets_ios/system04.png)
+
+**GamePotConfig-Info.plist 설정**
+
+![image-20181015222905411](./assets_ios/system06.png)
+
+```xml
+gamepot_project_id : 게임팟 프로젝트 아이디
+gamepot_elsa_projectid : 게임팟 로그 프로젝트 아이디
+```
+
+
 
 ### 빌드 옵션 추가
 
@@ -84,7 +83,19 @@ Build Settings -> Linking -> Other Linker Flags 섹션에 -ObjC 옵션을 추가
 서비스 별 Dependencies 표의 Login >> Google Sign In 을 참고하여 Framework 및 Dependencies를 추가합니다.
 
 GoogleService-Info.plist 파일의 REVERSED_CLIENT_ID 값을 복사하여 Info >> URL Types에 항목을 추가하여  URL Schemes에 값을 넣습니다.
+
 ![image-20181011204201558](./assets_ios/login_google_setting.png)
+
+**GamePotConfig-Info.plist 설정**
+
+![image-20181015223334453](./assets_ios/login_google_setting01.png)
+
+```xml
+gamepot_google_app_id : GoogleService-Info.plist 파일의 CLIENT_ID 값 
+gamepot_google_url_schemes : GoogleService-Info.plist 파일의 REVERSED_CLIENT_ID 값
+```
+
+
 
 ## Facebook 로그인 환경 설정
 
@@ -102,6 +113,15 @@ fbauth2
 fbshareextension 
 
 ![image-20181011205242561](./assets_ios/login_facebook_setting.png)
+
+**GamePotConfig-Info.plist 설정**
+
+![image-20181015223523135](./assets_ios/login_facebook_setting01.png)
+
+```xml
+gamepot_facebook_app_id : Facebook App ID
+gamepot_facebook_display_name : Facebook display name
+```
 
 # 2. 초기화
 
@@ -526,6 +546,42 @@ gamepot_naver_urlscheme // 네아로에서 사용할 urlscheme
         // TODO : _error에 쿠폰 사용 실패 원인에 대한 정보가 리턴됩니다.
         // [_error localizedDescription]의 내용을 게임 팝업으로 노출해 주세요.
     }
+}];
+```
+
+
+
+## Push
+
+```objective-c
+#import <GamePot/GamePot.h>
+
+// 푸쉬 수신 On / Off
+[[GamePot getInstance] setPushEnable:YES success:^{
+            
+} fail:^(NSError *error) {
+
+}];
+
+// 야간 푸쉬 수신 On / Off
+[[GamePot getInstance] setNightPushEnable:YES success:^{
+
+} fail:^(NSError *error) {
+
+}];
+
+// 광고 푸쉬 수신 On / Off
+[[GamePot getInstance] setAdPushEnable:YES success:^{
+
+} fail:^(NSError *error) {
+
+}];
+
+// 푸쉬 / 야간푸쉬 / 광고푸쉬를 한번에 설정
+[[GamePot getInstance] setPushStatus:YES night:YES ad:YES success:^{
+    <#code#>
+} fail:^(NSError *error) {
+    <#code#>
 }];
 ```
 
