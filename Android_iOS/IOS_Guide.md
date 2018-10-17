@@ -67,7 +67,7 @@ GamePotConfig-Info.plist 파일이 없다면 동일한 파일명으로 생성 �
 
 ```xml
 gamepot_project_id : 게임팟 프로젝트 아이디
-gamepot_elsa_projectid : 게임팟 로그 프로젝트 아이디
+gamepot_elsa_projectid : 게임팟 로그 프로젝트 아이디 (optional)
 ```
 
 
@@ -414,11 +414,82 @@ NSString* linkedList = [[GamePotChannelManager getInstance] getLinkedListJsonStr
 
 
 
+### Facebook 광고 플랫폼 사용 시
+
+위의 초기화 하는 부분을 제외한 특별한 추가 작업은 없습니다.
+
+### Adbrix 광고 플랫폼 사용 시
+
+GamePotConfig-Info.plist에 Adbrix 키 값을 넣습니다.
+
+![image-20181017121606495](./assets_ios/ad_adbrix01.png)
+
+```
+gamepot_adbrix_appid : Adbrix 앱 ID
+gamepot_adbrix_hashkey : Adbrix Hash Key
+```
+
+
+
 ## EventTracking 전달
+
+> Event Tracking은 아래와 같이 경우에 따라 호출 하는 코드가 다릅니다.
+>
+> 하기 코드 참고하여 호출 해주세요.
+
+```objective-c
+#import <GamePotAd/GamePotAd.h>
+
+// 일반
+TrackerEvent* event = [[TrackerEvent alloc] init];
+[event setEvent:@"test"];
+// [event setAdjustKey:@"3m586u"]; // Adjust 사용 시 해당 코드로 값을 전달해주세요.
+[[GamePotAdManager getInstance] tracking:EVENT obj:event];
+
+// 레벨 업 시
+TrackerLevel* level = [[TrackerLevel alloc] init];
+[level setLevel:@"12"];
+// [level setAdjustKey:@"x7en7q"]; // Adjust 사용 시 해당 코드로 값을 전달해주세요.
+[[GamePotAdManager getInstance] tracking:LEVEL obj:level];
+
+// 튜토리얼 완료 시
+TrackerTutorial* tutorialEvent = [[TrackerTutorial alloc] init];
+[tutorialEvent setContentData:@"튜토리얼 완료"];
+[tutorialEvent setContentId:@"1"];
+[tutorialEvent setSuccess:YES];
+// [tutorialEvent setAdjustKey:@"byoplo"]; // Adjust 사용 시 해당 코드로 값을 전달해주세요.
+[[GamePotAdManager getInstance] tracking:TUTORIAL_COMPLETE obj:tutorialEvent];
+
+```
 
 
 
 ## Deep Link
+
+Inpo.plist >> URL types 항목에 URL Schemes를 추가합니다.
+
+![image-20181017123647410](./assets_ios/deeplink001.png)
+
+
+
+AppDelegate.m 파일 내에 아래와 같이 추가합니다.
+
+```objective-c
+
+// AppDelegate.m
+#import <GamePotAd/GamePotAd.h>
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    ...
+    // DeepLinking 사용 시 추가
+    [[GamePotAdManager getInstance] application:app openURL:url options:options];
+	...
+}
+
+```
+
+
 
 # 6. 결제
 
