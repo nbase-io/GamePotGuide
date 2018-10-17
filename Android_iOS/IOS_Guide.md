@@ -649,6 +649,7 @@ gamepot_naver_urlscheme // 네아로에서 사용할 urlscheme
 }];
 
 // 푸쉬 / 야간푸쉬 / 광고푸쉬를 한번에 설정
+// 로그인 전에 푸쉬 / 야간푸쉬 / 광고푸쉬 허용 여부를 받는 게임이라면 로그인 후에 아래 코드로 필히 호출 합니다.
 [[GamePot getInstance] setPushStatus:YES night:YES ad:YES success:^{
     <#code#>
 } fail:^(NSError *error) {
