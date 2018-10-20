@@ -9,10 +9,14 @@
 
 
 
+Android SDK 다운로드
 
+- [2018-10-20]
 
-유니티 플로그인 다운로드
+iOS SDK 다운로드
 
-- 유니티 플로그인 2018-10-20
-  https://kr.object.ncloudstorage.com/itsb/GamePotUnityPlugin-20181020.unitypackage
-- 
+- [2018-10-20]
+
+Unity Plugin 다운로드
+
+- [2018-10-20] https://kr.object.ncloudstorage.com/itsb/GamePotUnityPlugin-20181020.unitypackage
