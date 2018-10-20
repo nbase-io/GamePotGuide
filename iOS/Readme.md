@@ -15,7 +15,7 @@ IOS에서 GamePot을 사용하기 위한 시스템 환경은 다음과 같습니
 
 ### Freamwork 추가
 
-![image-20181010211745442](./assets_ios/system01.png)
+![image-20181010211745442](./assets/system01.png)
 
 다운로드한 iOS SDK 파일을 Xcode 프로젝트 폴더 타겟에 드래그 하여 추가합니다.
 
@@ -39,7 +39,7 @@ GamePotAdFacebook.framework<br /><br />[ Adbirx ]<br />AdBrix.framework<br />Gam
 
 
 
-![image-20181010214938074](./assets_ios/system02.png)
+![image-20181010214938074](./assets/system02.png)
 
 ### Bundle Resource 추가
 
@@ -47,7 +47,7 @@ GamePotAdFacebook.framework<br /><br />[ Adbirx ]<br />AdBrix.framework<br />Gam
 
 서비스 별 Dependencies 표를 참고하여 Bundle Resource 파일을 추가합니다.
 
-![image-20181010215257113](./assets_ios/system03.png)
+![image-20181010215257113](./assets/system03.png)
 
 ### InfoPlist 추가
 
@@ -59,11 +59,11 @@ GamePot SDK의 기본설정 값을 포함하고 있는 GamePotConfig-Info.plist 
 
 GamePotConfig-Info.plist 파일이 없다면 동일한 파일명으로 생성 후 해당 키에 해당하는 값을 넣습니다.
 
-![image-20181010220948581](./assets_ios/system04.png)
+![image-20181010220948581](./assets/system04.png)
 
 **GamePotConfig-Info.plist 설정**
 
-![image-20181015222905411](./assets_ios/system06.png)
+![image-20181015222905411](./assets/system06.png)
 
 ```xml
 gamepot_project_id : 게임팟 프로젝트 아이디
@@ -76,7 +76,7 @@ gamepot_elsa_projectid : 게임팟 로그 프로젝트 아이디 (optional)
 
 Build Settings -> Linking -> Other Linker Flags 섹션에 -ObjC 옵션을 추가 합니다.
 
-![image-20181010224120529](./assets_ios/system05.png)
+![image-20181010224120529](./assets/system05.png)
 
 ## Google Sign In 로그인 환경 설정
 
@@ -84,11 +84,11 @@ Build Settings -> Linking -> Other Linker Flags 섹션에 -ObjC 옵션을 추가
 
 GoogleService-Info.plist 파일의 REVERSED_CLIENT_ID 값을 복사하여 Info >> URL Types에 항목을 추가하여  URL Schemes에 값을 넣습니다.
 
-![image-20181011204201558](./assets_ios/login_google_setting.png)
+![image-20181011204201558](./assets/login_google_setting.png)
 
 **GamePotConfig-Info.plist 설정**
 
-![image-20181015223334453](./assets_ios/login_google_setting01.png)
+![image-20181015223334453](./assets/login_google_setting01.png)
 
 ```xml
 gamepot_google_app_id : GoogleService-Info.plist 파일의 CLIENT_ID 값 
@@ -103,7 +103,7 @@ gamepot_google_url_schemes : GoogleService-Info.plist 파일의 REVERSED_CLIENT_
 
 Facebook App ID를 Info >> URL Types에  fb+Facebook App ID 형태로 추가 합니다.
 
-![image-20181011204201558](./assets_ios/login_google_setting.png)
+![image-20181011204201558](./assets/login_google_setting.png)
 
 Info >> iOS Target Property 의 LSApplicationQueriesSchemes에 아래 항목을 추가합니다.
 
@@ -112,11 +112,11 @@ fb-messenger-share-api
 fbauth2
 fbshareextension 
 
-![image-20181011205242561](./assets_ios/login_facebook_setting.png)
+![image-20181011205242561](./assets/login_facebook_setting.png)
 
 **GamePotConfig-Info.plist 설정**
 
-![image-20181015223523135](./assets_ios/login_facebook_setting01.png)
+![image-20181015223523135](./assets/login_facebook_setting01.png)
 
 ```xml
 gamepot_facebook_app_id : Facebook App ID
@@ -422,7 +422,7 @@ NSString* linkedList = [[GamePotChannelManager getInstance] getLinkedListJsonStr
 
 GamePotConfig-Info.plist에 Adbrix 키 값을 넣습니다.
 
-![image-20181017121606495](./assets_ios/ad_adbrix01.png)
+![image-20181017121606495](./assets/ad_adbrix01.png)
 
 ```
 gamepot_adbrix_appid : Adbrix 앱 ID
@@ -468,7 +468,7 @@ TrackerTutorial* tutorialEvent = [[TrackerTutorial alloc] init];
 
 Inpo.plist >> URL types 항목에 URL Schemes를 추가합니다.
 
-![image-20181017123647410](./assets_ios/deeplink001.png)
+![image-20181017123647410](./assets/deeplink001.png)
 
 
 
@@ -560,7 +560,7 @@ gamepot_naver_secretid // 네아로에서 사용할 secret 아이디
 gamepot_naver_urlscheme // 네아로에서 사용할 urlscheme
 ```
 
-![image-20181011212936439](./assets_ios/navercafe001.png)
+![image-20181011212936439](./assets/navercafe001.png)
 
 서비스 별 Dependencies 항목의 Naver Cafe 항목을 참고하여 Framework 및 Dependencies를 추가합니다.
 
