@@ -7,3 +7,12 @@
 * [Android/iOS 연동 가이드](Android_ios)
 * [Unity SDK 연동 가이드](Unity)
 
+
+
+
+
+유니티 플로그인 다운로드
+
+- 유니티 플로그인 2018-10-20
+  https://kr.object.ncloudstorage.com/itsb/GamePotUnityPlugin-20181020.unitypackage
+- 
