@@ -22,19 +22,19 @@ NAVER Cloud Platform의 GAMEPOT에서 제공하는 대시보드를 사용하는 
 
 NAVER Cloud Platform 의 콘솔에서 대시보드 URL을 클릭하여 생성된 대시보드로 접속합니다.
 
-![gamepot-1-200](/assets/gamepot-1-200.png)
+![gamepot-1-200](./assets/gamepot-1-200.png)
 
 대시보드에 접속하게 되면 가장 먼저  [회원가입]을 클릭하여 계정을 생성해 주세요.
 
 가장 처음에 생성된 계정이 대시보드 관리의 모든 권한을 갖는 마스터 계정이 됩니다.
 
-![gamepot-1-201](/assets/gamepot-1-201.png)
+![gamepot-1-201](./assets/gamepot-1-201.png)
 
 #### STEP 2. 회원가입 
 
 대시보드 이용할 계정을 생성합니다. 초기에 생성된 계정은 자동으로 마스터로 지정됩니다.
 
-![gamepot-1-202](/assets/gamepot-1-202.png)
+![gamepot-1-202](./assets/gamepot-1-202.png)
 
 ## 대시보드 메뉴 활용하기
 
@@ -42,7 +42,7 @@ NAVER Cloud Platform 의 콘솔에서 대시보드 URL을 클릭하여 생성된
 
 대시보드에서는 가입현황 / 매출 / 접속 / 통계등의 게임의 전반적인 운영 상황을 한 눈에 파악할 수 있습니다. 
 
-![gamepot-1-203](/assets/gamepot-1-203.png)
+![gamepot-1-203](./assets/gamepot-1-203.png)
 
 ### 공지사항
 
@@ -56,7 +56,7 @@ NAVER Cloud Platform 의 콘솔에서 대시보드 URL을 클릭하여 생성된
 
 API 인증키는 **포털 > 마이페이지 > 계정관리 > 인증키 관리** 메뉴에서 만들 수 있습니다.
 
-![gamepot-1-204](/assets/gamepot-1-204.png)
+![gamepot-1-204](./assets/gamepot-1-204.png)
 
 ① API 인증키를 생성하기 위해서 **신규 API 인증키 생성**을 클릭하세요.
 
@@ -66,7 +66,7 @@ API 인증키는 **포털 > 마이페이지 > 계정관리 > 인증키 관리** 
 
 발급 받은 인증키를 대시보드 연동을 해야 Object Storage의 버킷이 생성되고 공지사항 기능을 사용할 수 있습니다. 대시보드의 **설정 > NCP** 메뉴로 이동하여 API 인증키를 연결합니다.
 
-![gamepot-1-205](/assets/gamepot-1-205.png)
+![gamepot-1-205](./assets/gamepot-1-205.png)
 
 
 
@@ -76,11 +76,11 @@ API 인증키가 연결되면 Object Storage의 버킷이 자동으로 생성됩
 
 공지사항을 추가 하기 위해서는 좌측의 **공지사항 > 목록** 메뉴로 진입하여 **[공지사항 추가]** 버튼을 클릭합니다.
 
-![gamepot-1-206](/assets/gamepot-1-206.png)
+![gamepot-1-206](./assets/gamepot-1-206.png)
 
 이후 다음과 같은 팝업 메뉴가 나타나면 원하는 값을 입력하고 **[저장]** 버튼을 클릭하면 공지가 추가됩니다.
 
-![gamepot-1-207](/assets/gamepot-1-207.png)
+![gamepot-1-207](./assets/gamepot-1-207.png)
 
 ① 이미지를 표시하고자 하는 시작일과 종료일을 지정합니다.
 
@@ -96,11 +96,11 @@ API 인증키가 연결되면 Object Storage의 버킷이 자동으로 생성됩
 
 가입된 회원의 사용자 목록이 표시됩니다. 간단한 목록이 표시되며 사용자ID 를 클릭하면, 자세힌 정보가 보여집니다.
 
-![gamepot-1-208](/assets/gamepot-1-208.png)
+![gamepot-1-208](./assets/gamepot-1-208.png)
 
 사용자ID 를 클릭하면 아래와 같은 상세페이지가 나타납니다.
 
-![gamepot-1-209](/assets/gamepot-1-209.png)
+![gamepot-1-209](./assets/gamepot-1-209.png)
 
 ① 회원에 대한 기본정보를 표시합니다.
 
@@ -118,13 +118,13 @@ API 인증키가 연결되면 Object Storage의 버킷이 자동으로 생성됩
 
 현재 접속된 유저수를 확인 하실 수 있습니다. 1분단위로 최대 3일간의 접속자 수를 확인할 수 있습니다. 
 
-![gamepot-1-210](/assets/gamepot-1-210.png)
+![gamepot-1-210](./assets/gamepot-1-210.png)
 
 ### 메시지
 
 별도의 메시지 서버 구축 없이 SMS, PUSH 등을 통해 메시지 알림 기능을 구현할 수 있는 서비스 입니다. 해당 기능을 사용하기 위해서는 NAVER Cloud Plaform의 Simple & Easy Notification Service(SENS)를 신청해야만 합니다.
 
-![gamepot-1-211](/assets/gamepot-1-211.png)
+![gamepot-1-211](./assets/gamepot-1-211.png)
 
 ① SENS와 연동하기 위해서는 우선 서비스 키를 발급해야 합니다. **[서비스 키 발급]** 버튼을 클릭하여 **[SENS 공통가이드]**를 참고하여 서비스 키를 발급 받습니다.
 
@@ -132,17 +132,17 @@ API 인증키가 연결되면 Object Storage의 버킷이 자동으로 생성됩
 
 ③ **[설정]** 버튼을 클릭하여 아래의 화면으로 이동하여 PUSH 서비스 ID 값을 입력합니다.
 
-![gamepot-1-212](/assets/gamepot-1-212.png)
+![gamepot-1-212](./assets/gamepot-1-212.png)
 
 #### 푸시(PUSH)
 
 **메시지 > 푸시메시지** 메뉴를 클릭하면  발송 상태, 예약 시간, 발송 시간 등을 확인할 수 있는 목록 화면이 나타납니다.
 
-![gamepot-1-213](/assets/gamepot-1-213.png)
+![gamepot-1-213](./assets/gamepot-1-213.png)
 
 **푸시메시지** 메뉴에서 [+메시지 추가] 버튼을 클릭하면 아래와 같은 팝업이 노출됩니다. 해당 팝업 메뉴를 통해 메시지 발송이 가능합니다.
 
-![gamepot-1-214](/assets/gamepot-1-214.png)
+![gamepot-1-214](./assets/gamepot-1-214.png)
 
 ① 푸시 메시지 내용을 입력해 주세요.
 
@@ -154,17 +154,17 @@ API 인증키가 연결되면 Object Storage의 버킷이 자동으로 생성됩
 
 SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습니다. SMS/LMS 를 발송하려면 먼저 NAVER Cloud Platform의 SENS에서 서비스 키 발급과 발신 번호 등록이 필요합니다.
 
-![gamepot-1-215](/assets/gamepot-1-215.png)
+![gamepot-1-215](./assets/gamepot-1-215.png)
 
 ① SENS와 연동하기 위해서는 우선 서비스 키를 발급과 발신번호 등록을 해야 합니다. **[서비스 키 발급]** 버튼을 클릭하여 **[SENS 공통가이드]** 와 **[SENS SMS 사용 가이드]**를 참고하여 서비스 키  발급과 발신 번호를 등록합니다.
 
 ② **[설정]** 버튼을 클릭하여 서비스 ID와 Secret Key를 입력하여 주세요.
 
-![gamepot-1-216](/assets/gamepot-1-216.png)
+![gamepot-1-216](./assets/gamepot-1-216.png)
 
 **[메시지 추가]** 버튼을 클릭 합니다. 아래와 같은 팝업이 노출됩니다.
 
-![gamepot-1-217](/assets/gamepot-1-217.png)
+![gamepot-1-217](./assets/gamepot-1-217.png)
 
 ① SMS 단문메시지, LMS 장문 메시지 입니다. 메시지에 따라 가격이 상이합니다.
 
@@ -182,13 +182,13 @@ SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습
 
 #### 결제목록
 
-![gamepot-1-218](/assets/gamepot-1-218.png)
+![gamepot-1-218](./assets/gamepot-1-218.png)
 
 #### 구매(IAP)
 
 인앱 구매시 상품정보를 관리하는 기능 입니다. 구글플레이, 앱스토어, 원스토어등의 상품을 모두 등록하셔야 합니다.
 
-![gamepot-1-221](/assets/gamepot-1-221.png)
+![gamepot-1-221](./assets/gamepot-1-221.png)
 
 ① [In-App 아이템 추가] 버튼을 클릭하면 스토어, 상품 이름, 상품 아이디를 입력하여 유료 아이템을 생성할 수 있습니다.
 
@@ -200,11 +200,11 @@ SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습
 
 고객이 문의한 내역을 확인하실 수 있습니다.
 
-![gamepot-1-222](/assets/gamepot-1-222.png)
+![gamepot-1-222](./assets/gamepot-1-222.png)
 
 **[문의내용]**을 클릭합니다.
 
-![gamepot-1-223](/assets/gamepot-1-223.png)
+![gamepot-1-223](./assets/gamepot-1-223.png)
 
 ① 고객과 문의 답변한 내역 입니다. 채팅 형식으로 그동안의 모든 내용을 확인하실 수 있습니다.
 
@@ -218,7 +218,7 @@ SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습
 
 일반 쿠폰은 일반적으로 코드 형태로 되어 있는 쿠폰입니다. 게임내에서 사용될 쿠폰을 쉽게 생성 및 관리 하실 수 있는 기능입니다. **[+쿠폰생성]** 을 클릭하면 아래와 같은 팝업이 나타나고 이를 통해 쿠폰을 생성할 수 있습니다.
 
-![gamepot-1-224](/assets/gamepot-1-224.png)
+![gamepot-1-224](./assets/gamepot-1-224.png)
 
 ① 사용기간을 지정하여 해당 기간이외에는 쿠폰이 사용되지 않도록 합니다.
 
@@ -230,13 +230,13 @@ SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습
 
 쿠폰 생성이 완료되면 생성된 쿠폰 리스트가 아래와 같이 나타납니다.
 
-![gamepot-1-225](/assets/gamepot-1-225.png)
+![gamepot-1-225](./assets/gamepot-1-225.png)
 
 쿠폰의 현재 상태와 사용량 제한수량등을 확인하실 수 있습니다. 
 
 리스트에서 기존에 생성된 쿠폰 수량을 변경할 수 있어 손쉽게 쿠폰 수량을 증가시킬 수 있습니다.
 
-![gamepot-1-226](/assets/gamepot-1-226.png)
+![gamepot-1-226](./assets/gamepot-1-226.png)
 
 ① 리스트에서 가장 앞쪽에 파란색 아이콘을 클릭하면 쿠폰 추가 팝업이 노출됩니다.
 
@@ -248,9 +248,9 @@ SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습
 
 **[+쿠폰 생성]** 을 클릭 합니다.
 
-![gamepot-1-227](/assets/gamepot-1-227.png)
+![gamepot-1-227](./assets/gamepot-1-227.png)
 
-![](./assets/dashboard/gamepot-coupon-keyword-add-001.png)
+![](../assets/dashboard/gamepot-coupon-keyword-add-001.png)
 
 ① 쿠폰을 사용가능한 기간을 지정합니다.
 
@@ -262,13 +262,13 @@ SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습
 
 전체 발급된 쿠폰 번호를 조회하실 수 있습니다. 쿠폰 번호 조회시에 발급 쿠폰 사용일 아이템 정보등을 확인하실 수 있습니다.
 
-![gamepot-1-228](/assets/gamepot-1-228.png)
+![gamepot-1-228](./assets/gamepot-1-228.png)
 
 #### 아이템
 
 아이템 메뉴에서는 쿠폰을 통해 획득 가능한  쿠폰 아이템을 생성할 수 있는 메뉴입니다. [아이템 추가] 버튼을 클릭하여 아이템을 추가할 수 있습니다.
 
-![gamepot-1-229](/assets/gamepot-1-229.png)
+![gamepot-1-229](./assets/gamepot-1-229.png)
 
 ① 아이템의 이름을 입력합니다.
 
@@ -284,7 +284,7 @@ SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습
 
 점검 시간과 메시지를 입력한 뒤 저장하면 게임 내 점검 공지가 노출됩니다.
 
-![gamepot-1-230](/assets/gamepot-1-230.png)
+![gamepot-1-230](./assets/gamepot-1-230.png)
 
 ① 스토어를 지정하실 수 있습니다. 전체 점검일 경우 전체 스토어로 지정해 주세요.
 
@@ -300,7 +300,7 @@ SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습
 
 최신 버전이 아닐 경우 강제로 업데이트 안내를 보여주고 구글플레이나 애플스토어와 같은 스토어의 업데이트 화면으로 이동합니다.
 
-![gamepot-1-231](/assets/gamepot-1-231.png)
+![gamepot-1-231](./assets/gamepot-1-231.png)
 
 ### 로그
 
@@ -310,11 +310,11 @@ SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습
 
 원격구성 기능은 앱을 업데이트 하지 않고 앱의 동작과 모양을 변경할 수 있도록 하는 기능입니다. 서버에 매개변수를 추가하고 해당 값을 GAMEPOT SDK 에서 불러와 사용하실 수 있습니다.
 
-![gamepot-1-232](/assets/gamepot-1-232.png)
+![gamepot-1-232](./assets/gamepot-1-232.png)
 
 **[추가]** 버튼을 클릭합니다. 아래와 같은 팝업 창이 노출되면, 매개변수와 값을 입력합니다.
 
-![gamepot-1-233](/assets/gamepot-1-233.png)
+![gamepot-1-233](./assets/gamepot-1-233.png)
 
 해당 매개변수와 값이 반영되는 시점은 새롭게 앱을 실행하는 유저부터 반영됩니다.
 
@@ -324,29 +324,29 @@ SMS / LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습
 
 앱의 전반적인 환경을 설정하고 앱을 운영하기 위한 다양한 키값을 입력하실 수 있습니다.
 
-![gamepot-1-234](/assets/gamepot-1-234.png)
+![gamepot-1-234](./assets/gamepot-1-234.png)
 
 #### NCP
 
 네이버 클라우드 플랫폼과 연동하기 위한 키값을 추가 변경하실 수 있습니다.
 
-![gamepot-1-235](/assets/gamepot-1-235.png)
+![gamepot-1-235](./assets/gamepot-1-235.png)
 
 #### CDN
 
 CDN 을 이용하고자 할 경우 아래 CDN 주소를 입력해 주세요.
 
-![gamepot-1-236](/assets/gamepot-1-236.png)
+![gamepot-1-236](./assets/gamepot-1-236.png)
 
 ### 회원정보수정
 
 대시보드 이용 계정의 이름, 비밀번호를 변경하실 수 있습니다. 
 
-![gamepot-1-237](/assets/gamepot-1-237.png)
+![gamepot-1-237](./assets/gamepot-1-237.png)
 
 ① 대시보드 우측 상단의 아이콘을 클릭하면 드롭다운 메뉴가 나타납니다.
 
-![gamepot-1-238](/assets/gamepot-1-238.png)
+![gamepot-1-238](./assets/gamepot-1-238.png)
 
 ②  사용자의 이름을 변경할 수 있습니다.
 
