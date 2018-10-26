@@ -16,7 +16,7 @@ Android SDK 다운로드
 
 iOS SDK 다운로드
 
-- [2018-10-20]
+- [2018-10-26] https://kr.object.ncloudstorage.com/itsb/sdk/GamePotSDK_ios_1026.zip
 
 Unity Plugin 다운로드
 
