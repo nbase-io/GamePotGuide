@@ -63,6 +63,7 @@ build.gradle파일은 프로젝트 root 폴더와 app 폴더에 각각 존재�
            ...
            // GamePot [START]
            resValue "string", "gamepot_project_id", "[projectId]" // required
+           resValue "string", "gamepot_api_url", "[apiUrl]" // required
            resValue "string", "gamepot_store", "[storeId]" // required
            resValue "string", "gamepot_app_title","@string/app_name" // required (fcm)
            resValue "string", "gamepot_push_default_channel","Default" // required (fcm)
@@ -104,7 +105,7 @@ build.gradle파일은 프로젝트 root 폴더와 app 폴더에 각각 존재�
        compile(name: 'gamepot-channel-base', ext: 'aar')
        // GamePot facebook [START]
        compile(name: 'gamepot-channel-facebook', ext: 'aar')
-       compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+       compile 'com.facebook.android:facebook-android-sdk:4.37.0'
        // GamePot facebook [END]
     
        // GamePot google sigin [START]
@@ -549,13 +550,7 @@ public class MainActivity extends AppCompatActivity {
         GamePotAd.getInstance().addAd(new GamePotAdAdjust());
         ...
     }
-    
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        GamePotChannel.getInstance().onActivityResult(this, requestCode, resultCode, data);
-    }
-    
+        
     @Override
     protected void onResume() {
         super.onResume();
