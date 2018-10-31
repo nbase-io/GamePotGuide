@@ -2,10 +2,12 @@
 
 ## [다운로드](https://kr.objectstorage.ncloud.com/itsb/sdk/GamePot_android_1017.zip)
 
+
+
 ---
 
-# Changelog
+# Change Log
 
-# v1.0.0 (2018-10-26)
+## v1.0.0 (2018-10-26)
 
-- 최초 버전
+* 최초 버전
