@@ -57,6 +57,8 @@ build.gradle파일은 프로젝트 root 폴더와 app 폴더에 각각 존재�
 
 2. app폴더에 build.gradle 수정
 
+   > [xxxxx]에는 실제 적용될 값을 넣습니다.
+
    ```java
    android {
        defaultConfig {
