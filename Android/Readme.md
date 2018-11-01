@@ -23,7 +23,7 @@ Android에서 GamePot을 사용하기 위한 시스템 환경은 다음과 같�
 
 ### build.gradle 설정
 
-build.gradle파일은 프로젝트 root 폴더와 app 폴더에 각각 존재합니다.
+build.gradle파일은 프로젝트 root 폴더와 app 폴더에 각각 존재합니다.
 
 1. 프로젝트 root폴더에 build.gradle 수정
 
