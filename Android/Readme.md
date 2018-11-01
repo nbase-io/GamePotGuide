@@ -738,6 +738,12 @@ GamePotAd.getInstance().tracking(GamePotAdActions.TUTORIAL_COMPLETE, new GamePot
 
 # 6. 결제
 
+## 페이스북 콘솔 설정
+
+아래 '앱 내 구매 이벤트를 자동으로 로깅' 항목을 OFF합니다.
+
+![09](./assets/09.png)
+
 ## 설정
 
 결제의 결과 값은 Listener 형태로 구현되어 있습니다.
