@@ -616,25 +616,33 @@ public class ReferrerCatcher extends BroadcastReceiver {
             }
         }
 
-		// TODO : Adjust를 사용하는 경우에만 아래 코드 추가
+        // TODO : Adjust를 사용하는 경우에만 아래 코드 추가
         try {
-            Log.i("ReferrerCatcher", "Adjust");
+            Class.forName("com.adjust.sdk.AdjustReferrerReceiver");
+            Class.forName("com.google.android.gms.analytics.CampaignTrackingReceiver");
+
             // Adjust [START]
             new AdjustReferrerReceiver().onReceive(context, intent);
             new CampaignTrackingReceiver().onReceive(context, intent);
             // Adjust [END]
+
+            Log.i("ReferrerCatcher", "Adjust");
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-		// TODO : Igaworks를 사용하는 경우에만 아래 코드 추가
+        // TODO : Igaworks를 사용하는 경우에만 아래 코드 추가
         try {
-            Log.i("ReferrerCatcher", "IGAW");
+            Class.forName("com.igaworks.IgawReceiver");
+
             // IGAW [START]
             IgawReceiver igawReceiver = new IgawReceiver();
             igawReceiver.onReceive(context, intent);
             // IGAW [END]
-        } catch (Exception e) {
+
+            Log.i("ReferrerCatcher", "IGAW");
+        }
+        catch(Exception e) {
             e.printStackTrace();
         }
     }
