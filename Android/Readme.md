@@ -67,8 +67,8 @@ build.gradle파일은 프로젝트 root 폴더와 app 폴더에 각각 존재�
            resValue "string", "gamepot_store", "[storeId]" // required
            resValue "string", "gamepot_app_title","@string/app_name" // required (fcm)
            resValue "string", "gamepot_push_default_channel","Default" // required (fcm)
-           resValue "string", "facebook_app_id", "xxxxxxxxxxxx" // facebook
-           resValue "string", "fb_login_protocol_scheme", "fbxxxxxxxxxxxx" // (facebook)
+           resValue "string", "facebook_app_id", "[Facebook ID]" // facebook
+           resValue "string", "fb_login_protocol_scheme", "fb[Facebook ID]" // (facebook)
            // GamePot [END]
        }
    }
@@ -271,6 +271,22 @@ protected void onDestroy() {
 # 3. 로그인 / 로그아웃 / 회원 탈퇴
 
 구글 / 페이스북 / 네이버 등의 다양한 로그인 SDK 를 통합하여 사용하실 수 있습니다.
+
+## 구글(Firebase) 콘솔 설정
+
+APK 빌드 시 사용한 Keystore의 SHA-1값을 Firebase console에 추가합니다.
+
+> SHA-1 값은 개발사에 요청합니다.
+
+![06](./assets/06.png)
+
+## 페이스북 콘솔 설정
+
+APK 빌드 시 사용한 Keystore의 키 해시 값을 페이스북 콘솔에 추가합니다.
+
+> 키 해시 값은 개발사에 요청합니다.
+
+![08](./assets/08.png)
 
 ## 설정
 
