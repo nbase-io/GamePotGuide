@@ -2,9 +2,9 @@
 
 ### [다운로드](https://kr.objectstorage.ncloud.com/itsb/sdk/GamePot_android_1017.zip)
 
+<br/>
 
-
----
+<br/>
 
 ## Change Log
 
