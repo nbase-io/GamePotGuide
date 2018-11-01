@@ -309,6 +309,8 @@ resValue "string", "[key]", "[value]"
 | gamepot_facebook_display_name    | 페이스북에 보여지는 이름                             |
 | gamepot_adjust_id                | ADJUST 사용시 발급받은 앱토큰                        |
 | gamepot_adjust_signature         | ADJUST 사용시 발급받은 Signature                     |
+| gamepot_google_app_id		   | GoogleService-Info 파일의 CLIENT_ID 값             |
+| gamepot_google_url_schemes       | GoogleService-Info 파일의 REVERSED_CLIENT_ID 값  |
 | gamepot_elsa_projectid           | NCLOUD ELSA 사용시 프로젝트ID                        |
 | gamepot_naver_clientid           | 네이버 로그인 사용시 발급받은 CLIENT ID              |
 | gamepot_naver_secretid           | 네이버 로그인 사용시 발급받은 SECRET ID              |
