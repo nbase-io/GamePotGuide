@@ -406,8 +406,18 @@ GamePot.getMemberId();   		// 맴버ID
 GamePot.getMemberName(); 		// 맴버이름   
 GamePot.getMemberSocialId();    // 소셜ID
 ```
-
-
+#### 자동 로그인
+```c#
+if (GamePot.getLastLoginType() != NCommon.LoginType.NONE)
+{
+    // 마지막에 로그인 했던 로그인 타입으로 로그인 하는 방식입니다.
+    GamePot.login(lastLoginType);
+}
+else
+{
+    // 처음 게임을 실행했거나 로그아웃한 상태. 로그인을 할 수 있는 로그인 화면으로 이동해주세요.
+}
+```
 
 #### 로그아웃
 
