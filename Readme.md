@@ -12,7 +12,7 @@
 
 Android SDK 다운로드
 
-- [2018-10-29] https://kr.object.ncloudstorage.com/itsb/sdk/GamePotSDK_android_1029.zip
+- [2018-11-05] https://kr.object.ncloudstorage.com/itsb/sdk/GamePotSDK_Android_1105.zip
 
 iOS SDK 다운로드
 
