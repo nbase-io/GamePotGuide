@@ -459,7 +459,7 @@ GamePot.logout();
 
 Response:
 
-```
+```c#
 /// 로그아웃 성공
 public void onLogoutSuccess()
 {
@@ -468,6 +468,8 @@ public void onLogoutSuccess()
 /// 로그아웃 실패
 public void onLogoutFailure(NError error)
 {
+   	// 로그아웃을 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
 ```
 
@@ -485,13 +487,15 @@ GamePot.deleteMember();
 
 Response:
 
-```
+```c#
 /// 회원 탈퇴 성공
 public void onDeleteMemberSuccess() {
 }
  
 /// 회원 탈퇴 실패
 public void  onDeleteMemberFailure(NError error) {
+   	// 회원 탈퇴를 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
 ```
 
@@ -525,6 +529,7 @@ Response:
 ```C#
 /// 계정 연동 취소
 public void onCreateLinkingCancel() {
+    // 유저가 계정연동을 취소한 경우
 }
  
 /// 계정 연동 성공
@@ -533,6 +538,8 @@ public void onCreateLinkingSuccess(NUserInfo userInfo) {
  
 /// 계정 연동 실패
 public void onCreateLinkingFailure(NError error) {
+	// 계정 연동을 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
 ```
 
@@ -565,13 +572,15 @@ void GamePot.deleteLinking(NCommon.LinkType.XXXXX);
 
 Response:
 
-```
+```c#
 /// 계정 연동 해제 성공
 public void onDeleteLinkingSuccess() {
 }
  
 /// 계정 연동 해제 실패
 public void onDeleteLinkingFailure(NError error) {
+	// 연동 해제를 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
 ```
 
@@ -690,6 +699,8 @@ public void onPurchaseSuccess(PurchaseInfo purchase) {
  
 /// 인앱 결제 실패
 public void onPurchaseFailure(NError error) {
+	// 결제를 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
  
 /// 인앱 결제 실패
@@ -777,6 +788,8 @@ public void setPushSuccess() {
  
 /// 푸시 상태 변경에 대한 서버 통신 실패
 public void setPushFailure(NError error) {
+	// 푸시 상태 변경을 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
 ```
 
@@ -797,6 +810,8 @@ public void setPushNightSuccess() {
  
 /// 야간 푸시 상태 변경에 대한 서버 통신 실패
 public void setPushFailure(NError error) {
+	// 야간 푸시 상태 변경을 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
 ```
 
@@ -804,7 +819,7 @@ public void setPushFailure(NError error) {
 
 #### 푸시 상태 조회
 
-```
+```c#
 NPushInfo pushInfo = GamePot.getPushStatus();
 // pushInfo.enable  푸시 허용 여부
 // pushInfo.night   야간 푸시 동의 여부
@@ -831,6 +846,8 @@ public void onCouponSuccess() {
  
 /// 쿠폰 사용 실패
 public void onCouponFailure(NError error) {
+	// 쿠폰 사용을 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
 ```
 
