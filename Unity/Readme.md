@@ -351,7 +351,7 @@ GamePot.login(NCommon.LoginType);
 
 Response:
 
-```
+```c#
 // 로그인 성공
 public void onLoginSuccess(NUserInfo userInfo)
 {
