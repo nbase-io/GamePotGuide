@@ -358,11 +358,38 @@ public void onLoginSuccess(NUserInfo userInfo)
 } 
 // 로그인 실패
 public void onLoginFailure(NError error)
-{      
+{
+	// 로그인을 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
-/// 로그인 취소
+// 로그인 취소
 public void onLoginCancel()
 {
+	// 사용자가 임의로 로그인을 취소한 경우
+}
+// 강제 업데이트(스토어 버전과 클라이언트 버전이 다를 경우 호출)
+public void onNeedUpdate(NAppStatus status)
+{
+	// TODO : 파라미터로 넘어온 status정보를 토대로 팝업을 만들어 사용자에게 알려줘야 합니다.
+	// TODO : 아래 두 가지 방식 중 한가지를 선택하세요.
+    // case 1 : 인게임 팝업을 통해 개발사에서 직접 UI 구현
+    // case 2 : SDK의 팝업을 사용 (이 경우에는 아래 코드를 호출 해주세요.)
+    // GamePot.showAppStatusPopup(status.ToJson());
+}
+// 점검(대시보드에 점검이 활성화 되어있는 경우 호출)
+public void onMainternance(NAppStatus status)
+{
+   	// TODO : 파라미터로 넘어온 status정보를 토대로 팝업을 만들어 사용자에게 알려줘야 합니다.
+	// TODO : 아래 두 가지 방식 중 한가지를 선택하세요.
+    // case 1 : 인게임 팝업을 통해 개발사에서 직접 UI 구현
+    // case 2 : SDK의 팝업을 사용 (이 경우에는 아래 코드를 호출 해주세요.)
+    // GamePot.showAppStatusPopup(status.ToJson());
+}
+// 앱 종료
+public void onAppClose()
+{
+    // TODO: 강제 업데이트나 점검 기능을 case2 방식으로 구현하는 경우
+    // TODO: 앱을 강제 종료할 수 있기 때문에 이 곳에 앱을 종료할 수 있도록 구현하세요.
 }
 ```
 
@@ -408,10 +435,11 @@ GamePot.getMemberSocialId();    // 소셜ID
 ```
 #### 자동 로그인
 ```c#
-if (GamePot.getLastLoginType() != NCommon.LoginType.NONE)
+NCommon.LoginType type = GamePot.getLastLoginType();
+if(type != NCommon.LoginType.NONE) {
 {
     // 마지막에 로그인 했던 로그인 타입으로 로그인 하는 방식입니다.
-    GamePot.login(lastLoginType);
+    GamePot.login(type);
 }
 else
 {
@@ -811,6 +839,14 @@ public void onCouponFailure(NError error) {
 ```c#
 GamePot.showNoticeWebView();
 ```
+
+### 고객센터
+
+```c#
+GamePot.showCSWebView();
+```
+
+
 
 ### 문제 해결
 
