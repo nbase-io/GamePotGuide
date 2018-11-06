@@ -23,7 +23,8 @@
 - [푸시](#푸시)
 - [쿠폰](#쿠폰)
 - [공지사항](#공지사항)
-- [문제 해결](#문제 해결)
+- [고객센터](#고객센터)
+- [로컬 푸시(Local Push notification)](#로컬-푸시local-push-notification)
 
 
 ### 시작하기
@@ -278,10 +279,6 @@ File -> Build Settings -> Build And Run 하시면 완료 됩니다.
 
 ![](./assets/unity-plugin-ios-buildsettings.png)
 
-
-
-
-
 ### 초기화
 
 게임을 시작할때 로드 되는 첫 장면에 사용되는 개체에 다음 코드를 추가합니다. 
@@ -304,8 +301,6 @@ public class GamePotSampleListener : MonoBehaviour , NSDKInterface {
     ....
 }
 ```
-
-
 
 ### 오류코드
 
@@ -335,7 +330,58 @@ public class NError
 }   
 ```
 
+### 로그인 환경설정
 
+#### 구글 로그인
+
+##### Google Firebase Console
+
+1. Google Firebase Console에서 Android 용 google-service.json 을 다운로드 하신 후에 /Assets/Plugins/Android/ 에 복사 합니다.
+2. APK 빌드 시 사용한 Keystore의 SHA-1값을 Google Firebase console에 추가합니다.
+
+3. Google Firebase Console에서 iOS 용 GoogleService-Info.plist 을 다운로드 하신 후에 /Assets/Plugins/IOS/ 에 복사 합니다.
+
+#### 페이스북 로그인
+
+##### Facebook Developer Console
+
+APK 빌드 시 사용한 Keystore의 키 해시 값을 페이스북 콘솔에 추가합니다.
+
+##### Android
+
+mainTemplate.gradle 수정
+
+```java
+...  
+defaultConfig {
+	resValue "string", "facebook_app_id", "1234567890"
+	resValue "string", "fb_login_protocol_scheme", "fb1234567890"
+}
+...
+```
+
+페이스북 개발자 센터에서 발급 받은 facebook_app_id 에 추가하고 fb[facebook_app_id] 를 입력해 주세요. 
+
+> app_id 가 1234567890 인 경우 fb1234567890 이 fb_login_protocol_scheme 입니다.
+
+##### iOS
+
+/Assets/Plugins/IOS/Frameworks 에 아래 프레임 워크를 추가 합니다.
+
+FBSDKLoginKit.framework
+FBSDKCoreKit.framework
+Bolts.framework
+NFacebookChannel.framework
+
+#### 게임센터 로그인
+
+iOS 만 해당하는 기능 입니다.
+
+/Assets/Plugins/IOS/Frameworks/ 에 Gamekit.framwork 를 복사합니다. General -> Linked Frameworks and Libraries 내에 복사한 프레임워크를 추가 합니다.
+
+Capabilities 설정에서 Game Center ON 설정합니다. ( 앱스토어 콘솔에서도 Game Center ON 설정 되어 있어야 합니다.)
+
+![](/Users/even/Desktop/Works/01.github/GamePotGuide/Unity/assets/unity-plugin-gamecenter-001.png)
 
 ### 로그인/로그아웃/탈퇴
 
@@ -399,11 +445,10 @@ LoginType 정의
 public enum LoginType
 {
      NONE,
-     GOOGLE,  
-     GOOGLEPLAY,
+     GOOGLE,
      FACEBOOK,
-     NAVER,
      GAMECENTER,
+     NAVER,
      GUEST
 }
 
@@ -414,24 +459,18 @@ NUserInfo 정의
 ```c#
 public class NUserInfo
 {
- 
-    public string id { get; set; }              // 맴버ID
+    public string id { get; set; }              // 맴버 ID. (유저의 유니크 아이디)
     public string name { get; set; }            // 이름
     public string profileUrl { get; set; }      // 프로필URL (존재시)
     public string email { get; set; }           // 이메일 (존재시)
-    public string token { get; set; }           // Token
     public string socialid { get; set; }        // Social ID(google, facebook ...)
 }  
 ```
 
-
-
-로그인 정보 가져오기
+####로그인 정보 가져오기
 
 ```c#
-GamePot.getMemberId();   		// 맴버ID
-GamePot.getMemberName(); 		// 맴버이름   
-GamePot.getMemberSocialId();    // 소셜ID
+GamePot.getMemberId(); // 맴버ID. (유저의 유니크 아이디)
 ```
 #### 자동 로그인
 ```c#
@@ -503,12 +542,13 @@ public void  onDeleteMemberFailure(NError error) {
 
 ### 계정연동
 
-구글 / 페이스북 / 게임센터등의 아이디와 현재 계정을 연동할 수 있습니다. 
+하나의 게임 계정에 복수개의 소셜계정(구글/페이스북 등)을 연결/해제 할 수 있는 기능입니다. (최소 연동 소셜계정은 1가지 입니다.)
+
+> 연동화면 UI는 개발사에서 구현해주세요.
 
 ```c#
 public enum LinkingType
 {
-      GOOGLEPLAY,
       GAMECENTER,
       GOOGLE,
       FACEBOOK,
@@ -516,7 +556,9 @@ public enum LinkingType
 }
 ```
 
-계정 연동을 진행합니다.
+#### 연동
+
+Google / Facebook 등의 아이디로 계정을 연동 하실 수 있습니다.
 
 Request:
 
@@ -543,12 +585,10 @@ public void onCreateLinkingFailure(NError error) {
 }
 ```
 
-
-
 현재 연동된 모든 계정 정보를 가져올 수 있습니다.
 
 ```C#
-NLinkingInfo[] GamePot.getLinkedList();
+List<NLinkingInfo> linkedList = GamePot.getLinkedList();
 ```
 
 링크 정보 정의
@@ -560,9 +600,9 @@ public class NLinkingInfo
 }
 ```
 
+#### 연동 해제
 
-
-계정 연동 해제
+기존에 연동 되어 있는 계정을 해제 합니다.
 
 Request : 
 
@@ -584,83 +624,6 @@ public void onDeleteLinkingFailure(NError error) {
 }
 ```
 
-
-
-#### 구글
-
-##### Android
-
-구글 파이버베이스 콘솔에서 Android 용 google-service.json 을 다운로드 하신 후에 
-
-/Assets/Plugins/Android/ 에 복사 합니다.
-
-mainTemplate.gradle
-
-```java
-dependencies {
-    compile(name: 'gamepot-channel-google-signin', ext: 'aar')
-    compile 'com.google.android.gms:play-services-auth:15.0.1'
-}
-```
-
-##### iOS
-
-구글 파이버베이스 콘솔에서 iOS 용 GoogleService-Info.plist 을 다운로드 하신 후에
-
-/Assets/Plugins/IOS/ 에 복사 합니다.
-
-
-
-#### 페이스북
-
-페이스북 개발자 페이지에서 앱 정보를 등록합니다. 등록 후 페이스북 앱 ID 를  확인 합니다.
-
-##### Android
-
-mainTemplate.gradle 에 아래 항목을 추가 하거나 주석을 해제 합니다.
-
-```java
-dependencies {
-	compile(name: 'gamepot-ad-facebook', ext: 'aar')
-	compile 'com.facebook.android:facebook-android-sdk:[4,5)'
-    compile(name: 'gamepot-channel-facebook', ext: 'aar')
-}	
-...
-    
-defaultConfig {
-	resValue "string", "facebook_app_id", "" // optional (facebook)
-	resValue "string", "fb_login_protocol_scheme", ""
-}
-...
-```
-
-페이스북 개발자 센터에서 발급 받은 facebook_app_id 에 추가하고 fb[facebook_app_id] 를 입력해 주세요. 
-
-예) app_id 가 123456789 인 경우 fb123456789 이 fb_login_protocol_scheme 입니다.
-
-##### iOS
-
-/Assets/Plugins/IOS/Frameworks 에 아래 프레임 워크를 추가 합니다.
-
-FBSDKLoginKit.framework
-FBSDKCoreKit.framework
-Bolts.framework
-NFacebookChannel.framework
-
-
-
-#### 게임센터
-
-iOS 만 해당하는 기능 입니다.
-
-/Assets/Plugins/IOS/Frameworks/ 에 Gamekit.framwork 를 복사합니다. General -> Linked Frameworks and Libraries 내에 복사한 프레임워크를 추가 합니다.
-
-Capabilities 설정에서 Game Center ON 설정합니다. ( 앱스토어 콘솔에서도 Game Center ON 설정 되어 있어야 합니다.)
-
-![](./assets/unity-plugin-gamecenter-001.png)
-
-
-
 ### 결제
 
 #### 인앱 상품 조회
@@ -668,16 +631,14 @@ Capabilities 설정에서 Game Center ON 설정합니다. ( 앱스토어 콘솔�
 스토어에서 제공하는 상품정보를 가져와 화면에 표시해 주세요. 구각에 따라 통화, 설명등이 다르게 표시됩니다.
 
 ```c#
-NPurchaseItem[] GamePot.getPurchaseItems();
-foreach(NPurchaseItem item in GamePot.getPurchaseItems()) {
+NPurchaseItem[] items = GamePot.getPurchaseItems();
+foreach(NPurchaseItem item in items) {
     Debug.Log(item.productId);		// 상품ID
     Debug.Log(item.price);			// 가격
     Debug.Log(item.title);			// 제목
     Debug.Log(item.description);	// 설명
 }
 ```
-
-
 
 ### 인앱 상품 결제
 
@@ -708,8 +669,6 @@ public void onPurchaseCancel() {
 }
 ```
 
-
-
 ### 광고
 
 게임팟에는 다양한 광고 Third Party 연동 방법을 안내 합니다. 사용하자하는 광고 를 아래와 같이 추가합니다.
@@ -723,71 +682,45 @@ public enum AdType
 }
 ```
 
-사용할 광고를 추가합니다.
-
-```c#
-GamePot.addAd(NCommon.AdType.XXXX);
-```
-
-SandBox 모드 활성화
-
-```c#
-GamePot.setSandbox(bool enable);
-```
-
 이벤트 트래킹 전송
 
 ```C#
 // 튜토리얼 완료
 TutorialInfo tutorialInfo = new TutorialInfo("튜토리얼 완료", "1", true);
-GamePot.tracking(NSDKCommon.NAdActions.TUTORIAL_COMPLETE, trackingInfo);
+GamePot.tracking(NCommon.AdActions.TUTORIAL_COMPLETE, trackingInfo);
  
 // 레벨별 달성 
 LevelInfo levelInfo = new LevelInfo("12"); // 레벨 값
-GamePot.tracking(NSDKCommon.NAdActions.LEVEL, levelInfo); // 레벨 Tracking
+GamePot.tracking(NCommon.AdActions.LEVEL, levelInfo); // 레벨 Tracking
  
 // 이벤트 완료
 EventInfo eventInfo = new EventInfo("test");
-GamePot.Tracking(NSDKCommon.NAdActions.EVENT, eventInfo);
+GamePot.Tracking(NCommon.AdActions.EVENT, eventInfo);
 ```
 
+### Push on/off
 
+전체푸시, 야간푸시, 광고 푸시 3가지 종류의 푸시를 각각 on/off를 처리 할 수 있습니다.
 
-##### ADJUST 의 경우 아래와 같이 이용해 주세요.
-
-```c#
-GamePot.setAdjustData(AdjustInfo adjustDatas) // Adjust 사용 시 필수.
- 
- 
-ex)
-List<AdjustBillingData> adjustList = new List<AdjustBillingData>();
-AdjustInfo adjustList.Add(new AdjustBillingData("test1 productId", "AOS adjust key1"));
-adjustList.Add(new AdjustBillingData("test2 productId", "AOS adjust key2"));
-adjustInfo = new AdjustInfo(adjustList);
-GamePot.setAdjustData(adjustInfo);
-```
-
-
-
-### 푸시
+> on/off설정하는 UI는 개발사에서 구현해주세요.
 
 #### 푸시 설정
 
 Request:
 
 ```c#
-GamePot.setPush(bool pushEnable);
+GamePot.setPushStatus(bool pushEnable);
 ```
 
 Response:
 
 ```c#
 /// 푸시 상태 변경에 대한 서버 통신 성공
-public void setPushSuccess() {
+public void onPushSuccess() {
 }
  
 /// 푸시 상태 변경에 대한 서버 통신 실패
-public void setPushFailure(NError error) {
+public void onPushFailure(NError error) {
 	// 푸시 상태 변경을 실패하는 경우
 	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
@@ -798,24 +731,68 @@ public void setPushFailure(NError error) {
 Request:
 
 ```c#
-GamePot.setPushNight(bool nightPushEnable);
+GamePot.setPushNightStatus(bool nightPushEnable);
 ```
 
 Response:
 
 ```c#
 /// 야간 푸시 상태 변경에 대한 서버 통신 성공
-public void setPushNightSuccess() {
+public void onPushNightSuccess() {
 }
  
 /// 야간 푸시 상태 변경에 대한 서버 통신 실패
-public void setPushFailure(NError error) {
+public void onPushNightFailure(NError error) {
 	// 야간 푸시 상태 변경을 실패하는 경우
 	// error.message를 팝업 등으로 유저에게 알려주세요.
 }
 ```
 
+#### 광고 푸시 설정
 
+Request:
+
+```c#
+GamePot.setPushADStatus(bool adPushEnable);
+```
+
+Response:
+
+```c#
+/// 야간 푸시 상태 변경에 대한 서버 통신 성공
+public void onPushAdSuccess() {
+}
+ 
+/// 야간 푸시 상태 변경에 대한 서버 통신 실패
+public void onPushAdFailure(NError error) {
+	// 야간 푸시 상태 변경을 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
+}
+```
+
+#### 푸쉬 / 야간푸쉬 / 광고 상태를 한번에 설정
+
+로그인 전에 푸쉬 / 야간푸쉬 / 광고푸쉬 허용 여부를 받는 게임이라면 로그인 후에 아래 코드로 필히 호출 합니다.
+
+Request:
+
+```c#
+GamePot.setPushStatus(bool pushEnable, bool nightPushEnable, bool adPushEnable);
+```
+
+Response:
+
+```c#
+/// 야간 푸시 상태 변경에 대한 서버 통신 성공
+public void onPushStatusSuccess() {
+}
+ 
+/// 야간 푸시 상태 변경에 대한 서버 통신 실패
+public void onPushStatusFailure(NError error) {
+	// 야간 푸시 상태 변경을 실패하는 경우
+	// error.message를 팝업 등으로 유저에게 알려주세요.
+}
+```
 
 #### 푸시 상태 조회
 
@@ -823,9 +800,8 @@ public void setPushFailure(NError error) {
 NPushInfo pushInfo = GamePot.getPushStatus();
 // pushInfo.enable  푸시 허용 여부
 // pushInfo.night   야간 푸시 동의 여부
+// pushInfo.ad      광고 푸시 동의 여부
 ```
-
-
 
 ### 쿠폰
 
@@ -834,7 +810,7 @@ NPushInfo pushInfo = GamePot.getPushStatus();
 Request:
 
 ```c#
-GamePot.Coupon(string couponNumber); // 쿠폰번호
+GamePot.coupon(string couponNumber); // 쿠폰번호
 ```
 
 Response:
@@ -863,9 +839,26 @@ GamePot.showNoticeWebView();
 GamePot.showCSWebView();
 ```
 
+### 로컬 푸시(Local Push notification)
 
+푸시 서버를 통하지 않고 단말기에서 자체적으로 푸시를 노출하는 기능입니다.
 
-### 문제 해결
+####호출
 
-#### 
+#####푸시 등록
 
+정해진 시간에 로컬 푸시를 노출하는 방법은 아래와 같습니다.
+
+> 리턴 값으로 전달되는 pushId는 개발사에서 관리합니다.
+
+```java
+int pushId = GamePot.sendLocalPush(DateTime.Parse("2018-01-01 00:00:00"), "title", "content");
+```
+
+#####등록한 푸시 취소
+
+푸시 등록시 얻은 pushId를 기반으로 기존에 등록된 푸시를 취소할 수 있습니다.
+
+```java
+GamePot.cancelLocalPush(/*푸시 등록시 얻은 pushId*/);
+```
