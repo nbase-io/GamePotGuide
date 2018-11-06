@@ -687,7 +687,7 @@ public enum AdType
 ```C#
 // 튜토리얼 완료
 TutorialInfo tutorialInfo = new TutorialInfo("튜토리얼 완료", "1", true);
-GamePot.tracking(NCommon.AdActions.TUTORIAL_COMPLETE, trackingInfo);
+GamePot.tracking(NCommon.AdActions.TUTORIAL_COMPLETE, tutorialInfo);
  
 // 레벨별 달성 
 LevelInfo levelInfo = new LevelInfo("12"); // 레벨 값
@@ -695,7 +695,7 @@ GamePot.tracking(NCommon.AdActions.LEVEL, levelInfo); // 레벨 Tracking
  
 // 이벤트 완료
 EventInfo eventInfo = new EventInfo("test");
-GamePot.Tracking(NCommon.AdActions.EVENT, eventInfo);
+GamePot.tracking(NCommon.AdActions.EVENT, eventInfo);
 ```
 
 ### Push on/off
