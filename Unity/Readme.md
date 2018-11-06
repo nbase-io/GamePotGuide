@@ -843,9 +843,9 @@ GamePot.showCSWebView();
 
 푸시 서버를 통하지 않고 단말기에서 자체적으로 푸시를 노출하는 기능입니다.
 
-####호출
+#### 호출
 
-#####푸시 등록
+##### 푸시 등록
 
 정해진 시간에 로컬 푸시를 노출하는 방법은 아래와 같습니다.
 
@@ -855,7 +855,7 @@ GamePot.showCSWebView();
 int pushId = GamePot.sendLocalPush(DateTime.Parse("2018-01-01 00:00:00"), "title", "content");
 ```
 
-#####등록한 푸시 취소
+##### 등록한 푸시 취소
 
 푸시 등록시 얻은 pushId를 기반으로 기존에 등록된 푸시를 취소할 수 있습니다.
 
