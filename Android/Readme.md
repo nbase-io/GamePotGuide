@@ -974,80 +974,149 @@ import org.json.JSONObject;
 JSONObject status = GamePot.getInstance().getPushStatus();
 ```
 
-## 구글업적(Google Play game)
+## 공지사항
 
-업적은 Google Play Game의 기능으로 Google Signin 로그인을 이용 중이라면 Google Play Game연동을 선행해야 합니다.
+대시보드 - 공지사항에서 업로드한 이미지가 노출되는 기능입니다.
 
-### 설정
-
-#### build.gradle 파일 수정
-
-app/build.gradle에 Google Play Game 아이디를 아래와 같이 추가해주세요.
-
-```
-android {
-    ...
-    defaultConfig {
-        ...
-	    // google playgame [START]
-		resValue "string", "gamepot_gpg_id","{Google Play Game 아이디}"
-		// google playgame [END]
-        ...
-    }
-}
-...
-dependencies {
-    ...
-    // google playgame [START]
-    compile(name: 'gamepot-channel-google-playgame', ext: 'aar')
-    compile "com.google.android.gms:play-services-base:15.0.1"
-    compile "com.google.android.gms:play-services-auth:15.0.1"
-    compile "com.google.android.gms:play-services-games:15.0.1"
-    // google playgame [END]
-    ...
-}
-```
-
-Google Play Game 아이디는 콘솔에서 얻을 수 있습니다.
-
-![05](./assets/05.png)
-
-#### MainActivity.java 파일 수정
+### 호출
 
 ```java
-import io.gamepot.channel.GamePotChannel;
-import io.gamepot.channel.google.playgame.GamePotGooglePlaygame;
- 
-public class MainActivity extends Activity {
+GamePot.getInstance().showNoticeWebView(/*현재 액티비티*/);
+```
+
+## 고객센터
+
+대시보드 - 고객센터와 연동되는 유저와 운영자간에 소통 채널입니다.
+
+### 호출
+
+```java
+GamePot.getInstance().showCSWebView(/*현재 액티비티*/);
+```
+
+## 로컬 푸시(Local Push notification)
+
+푸시 서버를 통하지 않고 단말기에서 자체적으로 푸시를 노출하는 기능입니다.
+
+### 호출
+
+#### 푸시 등록
+
+정해진 시간에 로컬 푸시를 노출하는 방법은 아래와 같습니다.
+
+> 리턴 값으로 전달되는 pushid는 개발사에서 관리합니다.
+
+```java
+String date = "2018-09-27 20:00:00";
+GamePotLocalPushBuilder builder = new GamePotLocalPushBuilder(getActivity())
+                        .setTitle("로컬푸시 테스트")
+                        .setMessage("로컬푸시 메시지 입니다. " + date)
+                        .setDateString(date).build();
+int pushid = GamePot.getInstance().sendLocalPush(builder);
+```
+
+#### 등록한 푸시 취소
+
+푸시 등록시 얻은 pushid를 기반으로 기존에 등록된 푸시를 취소할 수 있습니다.
+
+```java
+GamePot.getInstance().cancelLocalPush(/*현재 액티비티*/, /*푸시 등록시 얻은 pushid*/);
+```
+
+## 점검/강제업데이트
+
+점검이나 강제업데이트 기능이 필요한 경우 대시보드 - 운영에서 기능을 활성화 할 경우 동작합니다.
+
+### 호출
+
+기존에 적용된 아래 api에서 사용이 가능합니다.
+
+#### 1. setup api
+
+기존 setup api에서 두번째 파라미터를 추가합니다.
+
+```java
+GamePot.getInstance().setup(getApplicationContext(), new GamePotAppStatusListener() {
     @Override
-    protected void onCreate(final Bundle savedInstanceState) {
-        // setup api는 맨 처음에 호출돼야 합니다.
-        GamePot.getInstance().setup(getApplicationContext()); 
-        
-        ...
-        // Google PlayGame 초기화
-        GamePotChannel.getInstance().addChannel(this, GamePotChannelType.GOOGLEPLAY, new GamePotGooglePlaygame());
-        // enableGPG api를 호출하면 적용 중인 모든 로그인 이후 Google PlayGame 로그인이 자동으로 동작합니다.
-        GamePotChannel.getInstance().enableGPG(true);
-        ...
+    public void onNeedUpdate(GamePotAppStatus status) {
+        // TODO : 강제업데이트가 필요한 경우. 아래 api를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO : Customizing을 하고자 하는 경우 아래 api를 호출하지 말고 Customizing을 하면 됩니다.
+        GamePot.getInstance().showAppStatusPopup(MainActivity.this, status, new GamePotAppCloseListener() {
+            @Override
+            public void onClose() {
+                // TODO : showAppStatusPopup api를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
+                // TODO : 종료 프로세스를 처리해주세요.
+                MainActivity.this.finish();
+            }
+        });
     }
-}
+
+    @Override
+    public void onMainternance(GamePotAppStatus status) {
+        // TODO : 점검중인 경우. 아래 api를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO : Customizing을 하고자 하는 경우 아래 api를 호출하지 말고 Customizing을 하면 됩니다.
+        GamePot.getInstance().showAppStatusPopup(MainActivity.this, status, new GamePotAppCloseListener() {
+            @Override
+            public void onClose() {
+                // TODO : showAppStatusPopup api를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
+                // TODO : 종료 프로세스를 처리해주세요.
+                MainActivity.this.finish();
+            }
+        });
+    }
+});
 ```
 
-### 업적 리스트 호출
+#### 2. login api
 
-게임 내에 업적 버튼을 누르면 아래 코드를 호출해 주세요.
+기존 login api에서 listener를 `GamePotAppStatusChannelListener`로 변경합니다.
 
 ```java
-// UIThread에서 호출해 주세요.
-GamePotChannel.getInstance().showAchievement(this);
+GamePotChannel.getInstance().login(this, GamePotChannelType.GOOGLE, new GamePotAppStatusChannelListener<GamePotUserInfo>() {
+    @Override
+    public void onNeedUpdate(GamePotAppStatus status) {
+        // TODO : 강제업데이트가 필요한 경우. 아래 api를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO : Customizing을 하고자 하는 경우 아래 api를 호출하지 말고 Customizing을 하면 됩니다.
+        GamePot.getInstance().showAppStatusPopup(MainActivity.this, status, new GamePotAppCloseListener() {
+            @Override
+            public void onClose() {
+                // TODO : showAppStatusPopup api를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
+                // TODO : 종료 프로세스를 처리해주세요.
+                MainActivity.this.finish();
+            }
+        });
+    }
+
+    @Override
+    public void onMainternance(GamePotAppStatus status) {
+        // TODO : 점검중인 경우. 아래 api를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO : Customizing을 하고자 하는 경우 아래 api를 호출하지 말고 Customizing을 하면 됩니다.
+        GamePot.getInstance().showAppStatusPopup(MainActivity.this, status, new GamePotAppCloseListener() {
+            @Override
+            public void onClose() {
+                // TODO : showAppStatusPopup api를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
+                // TODO : 종료 프로세스를 처리해주세요.
+                MainActivity.this.finish();
+            }
+        });
+    }
+
+    @Override
+    public void onCancel() {
+        // 사용자가 로그인을 취소한 상황.
+    }
+
+    @Override
+    public void onSuccess(GamePotUserInfo userinfo) {
+        // 로그인 완료. 게임 로직에 맞게 처리해주세요.
+    }
+
+    @Override
+    public void onFailure(GamePotError error) {
+        // 로그인 실패. error.getMessage()를 이용해서 오류 메시지를 보여주세요.
+    }
+});
 ```
 
-### 업적 달성 시 호출
 
-업적 달성 조건이 충족되면 아래 코드를 호출해 주세요.
 
-```java
-// id는 달성할 업적의 아이디
-GamePotChannel.getInstance().unlockAchievement(this, "id");
-```
