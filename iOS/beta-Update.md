@@ -1,10 +1,24 @@
-### 최신버전 :  v1.0.1
+### 최신버전 :  v1.0.5
 
-#### [다운로드](https://kr.object.ncloudstorage.com/itsb/sdk/GamePotSDK_IOS_1106.zip)
+#### [다운로드](https://kr.object.ncloudstorage.com/itsb/sdk/GamePotSDK_IOS_1113.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.5 (2018-11-13)
+
+→ 초기화 전에 WebView 호출 시 정상동작 되지 않는 문제 수정
+
+→ 안정성 강화
+
+<br/>
+
+#### v1.0.4 (2018-11-08)
+
+→ getConfig / getConfigs 시 로그아웃 후 다시 호출 하면 값을 가져 오지 못하는 문제 수정
+
+<br/>
 
 #### v1.0.3 (2018-11-06)
 
