@@ -624,6 +624,61 @@ public void onDeleteLinkingFailure(NError error) {
 }
 ```
 
+### 계정 연동 상태에 대한 결과 처리 예제
+
+createLinking / deleteLinking 결과에 따라 현재 연동 되어 있는 계정 정보를 받아와 연동상태에 대한 UI를 업데이트 합니다.
+
+```c#
+public void onInit()
+{
+	UI_Update();
+}
+public void onCreateLink_GAMECENTER_Click()
+{
+	GamePot.createLinking(NCommon.LinkingType.GAMECENTER);
+}
+public void onCreateLink_GOOGLE_Click()
+{
+	GamePot.createLinking(NCommon.LinkingType.GOOGLE);
+}
+public void onCreateLinkingSuccess(NUserInfo userInfo)
+{
+	UI_Update();
+}
+public void onCreateLinkingFailure(NError error)
+{
+	UI_Update();
+}
+public void onDeleteLinkingSuccess(NUserInfo userInfo)
+{	
+	UI_Update();
+}
+public void onDeleteLinkingFailure(NError error)
+{
+	UI_Update();
+}
+
+Public void UI_Update()
+{
+	// Ui Update in GAME
+	CreateLinkManager.instance._IOS_google_state  = false;
+	CreateLinkManager.instance._IOS_gamecenter_state  = false;
+
+	List<NLinkingInfo> linkedList = GamePot.getLinkedList(); 
+	foreach ( NLinkingInfo item in linkedList)
+	{
+		case NCommon.LinkingType.GOOGLE : 
+			CreateLinkManager.instance._IOS_google_state  = true;
+		break;
+		case NCommon.LinkingType.GAMECENTER :
+			CreateLinkManager.instance._IOS_gamecenter_state  = true;
+		break;
+	}
+}
+```
+
+
+
 ### 결제
 
 #### 인앱 상품 조회
