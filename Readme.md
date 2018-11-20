@@ -16,8 +16,8 @@ Android SDK 다운로드
 
 iOS SDK 다운로드
 
-- [2018-11-13] https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_1113.zip
+- [2018-11-20] https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_1120.zip
 
 Unity Plugin 다운로드
 
-- [2018-11-08] https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugin_1108.unitypackage
+- [2018-11-20] https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn_1120.unitypackage
