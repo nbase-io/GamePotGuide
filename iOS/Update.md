@@ -1,10 +1,18 @@
-### 최신버전 :  v1.0.5
+### 최신버전 :  v1.0.6
 
-#### [다운로드](https://kr.object.ncloudstorage.com/itsb/sdk/GamePotSDK_IOS_1113.zip)
+#### [다운로드](https://kr.object.ncloudstorage.com/itsb/sdk/GamePotSDK_IOS_1120.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.6 (2018-11-20)
+
+→ 유저 차단 시 메세지 노출 되지 않는 문제 수정
+
+→ 안정성 강화
+
+<br/>
 
 #### v1.0.5 (2018-11-13)
 
