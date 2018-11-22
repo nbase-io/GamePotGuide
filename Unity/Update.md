@@ -1,12 +1,12 @@
 ### 최신버전 :  v1.0.0
 
-[다운로드](https://kr.object.ncloudstorage.com/itsb/GamePotUnityPlugIn_1120.unitypackage)
+[다운로드](https://kr.object.ncloudstorage.com/itsb/GamePotUnity_1122.unitypackage)
 
 <br/>
 
 ### Change Log
 
-#### v1.0.0 (2018-11-20)
+#### v1.0.0 (2018-11-22)
 
 → 최신 SDK 반영
 
