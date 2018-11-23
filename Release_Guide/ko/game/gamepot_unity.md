@@ -238,7 +238,7 @@ resValue "string", "[key]", "[value]"
 | gamepot_app_title                | 앱 제목 (FCM)                                        |
 | gamepot_facebook_app_id          | 페이스북 발급 받은 앱ID                              |
 | gamepot_facebook_display_name    | 페이스북에 보여지는 이름                             |
-| gamepot_adjust_id                | ADJUST 사용시 발급받은 앱토큰                        |
+| gamepot_adjust_id                | ADJUST 사용시 발급받은 ID              |
 | gamepot_adjust_signature         | ADJUST 사용시 발급받은 Signature                     |
 | gamepot_google_app_id		   | GoogleService-Info 파일의 CLIENT_ID 값             |
 | gamepot_google_url_schemes       | GoogleService-Info 파일의 REVERSED_CLIENT_ID 값  |
@@ -246,9 +246,9 @@ resValue "string", "[key]", "[value]"
 | gamepot_naver_clientid           | 네이버 로그인 사용시 발급받은 CLIENT ID              |
 | gamepot_naver_secretid           | 네이버 로그인 사용시 발급받은 SECRET ID              |
 | gamepot_naver_cafeid             | 네이버 카페 연동시 카페ID                            |
-| gamepot_naver_global_consumerkey | 네이버 글로벌 카페 SDK                               |
-| gamepot_naver_global_cafeid      | 네이버 글로벌 카페 SDK                               |
-| gamepot_igaworks_appid           | IGAWORKS 사용시 발급받은 앱키                        |
+| gamepot_naver_global_consumerkey | 네이버 글로벌 카페 SDK에서 발급받은 Consumer Key |
+| gamepot_naver_global_cafeid      | 네이버 글로벌 카페 SDK에서 발급받은 카페ID     |
+| gamepot_igaworks_appid           | IGAWORKS 사용시 발급받은 앱키 |
 | gamepot_igaworks_hashkey         | IGAWORKS 사용시 발급받은 해시키                      |
 
 scenes을 추가하신 후에
