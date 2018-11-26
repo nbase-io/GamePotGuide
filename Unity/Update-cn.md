@@ -1,6 +1,6 @@
-### 最新版本 :  v1.0.0
+### 最新版本 : v1.0.0
 
-[下载](https://kr.object.ncloudstorage.com/itsb/GamePotUnity_1122.unitypackage)
+[下载](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnity_1122.unitypackage)
 
 <br/>
 
@@ -8,7 +8,7 @@
 
 #### v1.0.0 (2018-11-22)
 
-→ 反映最新的SDK
+→ 反映最新的 SDK
 
 <br/>
 

@@ -1,6 +1,6 @@
-### 最新版本 :  v1.0.12
+### 最新版本 : v1.0.12
 
-#### [下载](https://kr.object.ncloudstorage.com/itsb/sdk/GamePotSDK_Android_1106.zip)
+#### [下载](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_1106.zip)
 
 <br/>
 
@@ -8,7 +8,7 @@
 
 #### v1.0.12 (2018-11-06)
 
-→ 公告UI改进
+→ 公告 UI 改进
 
 <br/>
 

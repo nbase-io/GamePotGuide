@@ -1,6 +1,6 @@
-### 最新版本 :  v1.0.6
+### 最新版本 : v1.0.6
 
-#### [下载](https://kr.object.ncloudstorage.com/itsb/sdk/GamePotSDK_IOS_1120.zip)
+#### [下载](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_1120.zip)
 
 <br/>
 
@@ -16,7 +16,7 @@
 
 #### v1.0.5 (2018-11-13)
 
-→ 修复了初始化之前WebView调用无法正常工作的问题
+→ 修复了初始化之前 WebView 调用无法正常工作的问题
 
 → 加强稳定
 
@@ -24,7 +24,7 @@
 
 #### v1.0.4 (2018-11-08)
 
-→ 修复了在注销后再次调用时getConfig / getConfigs没有获取值的问题
+→ 修复了在注销后再次调用时 getConfig / getConfigs 没有获取值的问题
 
 <br/>
 
@@ -32,7 +32,7 @@
 
 → 修复强制更新问题
 
-→ 修复了iPhone XS / XR / XS Plus的问题
+→ 修复了 iPhone XS / XR / XS Plus 的问题
 
 → 加强稳定
 
