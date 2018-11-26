@@ -1,6 +1,6 @@
 ### 최신버전 :  v1.0.0
 
-[다운로드](https://kr.object.ncloudstorage.com/itsb/GamePotUnity_1122.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnity_1122.unitypackage)
 
 <br/>
 
@@ -15,3 +15,4 @@
 #### v0.9.3 (2018-11-08)
 
 → 최초 버전
+
