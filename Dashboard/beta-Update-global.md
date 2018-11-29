@@ -1,5 +1,13 @@
 ### Change Log
 
+#### v1.0.42 (2018-11-29)
+
+→ Add multiple languages
+
+→ Add coupon / member / billing data export function
+
+→ Bug fixes
+
 #### v1.0.38 (2018-11-13)
 
 → Backing up issues in a cluster

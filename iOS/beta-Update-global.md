@@ -1,4 +1,4 @@
-### latest version: v1.0.6
+### Latest version: v1.0.6
 
 #### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_1120.zip)
 
