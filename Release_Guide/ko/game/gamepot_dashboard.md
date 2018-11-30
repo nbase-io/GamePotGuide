@@ -37,7 +37,7 @@ NAVER Cloud Platform의 콘솔에서 대시보드 URL을 클릭하여 생성된 
 
 ![gamepot-1-202](./images/gamepot-1-202.png)
 
-## 대시보드 메뉴 활용하기
+## 대시보드 메뉴 활용하기 
 
 ### 대시보드
 
