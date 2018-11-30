@@ -205,13 +205,26 @@ API 인증키가 연결되면 Object Storage의 버킷이 자동으로 생성됩
 
 회원이 Google Play store, APPSTORE, ONE Store에서 결제를 시도한 내역을 확인할 수 있습니다. 
 
-![gamepot-1-218](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-218.png)
+![gamepot-1-218](./images/gamepot-1-218.png)
 
-#### 구매(IAP)
+① 성공된 결제에 대해서 결제 취소 처리를 할 수 있습니다. 결제를 취소할 경우 매출 통계에서 제외됩니다.
+
+② 회원이 시도한 결제의 성공 여부를 조회할 수 있습니다. 실패한 결제 시도에 대해서는 아이템을 재지급할 수 있습니다.
+
+③ 각각의 결제 내역 중 결제 취소 내역을 확인할 수 있습니다.
+
+- Y : 결제 취소 상태
+- N : 결제 미취소 상태
+
+![gamepot-1-218D](./images/gamepot-1-218D.png)
+
+결제 상태를 클릭하여 시도된 결제에 대한 상세 내역을 확인할 수 있으며, 실패된 결제에 대해서는 재지급 버튼을 이용하여 아이템을 재지급할 수 있습니다.
+
+#### IAP
 
 인앱 구매시 상품정보를 관리하는 기능입니다. 구글플레이, 앱스토어, 원스토어 등의 상품을 모두 등록하셔야 합니다.
 
-![gamepot-1-221](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-221.png)
+![gamepot-1-221](./images/gamepot-1-221.png)
 
 ① **In-App 아이템 추가** 버튼을 클릭하면 스토어, 상품 이름, 상품 아이디를 입력하여 유료 아이템을 생성할 수 있습니다.
 
@@ -219,9 +232,27 @@ API 인증키가 연결되면 Object Storage의 버킷이 자동으로 생성됩
 
 일일 단위로 결제 금액 데이터를 그래프로 보여주는 기능입니다.
 
-![gamepot-1-239](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-239.png)
+![gamepot-1-239](./images/gamepot-1-239.png)
 
 ① 기간을 지정하여 그래프를 볼 수 있습니다.
+
+#### 구글결제취소
+
+일정 시간마다 Google console의 결제 영수증 상태와 비교하여
+
+정상 결제건에 대해서 회원이 임의대로 결제를 취소한 경우를 알려줍니다.
+
+![gamepot-1-239B](./images/gamepot-1-239B.png)
+
+① 임의적으로 구글 결제를 취소하는 회원의 게임 접속에 대해서, 일정 조건을 설정하여 이용정지 조치를 할 수 있습니다.
+
+![gamepot-1-239C](./images/gamepot-1-239C.png)
+
+① 회원이 임의적으로 결제 취소한 총 횟수가 설정된 횟수 이상일 경우 게임 이용이 정지됩니다.
+
+② 회원이 임의적으로 결제 취소한 상품의 총합이 설정된 가격 이상일 경우 게임 이용이 정지됩니다.
+
+③ 게임 이용이 정지된 회원이 게임 접속을 시도할 경우 출력되는 안내 메세지입니다.
 
 
 
@@ -447,6 +478,24 @@ CDN을 이용하고자 할 경우 아래 CDN 주소를 입력해 주세요.
 **추가** 버튼을 클릭합니다. 아래와 같은 팝업 창이 노출되면, 매개변수와 값을 입력합니다.
 
 ![gamepot-1-241](./images/gamepot-1-241.png)
+
+
+
+### 사용자 가이드
+
+GAMEPOT 대시보드 사용 가이드 페이지로 이동합니다.
+
+![gamepot-1-239B](./images/gamepot-1-239B.png)
+
+
+
+### 언어 변경
+
+대시보드의 각 메뉴 등이 선택한 언어로 변경됩니다.
+
+![gamepot-1-239C](./images/gamepot-1-239C.png)
+
+
 
 ### 회원정보수정
 
