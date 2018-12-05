@@ -1,6 +1,6 @@
 ### Change Log
 
-#### v1.0.44 (2018-12-04)
+#### v1.0.45 (2018-12-05)
 
 → Add multiple languages
 
