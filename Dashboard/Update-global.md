@@ -1,5 +1,17 @@
 ### Change Log
 
+#### v1.0.45 (2018-12-05)
+
+→ Add multiple languages
+
+→ Add coupon / member / billing data export function
+
+→ Google Store Billing abuser filter function added
+
+→ Add member block function
+
+→ Bug fixes
+
 #### v1.0.38 (2018-11-13)
 
 → Backing up issues in a cluster
