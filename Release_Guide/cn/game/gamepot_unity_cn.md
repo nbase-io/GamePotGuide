@@ -100,22 +100,12 @@ resValue "string", "[key]", "[value]"
 |                                  | 说明                                                 |
 | -------------------------------- | ---------------------------------------------------- |
 | gamepot_project_id               | 输入从GamePot获取的项目ID                           |
-| gamepot_store                    | 渠道商城值 ( google or apple or one )                  |
-| gamepot_app_title                | 应用标题 (FCM)                                        |
 | gamepot_facebook_app_id          | 从Facebook获取的应用ID                              |
 | gamepot_facebook_display_name    | 在Facebook所被显示的名称                             |
-| gamepot_adjust_id                | 使用ADJUST时所获取的应用token                       |
-| gamepot_adjust_signature         | 使用ADJUST时所获取的Signature                    |
 | gamepot_google_app_id		       | GoogleService-Info文件的CLIENT_ID值             |
 | gamepot_google_url_schemes       | GoogleService-Info文件的REVERSED_CLIENT_ID值     |
 | gamepot_elsa_projectid           | 使用NCLOUD ELSA时项目ID                        |
-| gamepot_naver_clientid           | 使用Naver登录时获取的CLIENT ID              |
-| gamepot_naver_secretid           | 使用Naver登录时获取的SECRET ID              |
-| gamepot_naver_cafeid             | 使用Naver论坛时论坛ID                            |
-| gamepot_naver_global_consumerkey | Naver Global Cafe SDK                               |
-| gamepot_naver_global_cafeid      | Naver Global Cafe SDK                               |
-| gamepot_igaworks_appid           | 使用IGAWORKS时获取的应用key                      |
-| gamepot_igaworks_hashkey         | 使用IGAWORKS时获取的hash key                    |
+| gamepot_api_url | API URL |
 
 添加scenes之后
 
