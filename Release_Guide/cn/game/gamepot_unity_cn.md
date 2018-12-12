@@ -559,9 +559,16 @@ public void onPurchaseCancel() {
 
 ### 广告
 
-基本包含着 IGAWorks Unity Plugin(Updated 2018-12-05)，所以接入[IGAWorks的指南](http://help.igaworks.com/hc/ko/3_3/Content/Article/common_unity_aos)即可。
+基本包含着 IGAWorks Unity Plugin，所以接入[IGAWorks的指南](http://help.igaworks.com/hc/ko/3_3/Content/Article/common_unity_aos)即可。
 
 > 希望使用IGAWorks之外的library的时候我方会说明如何接入。
+
+版本如下所示。
+
+| 平台    | 版本                                           |
+| ------- | ---------------------------------------------- |
+| Android | IGAWorks_Unity_Android_Full_Package_2018-12-05 |
+| iOS     | IGAWorks_Unity_iOS_Full_Package_2018-10-02     |
 
 ### Push on/off
 
@@ -694,7 +701,7 @@ public void onCouponFailure(NError error) {
 
 ### Naver论坛SDK
 
-使用包含着Naver论坛SDK的plugin的话，参考[Naver论坛SDK指南](https://github.com/naver/cafe-sdk-unity/blob/master/README.md#usages)接入即可。
+使用包含着Naver论坛SDK(4.0.4)的plugin的话，参考[Naver论坛SDK指南](https://github.com/naver/cafe-sdk-unity/blob/master/README.md#usages)接入即可。
 
 > 因为Naver论坛SDK的容量大，所以有包含的Plugin以及没有包含的Plugin两个版本。按照需求来选择使用就可以。
 

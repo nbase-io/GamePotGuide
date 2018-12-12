@@ -561,9 +561,16 @@ public void onPurchaseCancel() {
 
 ### 광고
 
-IGAWorks Unity Plugin(Updated 2018-12-05)을 기본으로 포함하고 있으므로 [IGAWorks의 가이드](http://help.igaworks.com/hc/ko/3_3/Content/Article/common_unity_aos)로 적용하시면 됩니다.
+IGAWorks Unity Plugin을 기본으로 포함하고 있으므로 [IGAWorks의 가이드](http://help.igaworks.com/hc/ko/3_3/Content/Article/common_unity_aos)로 적용하시면 됩니다.
 
 > IGAWorks 외에 라이브러리를 사용하고자 하시는 경우에는 저희가 포함하는 방법을 안내해 드리도록 하겠습니다.
+
+포함된 버전은 아래와 같습니다.
+
+| 플랫폼  | 버전                                           |
+| ------- | ---------------------------------------------- |
+| Android | IGAWorks_Unity_Android_Full_Package_2018-12-05 |
+| iOS     | IGAWorks_Unity_iOS_Full_Package_2018-10-02     |
 
 ### Push on/off
 
@@ -696,7 +703,7 @@ public void onCouponFailure(NError error) {
 
 ### 네이버 카페 SDK
 
-네이버 카페 SDK를 포함한 plugin을 사용하시면 [네이버 카페 SDK 가이드](https://github.com/naver/cafe-sdk-unity/blob/master/README.md#usages)를 참고하여 적용하시면 됩니다.
+네이버 카페 SDK(4.0.4)를 포함한 plugin을 사용하시면 [네이버 카페 SDK 가이드](https://github.com/naver/cafe-sdk-unity/blob/master/README.md#usages)를 참고하여 적용하시면 됩니다.
 
 > 네이버 카페 SDK의 용량이 큰 관계로 포함/미포함한 버전 두 가지로 제공됩니다. 필요에 따라 택일하시면 됩니다.
 
