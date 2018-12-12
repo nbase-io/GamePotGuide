@@ -204,7 +204,7 @@ defaultConfig {
 FBSDKLoginKit.framework
 FBSDKCoreKit.framework
 Bolts.framework
-NFacebookChannel.framework
+GamePotFacebook.framework
 
 #### GameCenter登录
 
