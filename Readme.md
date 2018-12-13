@@ -20,4 +20,6 @@ iOS SDK 다운로드
 
 Unity Plugin 다운로드
 
-- [2018-11-20] https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn_1120.unitypackage
+- [2018-12-13] https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2018-12-13.unitypackage
+- [2018-12-13 NaverCafe 제외] https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2018-12-13-ExceptNaverCafe.unitypackage
+
