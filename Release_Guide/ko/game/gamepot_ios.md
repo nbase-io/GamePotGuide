@@ -645,6 +645,87 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 
 
 
+## 공지사항
+
+대시보드 - 공지사항에서 업로드한 이미지가 노출되는 기능입니다.
+
+### 호출
+
+```java
+[[GamePot getInstance] showNoticeWebView:(UIViewController *)];
+```
+
+## 고객센터
+
+대시보드 - 고객센터와 연동되는 유저와 운영자간에 소통 채널입니다.
+
+### 호출
+
+```java
+[[GamePot getInstance] showHelpWebView:(UIViewController *)];
+```
+
+## 로컬 푸시(Local Push notification)
+
+푸시 서버를 통하지 않고 단말기에서 자체적으로 푸시를 노출하는 기능입니다.
+
+### 호출
+
+#### 푸시 등록
+
+정해진 시간에 로컬 푸시를 노출하는 방법은 아래와 같습니다.
+
+> 리턴 값으로 전달되는 pushid는 개발사에서 관리합니다.
+
+```objective-c
+ NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+ [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        
+ NSString* strDate = [formatter stringFromDate:[[NSDate date] dateByAddingTimeInterval:30]];
+      
+ int pushId  = [[GamePot getInstance] sendLocalPush:@"Title" setMessage:@"Message" setDateString:strDate];
+```
+
+#### 등록한 푸시 취소
+
+푸시 등록 시 얻은 pushid를 기반으로 기존에 등록된 푸시를 취소할 수 있습니다.
+
+```objective-c
+[[GamePot getInstance] cancelLocalPush:(int)pushId];
+```
+
+## 점검, 강제 업데이트
+
+점검이나 강제 업데이트 기능이 필요한 경우 대시보드 - 운영에서 기능을 활성화할 경우 동작합니다.
+
+### 호출
+
+기존에 적용된 아래 API에서 사용이 가능합니다.
+
+#### 1. setup API
+
+```java
+[[GamePot getInstance] setupWithAppStatus:^(GamePotAppStatus *status) {
+        NSLog(@"Update : %@", [status toString]);
+	    // TODO : 강제 업데이트가 필요한 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO : Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
+        [[GamePot getInstance] showAppStatusPopup:self setAppStatus:status setCloseHandler:^{
+           // TODO : showAppStatusPopup API를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
+           // TODO : 종료 프로세스를 처리해주세요.
+        }];
+    } setMaintenance:^(GamePotAppStatus *status) {
+        NSLog(@"Maintenance : %@", [status toString]);
+	    // TODO : 점검 중인 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO : Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
+        [[GamePot getInstance] showAppStatusPopup:self setAppStatus:status setCloseHandler:^{
+            // TODO : showAppStatusPopup API를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
+            // TODO : 종료 프로세스를 처리해주세요.
+        }];
+    }];
+```
+
+#### 
+
 ## 8. 다운로드
 
 GAMEPOT 대시보드 > SDK 다운로드 메뉴에서 다운로드 받을 수 있습니다.
