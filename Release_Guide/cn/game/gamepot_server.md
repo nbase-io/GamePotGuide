@@ -3,43 +3,123 @@ search:
   keyword: ['gamepot']
 ---
 
-### 서버투서버 API 요청
+### 储值API对接方法
 
-결제 완료 후에 서버에서 게임서버로 아이템 지급에 대한 요청을 합니다.
-게임서버에서는 아래와 같은 내용으로 전달드리고 해당 정보를 바탕으로 이용자에게 아이템을 지급하시면 됩니다.
+## Purchase
 
-```javascript
+支付完成后服务器会对游戏服务器请求发放物品。游戏服务会按照以下形式传达，依照此信息发放用户相关物品即可。
+
+Request:
+
+```web-idl
 https://{domain}?
 userId={uuid}&orderId={orderId}&projectId={projectId}&platform={platform}&productid={productId}&store={store}&payment={payment}&transactionId={transactionId}
 ```
 
+| Attribute   | Type   | Description                                                  |
+| ----------- | ------ | ------------------------------------------------------------ |
+| domain      | String | 游戏服务器发放物品的服务器域名                               |
+| userId      | String | 用户 UID                                                     |
+| orderId     | String | 订单号 ( 自动生成 )                                          |
+| projectId   | String | ProjectID                                                    |
+| productid   | String | Google/Apple/Onestore的商品ID                                |
+| platform    | String | 平台 Platform信息 (Android, IOS)                             |
+| store       | String | 渠道信息(ios, google, one)                                   |
+| payment     | String | 储值方式 (apple, google, one, mycard, mol)                   |
+| transaction | String | transaction id of Google/Apple/Onestore<br/>(ex. Google is “GPA.0000-0000-0000-00000”) |
 
-
-| Attribute     | Type   | Description                                   |
-| ------------- | ------ | --------------------------------------------- |
-| userId        | String | 사용자 UID                                    |
-| transactionId | String | 주문번호(GPA-xxxx-xxxx-)                      |
-| store         | String | 스토어 정보(ios, google, one)                 |
-| projectId     | String | 프로젝트ID                                    |
-| productId     | String | 구글/애플/원스토어에 등록된 상품ID            |
-| platform      | String | 운영 Platform 정보 (Android, IOS)             |
-| payment       | String | 결제 방식 ( apple, google, one, mycard, mol ) |
-| orderId       | String | 주문번호 ( 자동생성 )                         |
-| domain        | String | 게임 서버에 아이템 지급 서버의 도메인         |
-
-
+Response:
 
 ```json
 {
-    "status": 1,
-    "message" : ""
+	"status": 1,
+	"message" : ""
 }
 ```
 
 | Attribute | Type   | Description                 |
 | --------- | ------ | --------------------------- |
-| status    | Int    | 결과값 ( 0: 실패, 1: 성공 ) |
-| message   | String | 오류 내용                   |
+| status    | Int    | 结果值 ( 0: 失败, 1: 成功 ) |
+| message   | String | 错误内容                    |
 
 
-이와 같은 형식으로만 전달해 주셔야 처리가 가능하며 오류시에 오류 메시지를 적어주시면 추후 메시지를 확인이 가능합니다.  
+
+## Item
+
+使用优惠卷时会对游戏服务器请求发放物品
+会依照以下形式来请求，游戏服务器就依照传达过来的内容发放给玩家相关物品即可。
+
+Request:
+
+```web-idl
+https://{domain}?
+userId={userId}&projectId={projectId}&platform={platform}&itemId=[{itemData}, {itemData}, ...]
+```
+
+| Attribute | Type            | Description                                                  |
+| --------- | --------------- | ------------------------------------------------------------ |
+| userId    | String          | 用户 UID                                                     |
+| projectId | String          | ProjectID                                                    |
+| platform  | String          | 平台 Platform信息 (Android, IOS)                             |
+| itemID    | Array<itemData> | itemData Array<br /><br />- itemData(JSON) <br /> {"item_id" : String, "store_item_id" : String, "count" : Number} |
+
+ex) 
+https://{domain}?itemId=[{"item_id":"989caae1-5f70-41d9-b797","store_item_id":"item1","count":1},{"item_id":"563e8ed5-ee1f-4f7f-a3c9","store_item_id":"item2","count":2}]&platform=android&userId=dcea66-0719-418-8dcd-f638f85e4
+
+Response:
+
+```json
+{
+	"status": 1,
+	"message" : ""
+}
+```
+
+| Attribute | Type   | Description                 |
+| --------- | ------ | --------------------------- |
+| status    | Int    | 结果值 ( 0: 失败, 1: 成功 ) |
+| message   | String | 错误内容                    |
+
+
+
+## Authentication check
+
+请求验证用户ID 
+
+请求验证时，GamePot服务器会实际的进行验证，按照验证结果会执行用户Block。
+
+Request:
+
+```web-idl
+POST
+url : https://{GamePot API URL}/loginauth
+Header : 'content-type: application/json'
+data: 
+{
+	"memberId": {GamePot SDK의 memberId},
+	"token": {GamePot SDK의 Token}
+}
+```
+
+| Attribute | Type   | Description            |
+| --------- | ------ | ---------------------- |
+| memberId  | String | GamePot SDK의 memberId |
+| token     | String | GamePot SDK의 Token    |
+
+GamePot API URL : GamePot Dashboard 网址的 :8080 之前的网址。 
+
+Dashboard 网址为 https://xxxxxxx.gamepot.ntruss.com:8080/aaaaaaa-aaaaaaa-aaaaaa/dashboard/analysis 的时候 [xxxxxxx.gamepot.ntruss.com](https://0bmnkzvhzd.gamepot.ntruss.com:8080/d1516c57-f7b5-41cc-a22c-8c0aaff56259/dashboard/analysis)就指这部分。 
+
+Response:
+
+```json
+{
+	"status": 1,
+	"message" : ""
+}
+```
+
+| Attribute | Type   | Description                 |
+| --------- | ------ | --------------------------- |
+| status    | Int    | 结果值 ( 0: 失败, 1: 成功 ) |
+| message   | String | 错误内容                    |
