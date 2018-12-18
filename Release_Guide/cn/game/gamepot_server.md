@@ -96,15 +96,17 @@ url : https://{GamePot API URL}/loginauth
 Header : 'content-type: application/json'
 data: 
 {
-	"memberId": {GamePot SDK의 memberId},
-	"token": {GamePot SDK의 Token}
+	"projectId": {GamePot SDK的projectId},
+	"memberId": {GamePot SDK的memberId},
+	"token": {GamePot SDK的Token}
 }
 ```
 
 | Attribute | Type   | Description            |
 | --------- | ------ | ---------------------- |
-| memberId  | String | GamePot SDK의 memberId |
-| token     | String | GamePot SDK의 Token    |
+| projectId | String | GamePot SDK的projectId |
+| memberId  | String | GamePot SDK的memberId  |
+| token     | String | GamePot SDK的Token     |
 
 GamePot API URL : GamePot Dashboard 网址的 :8080 之前的网址。 
 
@@ -119,7 +121,17 @@ Response:
 }
 ```
 
-| Attribute | Type   | Description                 |
-| --------- | ------ | --------------------------- |
-| status    | Int    | 结果值 ( 0: 失败, 1: 成功 ) |
-| message   | String | 错误内容                    |
+| Attribute | Type   | Description                                                  |
+| --------- | ------ | ------------------------------------------------------------ |
+| status    | Int    | 结果值 (1: 成功, 请参阅下面的错误代码以了解错误。)<br />如果不是1，请限制登录。 |
+| message   | String | 错误内容                                                     |
+
+错误代码
+
+| Code | Description                                                  |
+| ---- | ------------------------------------------------------------ |
+| 0    | 缺少数据<br />确保包含projectId，memberId和token。           |
+| -1   | 令牌验证失败<br />令牌已被篡改。                             |
+| -2   | MemberId验证失败<br />如果令牌的MemberId与正文的MemberId不匹配 |
+| -3   | 过期令牌<br />SDK登录api通话时间和认证检查请求时间差超过10分钟 |
+

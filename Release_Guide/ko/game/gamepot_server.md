@@ -98,15 +98,17 @@ url : https://{GamePot API URL}/loginauth
 Header : 'content-type: application/json'
 data: 
 {
+	"projectId": {GamePot SDK의 projectId},
 	"memberId": {GamePot SDK의 memberId},
 	"token": {GamePot SDK의 Token}
 }
 ```
 
-| Attribute | Type   | Description            |
-| --------- | ------ | ---------------------- |
-| memberId  | String | GamePot SDK의 memberId |
-| token     | String | GamePot SDK의 Token    |
+| Attribute | Type   | Description             |
+| --------- | ------ | ----------------------- |
+| projectId | String | GamePot SDK의 projectId |
+| memberId  | String | GamePot SDK의 memberId  |
+| token     | String | GamePot SDK의 Token     |
 
 GamePot API URL : GamePot Dashboard 주소의 :8080 전 까지의 주소입니다. 
 
@@ -121,8 +123,17 @@ Response:
 }
 ```
 
-| Attribute | Type   | Description                 |
-| --------- | ------ | --------------------------- |
-| status    | Int    | 결과값 ( 0: 실패, 1: 성공 ) |
-| message   | String | 오류 내용                   |
+| Attribute | Type   | Description                                                  |
+| --------- | ------ | ------------------------------------------------------------ |
+| status    | Int    | 결과값 (1: 성공, 실패는 아래 Error code 참고)<br />1이 아닌 경우 로그인을 제한해 주세요. |
+| message   | String | 오류 내용                                                    |
+
+Error code
+
+| Code | Description                                                  |
+| ---- | ------------------------------------------------------------ |
+| 0    | Body에 누락된 데이터가 있는 경우<br />projectId, memberId, token을 모두 넣었는지 확인해 주세요. |
+| -1   | Token 검증 실패<br />Token이 조작된 경우                     |
+| -2   | MemberId 검증 실패<br />Token의 MemberId 정보와 body의 MemberId가 일치하지 않은 경우 |
+| -3   | Token 만료<br />SDK login api가 성공한 시각과 해당 Authentication check를 요청한 시각이 10분 이상 차이가 발생한 경우 |
 
