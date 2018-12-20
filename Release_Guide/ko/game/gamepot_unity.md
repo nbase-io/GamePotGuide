@@ -394,7 +394,7 @@ public void  onDeleteMemberFailure(NError error) {
 
 로그인 완료 후 로그인 정보를 개발사 서버에서 GAMEPOT 서버로 전달하면 로그인 검증이 진행됩니다.
 
-자세한 설명은 `Server to server api` 매뉴에 `Authentication check` 항목을 참고해주세요.
+자세한 설명은 `Server to server api` 매뉴에 `Token Authentication` 항목을 참고해주세요.
 
 ## 계정 연동
 
@@ -604,7 +604,7 @@ public class NPurchaseInfo
 
 GAMEPOT은 Server to server api를 통해 결제 스토어에 영수증 검증까지 모두 마친 후 개발사 서버에 지급 요청을 하기 때문에 불법 결제가 불가능합니다.
 
-이를 위해선 `Server to server api` 메뉴에 `Purchase` 항목을 참고하여 처리하셔야 합니다.
+이를 위해선 `Server to server api` 메뉴에 `Purchase Webhook` 항목을 참고하여 처리하셔야 합니다.
 
 ## 광고
 
@@ -754,7 +754,7 @@ public void onCouponFailure(NError error) {
 
 쿠폰 사용이 성공하면 개발사 서버에 Server to server api를 통해 아이템 지급을 요청합니다.
 
-이를 위해선 `Server to server api` 메뉴에 `Item` 항목을 참고하여 처리하셔야 합니다.
+이를 위해선 `Server to server api` 메뉴에 `Item Webhook` 항목을 참고하여 처리하셔야 합니다.
 
 ##네이버 카페 SDK
 

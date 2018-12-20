@@ -3,19 +3,22 @@ search:
   keyword: ['gamepot']
 ---
 
-### 서버투서버 API 요청
+## Purchase Webhook
 
-## Purchase
+결제 완료 후에 GAMEPOT서버에서 게임 서버로 아이템 지급을 위해 HTTP 요청을 합니다.
 
-결제 완료 후에 서버에서 게임서버로 아이템 지급에 대한 요청을 합니다.
-게임서버에서는 아래와 같은 내용으로 전달드리고 해당 정보를 바탕으로 이용자에게 아이템을 지급하시면 됩니다.
+> GAMEPOT은 클라이언트로부터 전달받은 결제 정보를 토대로 스토어 영수증 검증까지 진행하여 불법 결제 시도를 막고 있습니다.
 
-```javascript
+###Request
+
+HTTP 요청 시 정보는 아래와 같은 내용으로 전달드리고 해당 정보를 바탕으로 유저에게 아이템을 지급하시면 됩니다.
+
+> `{domain}` 항목은 개발사에서 작업 완료 후 알려주어야 하며, 이 값은 GAMEPOT 대시보드 - 프로젝트 설정 - 일반 - Webhook 항목에 추가해야 합니다.
+
+```java
 https://{domain}?
 userId={uuid}&orderId={orderId}&projectId={projectId}&platform={platform}&productid={productId}&store={store}&payment={payment}&transactionId={transactionId}
 ```
-
-
 
 | Attribute     | Type   | Description                                   |
 | ------------- | ------ | --------------------------------------------- |
@@ -29,7 +32,9 @@ userId={uuid}&orderId={orderId}&projectId={projectId}&platform={platform}&produc
 | orderId       | String | 주문번호 ( 자동생성 )                         |
 | domain        | String | 게임 서버에 아이템 지급 서버의 도메인         |
 
+###Response
 
+응답은 아래와 같은 형식으로 해주세요.
 
 ```json
 {
@@ -43,15 +48,15 @@ userId={uuid}&orderId={orderId}&projectId={projectId}&platform={platform}&produc
 | status    | Int    | 결과값 ( 0: 실패, 1: 성공 ) |
 | message   | String | 오류 내용                   |
 
+## Item Webhook
 
-이와 같은 형식으로만 전달해 주셔야 처리가 가능하며 오류시에 오류 메시지를 적어주시면 추후 메시지를 확인이 가능합니다.  
+쿠폰 사용 후 GAMEPOT서버에서 게임 서버로 아이템 지급을 위해 HTTP 요청을 합니다.
 
-## Item
+###Request
 
-쿠폰 사용 시 게임서버로 아이템 지급에 대한 요청을 합니다.
-게임서버에서는 아래와 같은 내용으로 전달드리고 해당 정보를 바탕으로 이용자에게 아이템을 지급하시면 됩니다.
+HTTP 요청 시 정보는 아래와 같은 내용으로 전달드리고 해당 정보를 바탕으로 유저에게 아이템을 지급하시면 됩니다.
 
-Request:
+> `{domain}` 항목은 개발사에서 작업 완료 후 알려주어야 하며, 이 값은 GAMEPOT 대시보드 - 프로젝트 설정 - 일반 - Webhook 항목에 추가해야 합니다.
 
 ```web-idl
 https://{domain}?
@@ -60,15 +65,19 @@ userId={userId}&projectId={projectId}&platform={platform}&itemId=[{itemData}, {i
 
 | Attribute | Type            | Description                                                  |
 | --------- | --------------- | ------------------------------------------------------------ |
-| userId    | String          | 用户 UID                                                     |
-| projectId | String          | ProjectID                                                    |
-| platform  | String          | 平台 Platform信息 (Android, IOS)                             |
-| itemID    | Array<itemData> | itemData Array<br /><br />- itemData(JSON) <br /> {"item_id" : String, "store_item_id" : String, "count" : Number} |
+| userId    | String          | 사용자 ID                                                    |
+| projectId | String          | Project ID                                                   |
+| platform  | String          | 운영 Platform 정보 (Android, IOS)                            |
+| store     | String          | 스토어 정보(ios, google, one)                                |
+| itemId    | Array<itemData> | itemData Array<br /><br />- itemData(JSON) <br /> {"item_id" : String, "store_item_id" : String, "count" : Number} |
 
-ex) 
-https://{domain}?itemId=[{"item_id":"989caae1-5f70-41d9-b797","store_item_id":"item1","count":1},{"item_id":"563e8ed5-ee1f-4f7f-a3c9","store_item_id":"item2","count":2}]&platform=android&userId=dcea66-0719-418-8dcd-f638f85e4
+> ex) 
+>
+> https://{domain}?itemId=[{"item_id":"d0781c4e-df52-465b-ab93-0ee16fbf445d","store_item_id":"ttt","count":1}]&platform=android&projectId=f1df9464-40a8-4a66-8421-196c7c661002&store=google&userId=2d485044-06c2-48c4-a6ed-4ab53dea88bb
 
-Response:
+###Response
+
+응답은 아래와 같은 형식으로 해주세요.
 
 ```json
 {
@@ -82,19 +91,31 @@ Response:
 | status    | Int    | 결과값 ( 0: 실패, 1: 성공 ) |
 | message   | String | 오류 내용                   |
 
+## Token Authentication
 
+게임에서 로그인 완료 후 얻은 정보로 GAMEPOT 서버에 로그인 검증을 할 수 있습니다.
 
-## Authentication check
+토큰 검증은 2 단계로 진행되며, 1단계 GAMEPOT 토큰 검증 후 2단계 소셜 토큰 검증이 진행됩니다.
 
-사용자 ID에 대한 검증을 요청 합니다. 
+> 2단계 검증은 GAMEPOT 대시보드 - 프로젝트 설정 - Auth key에 값이 입력되어 있어야 합니다.
 
-검증 요청 시 GamePot 서버에서는 실질적인 검증을 하며, 이에 따라 사용자 Block 처리를 하게 됩니다.
+1단계 GAMEPOT 토큰 검증은 로그인 후 얻은 MemberID, Token으로 동기 토큰 검증을 진행하며,
 
-Request:
+2단계 소셜 토큰 검증은 구글 로그인이나 페북 로그인을 통해 얻은 소셜 계정의 토큰으로 소셜 비동기 토큰 검증을 진행합니다.
+
+2단계에서 검증 실패한 경우에는 GAMEPOT 이용정지 기능이 동작되어 이후 재 로그인 시 로그인이 불가합니다.
+
+> 검증 실패에 따른 이용정지는 GAMEPOT 대시보드 - 프로젝트 설정 - Auth key 항목에서 스위치가 ON되어 있는 경우에만 동작하며, 이용정지 대상자는 GAMEPOT 대시보드 - 회원 - 이용정지 메뉴에서 확인이 가능합니다.
+
+###Request
+
+데이터 무결성을 위해 클라이언트가 아닌 개발사 서버에서 진행 해주세요.
+
+> {API URL} 항목은 GAMEPOT 대시보드 주소에서 `:8080` 를 제외한 주소입니다.
 
 ```web-idl
 POST
-url : https://{GamePot API URL}/loginauth
+url : https://{API URL}/loginauth
 Header : 'content-type: application/json'
 data: 
 {
@@ -110,11 +131,11 @@ data:
 | memberId  | String | GamePot SDK의 memberId  |
 | token     | String | GamePot SDK의 Token     |
 
-GamePot API URL : GamePot Dashboard 주소의 :8080 전 까지의 주소입니다. 
+###Response
 
-Dashboard 주소가 https://xxxxxxx.gamepot.ntruss.com:8080/aaaaaaa-aaaaaaa-aaaaaa/dashboard/analysis 이라면 [xxxxxxx.gamepot.ntruss.com](https://0bmnkzvhzd.gamepot.ntruss.com:8080/d1516c57-f7b5-41cc-a22c-8c0aaff56259/dashboard/analysis)를 뜻합니다. 
+1단계 검증에서 검증 실패하는 경우 status가 1이 아닌 값이 입력됩니다.
 
-Response:
+이 경우는 게임 진입을 제한 해주세요.
 
 ```json
 {
@@ -123,17 +144,16 @@ Response:
 }
 ```
 
-| Attribute | Type   | Description                                                  |
-| --------- | ------ | ------------------------------------------------------------ |
-| status    | Int    | 결과값 (1: 성공, 실패는 아래 Error code 참고)<br />1이 아닌 경우 로그인을 제한해 주세요. |
-| message   | String | 오류 내용                                                    |
+| Attribute | Type   | Description                                   |
+| --------- | ------ | --------------------------------------------- |
+| status    | Int    | 결과값 (1: 성공, 실패는 아래 Error code 참고) |
+| message   | String | 오류 내용                                     |
 
-Error code
+###Error code
 
 | Code | Description                                                  |
 | ---- | ------------------------------------------------------------ |
-| 0    | Body에 누락된 데이터가 있는 경우<br />projectId, memberId, token을 모두 넣었는지 확인해 주세요. |
+| 0    | Body에 누락된 데이터가 있는 경우<br />HTTP 요청 시 projectId, memberId, token을 모두 넣었는지 확인해 주세요. |
 | -1   | Token 검증 실패<br />Token이 조작된 경우                     |
 | -2   | MemberId 검증 실패<br />Token의 MemberId 정보와 body의 MemberId가 일치하지 않은 경우 |
 | -3   | Token 만료<br />SDK login api가 성공한 시각과 해당 Authentication check를 요청한 시각이 10분 이상 차이가 발생한 경우 |
-
