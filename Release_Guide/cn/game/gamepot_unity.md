@@ -3,29 +3,29 @@ search:
   keyword: ['gamepot']
 ---
 
-## 유니티 플러그인 안내
+## Unity插件介绍
 
-### 시작하기
+### 入门
 
-#### STEP 1. GAMEPOT 플러그인 가져오기
+#### STEP 1. 导入GAMEPOT插件
 
-생성된 GAMEPOT 대시보드에 접속한 후 최신 플러그인을 다운로드하시기 바랍니다.
+访问已生成的GAMEPOT Dashboard并下载最新插件。
 
-#### STEP 2. 플러그인 가져오기
+#### STEP 2. 导入插件
 
-**Assets > Import Package > Custom Package** 메뉴에서 다운로드한 GamePotUnityPlugin-xxxx.unitypackage 파일을 선택합니다.
+选择**Assets > Import Package > Custom Package** 菜单中下载的GamePotUnityPlugin-xxxx.unitypackage文件。
 
 ![](./images/gamepot_unity_01.png)
 
-플러그인을 확인 후에 import 하시면 해당 프로젝트 추가됩니다.
+import所确认的插件，项目就会被添加。
 
 ![](./images/gamepot_unity_02.png)
 
 #### STEP 3. Android
 
-##### Gradle 환경 설정 방법
+##### 如何设置Gradle首选项
 
-/Assets/Plugin/Android/mainTemplate.gradle 파일을 에디터로 엽니다.
+/Assets/Plugin/Android/mainTemplate.gradle文件请使用编辑器打开。
 
 ```java
 ...
@@ -46,36 +46,36 @@ android {
 }
 ```
 
-아래의 필수 값을 찾아 수정합니다. 아래 값들을 수정해야만 정상적으로 작동됩니다.
+查找以下必须值并修改。必须要修改以下值才可以正常操作。
 
 ```java
 resValue "string", "[key]", "[value]"
 ```
 
-| 값                           | 설명                                                         |
+| 值                           | 说明                                                         |
 | ---------------------------- | ------------------------------------------------------------ |
-| gamepot_project_id           | 게임팟에서 발급받은 프로젝트 아이디를 입력해 주세요.         |
-| gamepot_api_url              | 게임팟에서 발급받은 API URL을 입력해 주세요.                 |
-| gamepot_store                | 스토어값 ( google or one )                                   |
-| gamepot_app_title            | 앱 제목 (FCM)                                                |
-| gamepot_push_default_channel | 등록된 기본 채널 이름 (Default) - 변경하지 마세요.           |
-| facebook_app_id              | 페이스북 발급 받은 앱ID                                      |
-| fb_login_protocol_scheme     | 페이스북에서 발급 받은 protocol scheme  fb[app_id]           |
-| gamepot_elsa_projectid       | NCLOUD ELSA 사용시 프로젝트ID ([자세히 보기](https://www.ncloud.com/product/analytics/elsa)) |
+| gamepot_project_id           | 输入从GamePot获取的项目ID。                                  |
+| gamepot_api_url              | 输入从GamePot获取的API URL。                                 |
+| gamepot_store                | 渠道商城值 ( google or one )                                 |
+| gamepot_app_title            | 应用标题 (FCM)                                               |
+| gamepot_push_default_channel | 已注册的默认频道名称(Default) - 请勿更改。                   |
+| facebook_app_id              | 从Facebook获取的应用ID                                       |
+| fb_login_protocol_scheme     | 从Facebook获取的protocol scheme  fb[app_id]                  |
+| gamepot_elsa_projectid       | 使用NCLOUD ELSA时项目ID([了解更多](https://www.ncloud.com/product/analytics/elsa)) |
 
-##### 푸시 표시 아이콘 변경 방법
+##### 如何更改推送显示图标
 
 ![](./images/gamepot_unity_05.png)
 
-푸시 수신 시 Android Notification bar에 보여줄 Small icon은 SDK 내부에서 기본 이미지로 노출을 하며 직접 추가하실 수도 있습니다.
+接受推送时在Android Notification bar所显示的Small icon是基本使用SDK内部的默认图像，也可以手动添加适合游戏的图标。
 
-직접 넣으려면 `drawable` 폴더별로 이미지를 넣어야 합니다. 
+手动添加需要为每个`drawable`文件夹放入图像。
 
-> [링크](http://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_gamepot_small)를 통해 제작하면 자동으로 폴더 별로 이미지가 제작되어 편리합니다.
+> ([链接](http://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_gamepot_small))通过此链接制作图像时会自动创建每个文件夹的图像。
 
-이미지 파일명은 ic_stat_gamepot_small 이어야 합니다.
+图像文件名必须为ic_stat_gamepot_small。
 
-| 폴더명                | 크기  |
+| 文件夹名称             | 大小  |
 | --------------------- | ----- |
 | res/drawable-mdpi/    | 24x24 |
 | res/drawable-hdpi/    | 36x36 |
@@ -83,40 +83,38 @@ resValue "string", "[key]", "[value]"
 | res/drawable-xxhdpi/  | 72x72 |
 | res/drawable-xxxhdpi/ | 96x96 |
 
-##### Firebase 적용 방법
+##### Firebase使用方法
 
-Google Firebase 콘솔에서 다운로드한 `google-services.json` 파일을 `/Assets/Plugins/Android/`에 복사합니다.
+从 Google Firebase Console 下载的`google-services.json` 文件复制到 `/Assets/Plugins/Android/`里面。
 
-> 구글 로그인 및 푸시를 사용하기 위해서 적용해야 합니다.
+> 为了使用Google登录以及推送必须要接入。
 
 #### STEP 4. iOS
 
-구글 파이어베이스에서 다운로드한 `GamePotConfig-Info.plist` 파일을  `/Assets/Plugins/IOS/`에 복사합니다.
+将从Google Firebase下载的`GamePotConfig-Info.plist`文件复制到`/Assets/Plugins/IOS/`。
 
-/Assets/Plugin/GamePotConfig-Info.plist 내에 필요한 환경 변수를 추가해 주세요.
+/Assets/Plugin/GamePotConfig-Info.plist 里添加所需要环境参数。
 
 ![](./images/gamepot_unity_06.png)
 
-|                                  | 설명                                                 |
+|                                  | 说明                                                 |
 | -------------------------------- | ---------------------------------------------------- |
-| gamepot_project_id               | 게임팟에서 발급받은 프로젝트 아이디를 입력해 주세요.  |
-| gamepot_facebook_app_id          | 페이스북 발급 받은 앱ID                              |
-| gamepot_facebook_display_name    | 페이스북에 보여지는 이름                             |
-| gamepot_google_app_id		   | GoogleService-Info 파일의 CLIENT_ID 값             |
-| gamepot_google_url_schemes       | GoogleService-Info 파일의 REVERSED_CLIENT_ID 값  |
-| gamepot_elsa_projectid           | NCLOUD ELSA 사용시 프로젝트ID                        |
-| gamepot_api_url | 프로젝트의 api url을 입력해주세요. |
+| gamepot_project_id               | 输入从GamePot获取的项目ID                           |
+| gamepot_facebook_app_id          | 从Facebook获取的应用ID                              |
+| gamepot_facebook_display_name    | 在Facebook所被显示的名称                             |
+| gamepot_google_app_id		       | GoogleService-Info文件的CLIENT_ID值             |
+| gamepot_google_url_schemes       | GoogleService-Info文件的REVERSED_CLIENT_ID值     |
+| gamepot_elsa_projectid           | 使用NCLOUD ELSA时项目ID                        |
+| gamepot_api_url | API URL |
 
+添加scenes之后
 
-
-scenes을 추가하신 후에
-
-File -> Build Settings -> Build And Run 하시면 완료됩니다.
+File -> Build Settings -> Build And Run 就完成。
 
 ![](./images/gamepot_unity_07.png)
-### 초기화
+### 初始化
 
-게임을 시작할때 로드 되는 첫 장면에 사용되는 개체에 다음 코드를 추가합니다.
+将把以下代码添加到游戏开始时加载的第一个场景中所使用的对象中。
 
 ```csharp
 using GamePotUnity;
@@ -125,7 +123,7 @@ public class GamePotLoginSampleScene : MonoBehaviour {
         GamePot.initPlugin();
     }
     void Start () {
-        GamePot.setListener(  GamePotInterface.cs 상속받은 class );
+        GamePot.setListener(  GamePotInterface.cs 继承的 class );
          // ex) GamePot.setListener(new GamePotSampleListener());
     }
 
@@ -137,27 +135,27 @@ public class GamePotSampleListener : MonoBehaviour , NSDKInterface {
 }
 ```
 
-### 오류코드
+### 错误代码
 
 ```csharp
 public class NError
 {
     //Detail Error code
-    public static readonly int CODE_UNKNOWN_ERROR           = 0;                    // 알 수 없는 Error
-    public static readonly int CODE_NOT_INITALIZE           = 1;                    // 초기화 실패
-    public static readonly int CODE_INVAILD_PARAM           = 2;                    // 파라미터가 올바르지 않은 경우
-    public static readonly int CODE_MEMBERID_IS_EMPTY       = 3;                    // 멤버아이디 데이터가 없을때
-    public static readonly int CODE_NOT_SIGNIN              = 4;                    // 로그인이 되지 않은 상태
-    public static readonly int CODE_NETWORK_MODULE_NOT_INIT = 3000;                 // 네트웍 모듈이 초기화 되지 않았을 때
-    public static readonly int CODE_NETWORK_ERROR           = 3001;                 // 네트웍 연결 오류 및 타임아웃 발생 시
-    public static readonly int CODE_SERVER_ERROR            = 4000;                 // server-side에서 발생하는 오류
-    public static readonly int CODE_SERVER_HTTP_ERROR       = 4001;                 // http response code가 성공이 아닌 경우
-    public static readonly int CODE_SERVER_NETWORK_ERROR    = 4002;                 // 네트웍 연결 오류 및 타임아웃 발생 시
-    public static readonly int CODE_SERVER_PARSING_ERROR    = 4003;                 // 서버에서 받은 데이터를 파싱할때 오류
-    public static readonly int CODE_CHARGE_UNKNOWN_ERROR    = 5000;                 // 결제에서 알 수 없는 오류 발생 및 스토어 측에서 Error를 전달 할 때
-    public static readonly int CODE_CHARGE_PRODUCTID_EMPTY  = 5001;                 // product id를 넣지 않은 경우
-    public static readonly int CODE_CHARGE_PRODUCTID_WRONG  = 5002;                 // product id를 잘못 넣은 경우
-    public static readonly int CODE_CHARGE_CONSUME_ERROR    = 5003;                 // consume시 오류
+    public static readonly int CODE_UNKNOWN_ERROR           = 0;                    // 未知Error
+    public static readonly int CODE_NOT_INITALIZE           = 1;                    // 初始化失败
+    public static readonly int CODE_INVAILD_PARAM           = 2;                    // 参数不正确
+    public static readonly int CODE_MEMBERID_IS_EMPTY       = 3;                    // 没有MemberID数据
+    public static readonly int CODE_NOT_SIGNIN              = 4;                    // 不是登录状态
+    public static readonly int CODE_NETWORK_MODULE_NOT_INIT = 3000;                 // 未初始化网络模块
+    public static readonly int CODE_NETWORK_ERROR           = 3001;                 // 网络连接错误和超时
+    public static readonly int CODE_SERVER_ERROR            = 4000;                 // 从server-side发生错误
+    public static readonly int CODE_SERVER_HTTP_ERROR       = 4001;                 // 未成功http response code
+    public static readonly int CODE_SERVER_NETWORK_ERROR    = 4002;                 // 网络连接错误和超时
+    public static readonly int CODE_SERVER_PARSING_ERROR    = 4003;                 // 解析从服务器获取的数据时错误
+    public static readonly int CODE_CHARGE_UNKNOWN_ERROR    = 5000;                 // 在支付出现未知错误和渠道传达错误时
+    public static readonly int CODE_CHARGE_PRODUCTID_EMPTY  = 5001;                 // 未输入product id
+    public static readonly int CODE_CHARGE_PRODUCTID_WRONG  = 5002;                 // product id输入错误
+    public static readonly int CODE_CHARGE_CONSUME_ERROR    = 5003;                 // consume时错误
 
 
     public int code { get; set; }                                                      // error Code
@@ -165,26 +163,26 @@ public class NError
 }
 ```
 
-### 로그인 환경설정
+### 设置登录环境
 
-#### 구글 로그인
+#### Google登录
 
 ##### Google Firebase Console
 
-1. Google Firebase Console에서 Android용 google-service.json을 다운로드 하신 후에 `/Assets/Plugins/Android/`에 복사합니다.
-2. APK 빌드 시 사용한 Keystore의 SHA-1값을 Google Firebase console에 추가합니다.
+1. 从Google Firebase Console下载Android专用google-service.json之后复制到 `/Assets/Plugins/Android/`。
+2. 将把编译APK时所使用的Keystore的SHA-1值添加到Google Firebase console里。
 
-3. Google Firebase Console에서 iOS 용 GoogleService-Info.plist을 다운로드 하신 후에 `/Assets/Plugins/IOS/`에 복사합니다.
+3. 从Google Firebase Console下载iOS专用GoogleService-Info.plist之后复制到 `/Assets/Plugins/IOS/`。
 
-#### 페이스북 로그인
+#### Facebook登录
 
 ##### Facebook Developer Console
 
-APK 빌드 시 사용한 Keystore의 키 해시 값을 페이스북 콘솔에 추가합니다.
+将把编译APK时使用的Keystore的key hash值添加到Facebook Console里。
 
 ##### Android
 
-mainTemplate.gradle 수정
+修改mainTemplate.gradle
 
 ```java
 ...
@@ -195,34 +193,34 @@ defaultConfig {
 ...
 ```
 
-페이스북 개발자 센터에서 발급 받은 facebook_app_id 에 추가하고 fb[facebook_app_id]를 입력해 주세요.
+将把从Facebook开发者中心获取的facebook_app_id里添加之后输入fb[facebook_app_id]。
 
-> app_id 가 1234567890 인 경우 fb1234567890 이 fb_login_protocol_scheme입니다.
+> 如app_id为1234567890的时候，fb1234567890就是fb_login_protocol_scheme。
 
 ##### iOS
 
-/Assets/Plugins/IOS/Frameworks 에 아래 프레임 워크를 추가합니다.
+在/Assets/Plugins/IOS/Frameworks添加以下Frameworks。
 
 FBSDKLoginKit.framework
 FBSDKCoreKit.framework
 Bolts.framework
 GamePotFacebook.framework
 
-#### 게임센터 로그인
+#### GameCenter登录
 
-iOS 만 해당하는 기능입니다.
+只针对iOS的功能。
 
-/Assets/Plugins/IOS/Frameworks/ 에 Gamekit.framwork를 복사합니다. General -> Linked Frameworks and Libraries 내에 복사한 프레임워크를 추가합니다.
+在/Assets/Plugins/IOS/Frameworks/复制Gamekit.framwork。General -> Linked Frameworks and Libraries里添加复制的Frameworks。
 
-Capabilities 설정에서 Game Center ON 설정합니다. ( 앱스토어 콘솔에서도 Game Center ON 설정 되어 있어야 합니다.)
+在Capabilities设置中设置为Game Center ON。 ( 在App Store Console里也需要设置为Game Center ON。)
 
 ![](./images/gamepot_unity_09.png)
 
-### 로그인/로그아웃/탈퇴
+### 登录/退出/注销
 
-#### 로그인
+#### 登录
 
-별도의 가입 없이 사용자 계정이 생성됩니다. 모든 신원 확인을 위한 MemberId가 생성되며, 생성된 정보는 NUserInfo 구조체에 저장되어 리턴합니다.
+无需注册也可以生成用户账号。生成可以检查身份的MemberId，生成的信息储存到NUserInfo结构体中并返回。
 
 Request:
 
@@ -233,48 +231,48 @@ GamePot.login(NCommon.LoginType);
 Response:
 
 ```csharp
-// 로그인 성공
+// 登录成功
 public void onLoginSuccess(NUserInfo userInfo)
 {
 }
-// 로그인 실패
+// 登录失败
 public void onLoginFailure(NError error)
 {
-	// 로그인을 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+	// 如果登录失败
+	// error.message请使用弹窗告知给用户
 }
-// 로그인 취소
+// 取消登录
 public void onLoginCancel()
 {
-	// 사용자가 임의로 로그인을 취소한 경우
+	// 用户取消登录
 }
-// 강제 업데이트(스토어 버전과 클라이언트 버전이 다를 경우 호출)
+// 强制更新(渠道版本和客户端版本不一致的时候调用)
 public void onNeedUpdate(NAppStatus status)
 {
-	// TODO : 파라미터로 넘어온 status정보를 토대로 팝업을 만들어 사용자에게 알려줘야 합니다.
-	// TODO : 아래 두 가지 방식 중 한가지를 선택하세요.
-    // case 1 : 인게임 팝업을 통해 개발사에서 직접 UI 구현
-    // case 2 : SDK의 팝업을 사용 (이 경우에는 아래 코드를 호출 해주세요.)
+	// TODO : 需要根据传递过来的status信息做出弹窗告知给用户。
+	// TODO : 可以选择以下两种方式之一。
+    // case 1 : 使用游戏内弹窗开发上来实现UI
+    // case 2 : 使用SDK的弹窗(此情况下，请调用下面代码。)
     // GamePot.showAppStatusPopup(status.ToJson());
 }
-// 점검(대시보드에 점검이 활성화 되어있는 경우 호출)
+// 维护(Dashboard中维护为激活状态时调用)
 public void onMainternance(NAppStatus status)
 {
-   	// TODO : 파라미터로 넘어온 status정보를 토대로 팝업을 만들어 사용자에게 알려줘야 합니다.
-	// TODO : 아래 두 가지 방식 중 한가지를 선택하세요.
-    // case 1 : 인게임 팝업을 통해 개발사에서 직접 UI 구현
-    // case 2 : SDK의 팝업을 사용 (이 경우에는 아래 코드를 호출 해주세요.)
+   	// TODO : 需要根据传递过来的status信息做出弹窗告知给用户。
+	// TODO : 可以选择以下两种方式之一。
+    // case 1 : 使用游戏内弹窗开发上来实现UI
+    // case 2 : 使用SDK的弹窗(此情况下，请调用下面代码。)
     // GamePot.showAppStatusPopup(status.ToJson());
 }
-// 앱 종료
+// 结束应用
 public void onAppClose()
 {
-    // TODO: 강제 업데이트나 점검 기능을 case2 방식으로 구현하는 경우
-    // TODO: 앱을 강제 종료할 수 있기 때문에 이 곳에 앱을 종료할 수 있도록 구현하세요.
+    // TODO: 如果使用case2方式实现强制更新或者维护功能
+    // TODO: 需要可以强制结束应用，请在此地方实现结束应用。
 }
 ```
 
-LoginType 정의
+LoginType定义
 
 ```csharp
 public enum LoginType
@@ -289,41 +287,41 @@ public enum LoginType
 
 ```
 
-NUserInfo 정의
+NUserInfo定义
 
 ```csharp
 public class NUserInfo
 {
-    public string id { get; set; }              // 맴버 ID. (유저의 유니크 아이디)
-    public string name { get; set; }            // 이름
-    public string profileUrl { get; set; }      // 프로필URL (존재시)
-    public string email { get; set; }           // 이메일 (존재시)
+    public string id { get; set; }              // MemberID. (用户唯一ID)
+    public string name { get; set; }            // 名称
+    public string profileUrl { get; set; }      // 简介URL (如有)
+    public string email { get; set; }           // 电子邮件 (如有)
     public string socialid { get; set; }        // Social ID(google, facebook ...)
 }
 ```
 
-####로그인 정보 가져오기
+####获取登录信息
 
 ```csharp
-GamePot.getMemberId(); // 맴버ID. (유저의 유니크 아이디)
+GamePot.getMemberId(); // MemberID. (用户唯一ID)
 ```
-#### 자동 로그인
+#### 自动登录
 ```csharp
 NCommon.LoginType type = GamePot.getLastLoginType();
 if(type != NCommon.LoginType.NONE) {
 {
-    // 마지막에 로그인 했던 로그인 타입으로 로그인 하는 방식입니다.
+    // 使用最终登录的登录类型来登录的方式。
     GamePot.login(type);
 }
 else
 {
-    // 처음 게임을 실행했거나 로그아웃한 상태. 로그인을 할 수 있는 로그인 화면으로 이동해주세요.
+    // 首次启动游戏或者退出状态。请移动至可以登录的登录界面。
 }
 ```
 
-#### 로그아웃
+#### 退出
 
-사용자를 로그아웃합니다. 계정이 삭제되지 않으며, 동일한 계정으로 로그인이 가능합니다.
+退出用户。账户不被删除，可以重新用同样账号登录。
 
 Request:
 
@@ -334,24 +332,24 @@ GamePot.logout();
 Response:
 
 ```csharp
-/// 로그아웃 성공
+/// 退出成功
 public void onLogoutSuccess()
 {
 }
 
-/// 로그아웃 실패
+/// 退出失败
 public void onLogoutFailure(NError error)
 {
-   	// 로그아웃을 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+   	// 如果退出失败
+	// error.message请使用弹窗告知给用户
 }
 ```
 
 
 
-#### 탈퇴
+#### 注销
 
-회원을 탈퇴하며, 복구가 불가능합니다.
+注销会员，无法复原。
 
 Request:
 
@@ -362,24 +360,24 @@ GamePot.deleteMember();
 Response:
 
 ```csharp
-/// 회원 탈퇴 성공
+/// 会员注销成功
 public void onDeleteMemberSuccess() {
 }
 
-/// 회원 탈퇴 실패
+/// 会员注销失败
 public void  onDeleteMemberFailure(NError error) {
-   	// 회원 탈퇴를 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+   	// 如果会员注销失败
+	// error.message请使用弹窗告知给用户
 }
 ```
 
 
 
-### 계정연동
+### 绑定账号
 
-하나의 게임 계정에 복수 개의 소셜계정(구글/페이스북 등)을 연결/해제 할 수 있는 기능입니다. (최소 연동 소셜계정은 1가지입니다.)
+可以将多个社交账户(Google，FaceBook 等)连接/断开连接到一个游戏账户的功能。(至少可以绑定一个社交账户。)
 
-> 연동화면 UI는 개발사에서 구현해주세요.
+> 绑定相关UI界面，请由开发公司来支持实现。
 
 ```csharp
 public enum LinkingType
@@ -391,9 +389,9 @@ public enum LinkingType
 }
 ```
 
-#### 연동
+#### 绑定
 
-Google / Facebook 등의 아이디로 계정을 연동 하실 수 있습니다.
+可以使用Google, Facebook 等账号来绑定账户。
 
 Request:
 
@@ -404,29 +402,29 @@ GamePot.createLinking(NCommon.LinkingType.XXXXX);
 Response:
 
 ```csharp
-/// 계정 연동 취소
+/// 绑定账号取消
 public void onCreateLinkingCancel() {
-    // 유저가 계정연동을 취소한 경우
+    // 用户取消绑定账号
 }
 
-/// 계정 연동 성공
+/// 绑定账号成功
 public void onCreateLinkingSuccess(NUserInfo userInfo) {
 }
 
-/// 계정 연동 실패
+/// 绑定账号失败
 public void onCreateLinkingFailure(NError error) {
-	// 계정 연동을 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+	// 如果绑定账户失败
+	// error.message请使用弹窗告知给用户
 }
 ```
 
-현재 연동된 모든 계정 정보를 가져올 수 있습니다.
+可以获取目前所绑定的所有账号信息。
 
 ```csharp
 List<NLinkingInfo> linkedList = GamePot.getLinkedList();
 ```
 
-링크 정보 정의
+定义链接信息
 
 ```csharp
 public class NLinkingInfo
@@ -435,9 +433,9 @@ public class NLinkingInfo
 }
 ```
 
-#### 연동 해제
+#### 解除绑定
 
-기존에 연동 되어 있는 계정을 해제합니다.
+解除已绑定的账号。
 
 Request :
 
@@ -448,20 +446,20 @@ void GamePot.deleteLinking(NCommon.LinkType.XXXXX);
 Response:
 
 ```csharp
-/// 계정 연동 해제 성공
+/// 解除绑定成功
 public void onDeleteLinkingSuccess() {
 }
 
-/// 계정 연동 해제 실패
+/// 解除绑定失败
 public void onDeleteLinkingFailure(NError error) {
-	// 연동 해제를 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+	// 如果解除绑定失败
+	// error.message请使用弹窗告知给用户
 }
 ```
 
-#### 계정 연동 상태에 대한 결과 처리 예제
+#### 对于处理账户绑定状态结果示例
 
-createLinking / deleteLinking 결과에 따라 현재 연동 되어 있는 계정 정보를 받아와 연동상태에 대한 UI를 업데이트 합니다.
+根据createLinking / deleteLinking结果获取目前已绑定的账号信息并更新绑定状态的UI。
 
 ```csharp
 public void onInit()
@@ -514,71 +512,71 @@ Public void UI_Update()
 
 
 
-### 결제
+### 支付
 
-#### 인앱 상품 조회
+#### 查询In App商品
 
-스토어에서 제공하는 상품정보를 가져와 화면에 표시해 주세요. 가격에 따라 통화, 설명 등이 다르게 표시됩니다.
+请从渠道商城获取的商品信息显示在画面上。根据价格，货币、描述等信息会显示不同。
 
 ```csharp
 NPurchaseItem[] items = GamePot.getPurchaseItems();
 foreach(NPurchaseItem item in items) {
-    Debug.Log(item.productId);		// 상품ID
-    Debug.Log(item.price);			// 가격
-    Debug.Log(item.title);			// 제목
-    Debug.Log(item.description);	// 설명
+    Debug.Log(item.productId);		// 商品ID
+    Debug.Log(item.price);			// 价格
+    Debug.Log(item.title);			// 标题
+    Debug.Log(item.description);	// 说明
 }
 ```
 
-### 인앱 상품 결제
+### 支付In App商品
 
-아래 함수 하나로 구글, 애플, 앱스토어 결제가 가능합니다.
+使用下面的一个函数，可以在Google, Apple, AppStore支付。
 
 Request:
 
 ```csharp
-// productId : 마켓에 등록된 상품ID
+// productId : 渠道商城里所注册的商品ID
 GamePot.purchase(string productId)
 ```
 
 Response:
 
 ```csharp
-/// 인앱 결제 성공
+/// In App支付成功
 public void onPurchaseSuccess(PurchaseInfo purchase) {
 }
 
-/// 인앱 결제 실패
+/// In App支付失败
 public void onPurchaseFailure(NError error) {
-	// 결제를 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+	// 如果In App支付失败
+	// error.message请使用弹窗告知给用户
 }
 
-/// 인앱 결제 실패
+/// In App支付失败
 public void onPurchaseCancel() {
 }
 ```
 
-### 광고
+### 广告
 
-IGAWorks Unity Plugin을 기본으로 포함하고 있으므로 [IGAWorks의 가이드](http://help.igaworks.com/hc/ko/3_3/Content/Article/common_unity_aos)로 적용하시면 됩니다.
+基本包含着 IGAWorks Unity Plugin，所以接入[IGAWorks的指南](http://help.igaworks.com/hc/ko/3_3/Content/Article/common_unity_aos)即可。
 
-> IGAWorks 외에 라이브러리를 사용하고자 하시는 경우에는 저희가 포함하는 방법을 안내해 드리도록 하겠습니다.
+> 希望使用IGAWorks之外的library的时候我方会说明如何接入。
 
-포함된 버전은 아래와 같습니다.
+版本如下所示。
 
-| 플랫폼  | 버전                                           |
+| 平台    | 版本                                           |
 | ------- | ---------------------------------------------- |
 | Android | IGAWorks_Unity_Android_Full_Package_2018-12-05 |
 | iOS     | IGAWorks_Unity_iOS_Full_Package_2018-10-02     |
 
 ### Push on/off
 
-전체푸시, 야간푸시, 광고 푸시 3가지 종류의 푸시를 각각 on/off를 처리 할 수 있습니다.
+全体推送，夜间推送和广告推送的这3种类型的推送可以各个设置开关。
 
-> on/off설정하는 UI는 개발사에서 구현해주세요.
+> 设置开关on/off的UI界面，请由开发公司来支持实现。
 
-#### 푸시 설정
+#### 设置推送
 
 Request:
 
@@ -589,18 +587,18 @@ GamePot.setPushStatus(bool pushEnable);
 Response:
 
 ```csharp
-/// 푸시 상태 변경에 대한 서버 통신 성공
+/// 对于更改推送状态服务器通信成功
 public void onPushSuccess() {
 }
 
-/// 푸시 상태 변경에 대한 서버 통신 실패
+/// 对于更改推送状态服务器通信失败
 public void onPushFailure(NError error) {
-	// 푸시 상태 변경을 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+	// 如果更改推送状态失败
+	// error.message请使用弹窗告知给用户
 }
 ```
 
-#### 야간 푸시 설정
+#### 设置夜间推送
 
 Request:
 
@@ -611,18 +609,18 @@ GamePot.setPushNightStatus(bool nightPushEnable);
 Response:
 
 ```csharp
-/// 야간 푸시 상태 변경에 대한 서버 통신 성공
+/// 对于更改夜间推送状态服务器通信成功
 public void onPushNightSuccess() {
 }
 
-/// 야간 푸시 상태 변경에 대한 서버 통신 실패
+/// 对于更改夜间推送状态服务器通信失败
 public void onPushNightFailure(NError error) {
-	// 야간 푸시 상태 변경을 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+	// 如果更改夜间推送状态失败
+	// error.message请使用弹窗告知给用户
 }
 ```
 
-#### 광고 푸시 설정
+#### 设置广告推送
 
 Request:
 
@@ -633,20 +631,20 @@ GamePot.setPushADStatus(bool adPushEnable);
 Response:
 
 ```csharp
-/// 광고 푸시 상태 변경에 대한 서버 통신 성공
+/// 对于更改广告推送状态服务器通信成功
 public void onPushAdSuccess() {
 }
 
-/// 광고 푸시 상태 변경에 대한 서버 통신 실패
+/// 对于更改广告推送状态服务器通信失败
 public void onPushAdFailure(NError error) {
-	// 광고 푸시 상태 변경을 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+	// 如果更改广告推送状态失败
+	// error.message请使用弹窗告知给用户
 }
 ```
 
-#### 푸쉬 / 야간푸쉬 / 광고 상태를 한번에 설정
+#### 一并设置 推送/夜间推送/广告推送
 
-로그인 전에 푸쉬 / 야간푸쉬 / 광고푸쉬 허용 여부를 받는 게임이라면 로그인 후에 아래 코드로 필히 호출합니다.
+游戏如果在登录之前接受推送，夜间推送，广告推送时，必须要在登录之后调用以下代码。
 
 Request:
 
@@ -657,88 +655,88 @@ GamePot.setPushStatus(bool pushEnable, bool nightPushEnable, bool adPushEnable);
 Response:
 
 ```csharp
-/// 야간 푸시 상태 변경에 대한 서버 통신 성공
+/// 对于更改夜间推送状态服务器通信成功
 public void onPushStatusSuccess() {
 }
 
-/// 야간 푸시 상태 변경에 대한 서버 통신 실패
+/// 对于更改夜间推送状态服务器通信失败
 public void onPushStatusFailure(NError error) {
-	// 야간 푸시 상태 변경을 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+	// 如果更改夜间推送状态失败
+	// error.message请使用弹窗告知给用户
 }
 ```
 
-#### 푸시 상태 조회
+#### 查询推送状态
 
 ```csharp
 NPushInfo pushInfo = GamePot.getPushStatus();
-// pushInfo.enable  푸시 허용 여부
-// pushInfo.night   야간 푸시 허용 여부
-// pushInfo.ad      광고 푸시 허용 여부
+// pushInfo.enable  是否接受推送
+// pushInfo.night   是否接受夜间推送
+// pushInfo.ad      是否接受广告推送
 ```
 
-### 쿠폰
+### 优惠卷
 
-#### 쿠폰 사용
+#### 使用优惠卷
 
 Request:
 
 ```csharp
-GamePot.coupon(string couponNumber); // 쿠폰번호
+GamePot.coupon(string couponNumber); // 优惠卷号码
 ```
 
 Response:
 
 ```csharp
-/// 쿠폰 사용 성공
+/// 优惠卷使用成功
 public void onCouponSuccess() {
 }
 
-/// 쿠폰 사용 실패
+/// 优惠卷使用失败
 public void onCouponFailure(NError error) {
-	// 쿠폰 사용을 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
+	// 如果失败使用优惠卷
+	// error.message请使用弹窗告知给用户
 }
 ```
 
-### 네이버 카페 SDK
+### Naver论坛SDK
 
-네이버 카페 SDK(4.0.4)를 포함한 plugin을 사용하시면 [네이버 카페 SDK 가이드](https://github.com/naver/cafe-sdk-unity/blob/master/README.md#usages)를 참고하여 적용하시면 됩니다.
+使用包含着Naver论坛SDK(4.0.4)的plugin的话，参考[Naver论坛SDK指南](https://github.com/naver/cafe-sdk-unity/blob/master/README.md#usages)接入即可。
 
-> 네이버 카페 SDK의 용량이 큰 관계로 포함/미포함한 버전 두 가지로 제공됩니다. 필요에 따라 택일하시면 됩니다.
+> 因为Naver论坛SDK的容量大，所以有包含的Plugin以及没有包含的Plugin两个版本。按照需求来选择使用就可以。
 
-### 공지사항
+### 公告
 
 ```csharp
 GamePot.showNoticeWebView();
 ```
 
-### 고객센터
+### 客服中心
 
 ```csharp
 GamePot.showCSWebView();
 ```
 
-### 로컬 푸시(Local Push notification)
+### 本地推送(Local Push notification)
 
-푸시 서버를 통하지 않고 단말기에서 자체적으로 푸시를 노출하는 기능입니다.
+不通过推送服务器，直接在设备自行显示推送的功能。
 
-#### 호출
+#### 调用
 
-##### 푸시 등록
+##### 注册推送
 
-정해진 시간에 로컬 푸시를 노출하는 방법은 아래와 같습니다.
+在指定时间显示本地推送的方法为如下。
 
-> 리턴 값으로 전달되는 pushId는 개발사에서 관리합니다.
+> 返回所传达的pushid值由开发公司来管理。
 
 ```Java
 int pushId = GamePot.sendLocalPush(DateTime.Parse("2018-01-01 00:00:00"), "title", "content");
 ```
 
-##### 등록한 푸시 취소
+##### 取消注册推送
 
-푸시 등록시 얻은 pushId를 기반으로 기존에 등록된 푸시를 취소할 수 있습니다.
+可以根据注册推送时所获得的pushid来取消现有的推送。
 
 ```Java
-GamePot.cancelLocalPush(/*푸시 등록시 얻은 pushId*/);
+GamePot.cancelLocalPush(/*注册推送时获得的 pushId*/);
 ```

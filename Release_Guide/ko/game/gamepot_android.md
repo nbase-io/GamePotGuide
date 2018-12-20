@@ -444,6 +444,12 @@ GamePotChannel.getInstance().deleteMember(this, new GamePotCommonListener() {
 });
 ```
 
+##검증
+
+로그인 완료 후 로그인 정보를 개발사 서버에서 GAMEPOT 서버로 전달하면 로그인 검증이 진행됩니다.
+
+자세한 설명은 `Server to server api` 매뉴에 `Authentication check` 항목을 참고해주세요.
+
 # 4. 계정 연동
 
 하나의 게임 계정에 복수 개의 소셜 계정(구글, 페이스북 등)을 연결/해제할 수 있는 기능입니다.(최소 연동 소셜 계정은 1가지입니다.)
@@ -503,8 +509,6 @@ boolean isLinked = GamePotChannel.getInstance().isLinked(GamePotChannelType.GOOG
 // [{“provider”:”google”},{“provider”:”facebook”}]
 JSONArray linking = GamePotChannel.getInstance().getLinkedList();
 ```
-
-
 
 ## 연동 해제
 
@@ -611,7 +615,7 @@ public class ReferrerCatcher extends BroadcastReceiver {
             }
         }
 
-        // TODO : Adjust를 사용하는 경우에만 아래 코드 추가
+        // TODO: Adjust를 사용하는 경우에만 아래 코드 추가
         try {
             Class.forName("com.adjust.sdk.AdjustReferrerReceiver");
             Class.forName("com.google.android.gms.analytics.CampaignTrackingReceiver");
@@ -626,7 +630,7 @@ public class ReferrerCatcher extends BroadcastReceiver {
             e.printStackTrace();
         }
 
-        // TODO : Igaworks를 사용하는 경우에만 아래 코드 추가
+        // TODO: Igaworks를 사용하는 경우에만 아래 코드 추가
         try {
             Class.forName("com.igaworks.IgawReceiver");
 
@@ -802,6 +806,12 @@ import io.gamepot.common.GamePot;
 GamePot.getInstance().purchase("product id");
 ```
 
+##결제 아이템 지급
+
+GAMEPOT은 Server to server api를 통해 결제 스토어에 영수증 검증까지 모두 마친 후 개발사 서버에 지급 요청을 하기 때문에 불법 결제가 불가능합니다.
+
+이를 위해선 `Server to server api` 메뉴에 `Purchase` 항목을 참고하여 처리하셔야 합니다.
+
 # 7. 기타 API
 
 ## 네이버 카페 SDK
@@ -828,7 +838,7 @@ dependencies {
     ...
     // naver cafe [START]
     compile(name: 'gamepot-navercafe', ext: 'aar')
-    compile(name: 'cafeSdk-3.3.1', ext: 'aar')
+    compile(name: 'cafeSdk-4.0.4', ext: 'aar')
     compile 'com.navercorp.volleyextensions:volleyer:2.0.1', {
         exclude group: 'com.mcxiaoke.volley', module: 'library'
     }
@@ -896,6 +906,12 @@ GamePot.getInstance().coupon(/*사용자에게 입력받은 쿠폰*/, new GamePo
 });
 ```
 
+###아이템 지급
+
+쿠폰 사용이 성공하면 개발사 서버에 Server to server api를 통해 아이템 지급을 요청합니다.
+
+이를 위해선 `Server to server api` 메뉴에 `Item` 항목을 참고하여 처리하셔야 합니다.
+
 ## Push on/off
 
 전체푸시, 야간푸시, 광고성푸시 3가지 종류의 푸시를 각각 on/off를 처리 할 수 있습니다.
@@ -907,7 +923,7 @@ import io.gamepot.common.GamePot;
 import io.gamepot.common.GamePotError;
 import io.gamepot.common.GamePotCommonListener;
 
-// 푸쉬 수신 On/Off
+// 푸시 수신 On/Off
 GamePot.getInstance().setPushEnable(/*true or false*/, new GamePotCommonListener() {
     @Override
     public void onSuccess() {
@@ -918,7 +934,7 @@ GamePot.getInstance().setPushEnable(/*true or false*/, new GamePotCommonListener
     }
 });
 
-// 야간 푸쉬 수신 On/Off
+// 야간 푸시 수신 On/Off
 GamePot.getInstance().setNightPushEnable(/*true or false*/, new GamePotCommonListener() {
     @Override
     public void onSuccess() {
@@ -929,7 +945,7 @@ GamePot.getInstance().setNightPushEnable(/*true or false*/, new GamePotCommonLis
     }
 });
 
-// 광고 푸쉬 수신 On/Off
+// 광고 푸시 수신 On/Off
 // 광고성 푸시 설정
 GamePot.getInstance().setAdPushEnable(/*true or false*/, new GamePotCommonListener() {
     @Override
@@ -941,8 +957,8 @@ GamePot.getInstance().setAdPushEnable(/*true or false*/, new GamePotCommonListen
     }
 });
 
-// 푸쉬, 야간푸쉬, 광고푸쉬를 한번에 설정
-// 로그인 전에 푸쉬, 야간푸쉬, 광고푸쉬 허용 여부를 받는 게임이라면 로그인 후에 아래 코드로 필히 호출합니다.
+// 푸시, 야간푸시, 광고푸시를 한번에 설정
+// 로그인 전에 푸시, 야간푸시, 광고푸시 허용 여부를 받는 게임이라면 로그인 후에 아래 코드로 필히 호출합니다.
 GamePot.getInstance().setPushEnable(/*true or false*/, /*true or false*/, /*true or false*/, new GamePotCommonListener() {
     @Override
     public void onSuccess() {
@@ -1032,13 +1048,13 @@ GamePot.getInstance().cancelLocalPush(/*현재 액티비티*/, /*푸시 등록�
 GamePot.getInstance().setup(getApplicationContext(), new GamePotAppStatusListener() {
     @Override
     public void onNeedUpdate(GamePotAppStatus status) {
-        // TODO : 강제 업데이트가 필요한 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
-        // TODO : Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
+        // TODO: 강제 업데이트가 필요한 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO: Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
         GamePot.getInstance().showAppStatusPopup(MainActivity.this, status, new GamePotAppCloseListener() {
             @Override
             public void onClose() {
-                // TODO : showAppStatusPopup API를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
-                // TODO : 종료 프로세스를 처리해주세요.
+                // TODO: showAppStatusPopup API를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
+                // TODO: 종료 프로세스를 처리해주세요.
                 MainActivity.this.finish();
             }
         });
@@ -1046,13 +1062,13 @@ GamePot.getInstance().setup(getApplicationContext(), new GamePotAppStatusListene
 
     @Override
     public void onMainternance(GamePotAppStatus status) {
-        // TODO : 점검 중인 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
-        // TODO : Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
+        // TODO: 점검 중인 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO: Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
         GamePot.getInstance().showAppStatusPopup(MainActivity.this, status, new GamePotAppCloseListener() {
             @Override
             public void onClose() {
-                // TODO : showAppStatusPopup API를 호출하신 경우 앱을 종료해야 하는 상황에 호출됩니다.
-                // TODO : 종료 프로세스를 처리해주세요.
+                // TODO: showAppStatusPopup API를 호출하신 경우 앱을 종료해야 하는 상황에 호출됩니다.
+                // TODO: 종료 프로세스를 처리해주세요.
                 MainActivity.this.finish();
             }
         });
@@ -1068,13 +1084,13 @@ GamePot.getInstance().setup(getApplicationContext(), new GamePotAppStatusListene
 GamePotChannel.getInstance().login(this, GamePotChannelType.GOOGLE, new GamePotAppStatusChannelListener<GamePotUserInfo>() {
     @Override
     public void onNeedUpdate(GamePotAppStatus status) {
-        // TODO : 강제 업데이트가 필요한 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
-        // TODO : Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
+        // TODO: 강제 업데이트가 필요한 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO: Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
         GamePot.getInstance().showAppStatusPopup(MainActivity.this, status, new GamePotAppCloseListener() {
             @Override
             public void onClose() {
-                // TODO : showAppStatusPopup API를 호출하신 경우 앱을 종료해야 하는 상황에 호출됩니다.
-                // TODO : 종료 프로세스를 처리해주세요.
+                // TODO: showAppStatusPopup API를 호출하신 경우 앱을 종료해야 하는 상황에 호출됩니다.
+                // TODO: 종료 프로세스를 처리해주세요.
                 MainActivity.this.finish();
             }
         });
@@ -1082,13 +1098,13 @@ GamePotChannel.getInstance().login(this, GamePotChannelType.GOOGLE, new GamePotA
 
     @Override
     public void onMainternance(GamePotAppStatus status) {
-        // TODO : 점검 중인 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
-        // TODO : Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
+        // TODO: 점검 중인 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO: Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
         GamePot.getInstance().showAppStatusPopup(MainActivity.this, status, new GamePotAppCloseListener() {
             @Override
             public void onClose() {
-                // TODO : showAppStatusPopup API를 호출하신 경우 앱을 종료해야 하는 상황에 호출됩니다.
-                // TODO : 종료 프로세스를 처리해주세요.
+                // TODO: showAppStatusPopup API를 호출하신 경우 앱을 종료해야 하는 상황에 호출됩니다.
+                // TODO: 종료 프로세스를 처리해주세요.
                 MainActivity.this.finish();
             }
         });
