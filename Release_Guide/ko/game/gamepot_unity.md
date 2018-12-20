@@ -64,7 +64,7 @@ resValue "string", "[key]", "[value]"
 | fb_login_protocol_scheme     | 페이스북에서 발급 받은 protocol scheme  fb[app_id]           |
 | gamepot_elsa_projectid       | NCLOUD ELSA 사용시 프로젝트ID ([자세히 보기](https://www.ncloud.com/product/analytics/elsa)) |
 
-#####푸시 표시 아이콘 변경 방법
+#####노티바에 푸시 아이콘 변경 방법
 
 ![](/Users/even/Desktop/Works/01.github/GamePotGuide/Release_Guide/cn/game/images/gamepot_unity_05.png)
 
@@ -81,12 +81,6 @@ resValue "string", "[key]", "[value]"
 | res/drawable-xhdpi/   | 48x48 |
 | res/drawable-xxhdpi/  | 72x72 |
 | res/drawable-xxxhdpi/ | 96x96 |
-
-##### Firebase 적용 방법
-
-Google Firebase에서 다운로드한 `google-services.json` 파일을 `/Assets/Plugins/Android/` 경로에 복사합니다.
-
-> 구글 로그인 및 푸시를 사용하기 위해서 적용해야 합니다.
 
 #####Unity Build Settings
 
@@ -394,7 +388,7 @@ public void  onDeleteMemberFailure(NError error) {
 
 로그인 완료 후 로그인 정보를 개발사 서버에서 GAMEPOT 서버로 전달하면 로그인 검증이 진행됩니다.
 
-자세한 설명은 `Server to server api` 매뉴에 `Token Authentication` 항목을 참고해주세요.
+자세한 설명은 Server to server api 메뉴에 `Token Authentication` 항목을 참고해주세요.
 
 ## 계정 연동
 
@@ -754,7 +748,7 @@ public void onCouponFailure(NError error) {
 
 쿠폰 사용이 성공하면 개발사 서버에 Server to server api를 통해 아이템 지급을 요청합니다.
 
-이를 위해선 `Server to server api` 메뉴에 `Item Webhook` 항목을 참고하여 처리하셔야 합니다.
+이를 위해선 Server to server api 메뉴에 `Item Webhook` 항목을 참고하여 처리하셔야 합니다.
 
 ##네이버 카페 SDK
 
