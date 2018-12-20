@@ -32,7 +32,7 @@ GAMEPOT은 게임의 성장과 비례하여 비용이 증가하는 구조가 아
 
 서비스를 사용하기 위해서는 우선 프로젝트를 생성해야 합니다.
 
-![gamrpot-1-101](./images/gamrpot-1-101.PNG)
+![gamrpot-1-101](./images/gamrpot-1-101.png)
 
 ① 콘솔에서 **Game > GAMEPOT**을 선택합니다.
 
