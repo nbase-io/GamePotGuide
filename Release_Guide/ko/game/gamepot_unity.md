@@ -66,7 +66,7 @@ resValue "string", "[key]", "[value]"
 
 #####노티바에 푸시 아이콘 변경 방법
 
-![](/Users/even/Desktop/Works/01.github/GamePotGuide/Release_Guide/cn/game/images/gamepot_unity_05.png)
+![](./images/gamepot_unity_05.png)
 
 푸시 수신 시 Android Notification bar에 보여줄 Small icon은 SDK 내부에서 기본 이미지로 노출하며 직접 추가할 수도 있습니다.
 
