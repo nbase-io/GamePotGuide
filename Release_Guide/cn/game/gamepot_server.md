@@ -53,7 +53,7 @@ Request:
 
 ```web-idl
 https://{domain}?
-userId={userId}&projectId={projectId}&platform={platform}&itemId=[{itemData}, {itemData}, ...]
+userId={userId}&projectId={projectId}&platform={platform}&store={store}&userData={userData}&itemId=[{itemData}, {itemData}, ...]
 ```
 
 | Attribute | Type            | Description                                                  |
@@ -61,10 +61,12 @@ userId={userId}&projectId={projectId}&platform={platform}&itemId=[{itemData}, {i
 | userId    | String          | 用户 UID                                                     |
 | projectId | String          | ProjectID                                                    |
 | platform  | String          | 平台 Platform信息 (Android, IOS)                             |
+| store     | String          | 渠道信息(ios, google, one)                                   |
+| userData  | String          | User data                                                    |
 | itemID    | Array<itemData> | itemData Array<br /><br />- itemData(JSON) <br /> {"item_id" : String, "store_item_id" : String, "count" : Number} |
 
 ex) 
-https://{domain}?itemId=[{"item_id":"989caae1-5f70-41d9-b797","store_item_id":"item1","count":1},{"item_id":"563e8ed5-ee1f-4f7f-a3c9","store_item_id":"item2","count":2}]&platform=android&userId=dcea66-0719-418-8dcd-f638f85e4
+https://{domain}?itemId=[{"item_id":"d892ee43-d516-43c2-b16f-3ca5672e8166","store_item_id":"000","count":1},{"item_id":"989caae1-5f70-41d9-b797-2e27cc838cb0","store_item_id":"rrr","count":2}]&platform=android&projectId=f1df9464-40a8-4a66-8421-196c7c661002&store=google&userData=abcdefg&userId=25dcea66-0719-4d18-8dcd-9b7f638f85e4
 
 Response:
 

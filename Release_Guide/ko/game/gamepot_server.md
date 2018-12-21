@@ -60,7 +60,7 @@ HTTP 요청 시 정보는 아래와 같은 내용으로 전달드리고 해당 �
 
 ```web-idl
 https://{domain}?
-userId={userId}&projectId={projectId}&platform={platform}&itemId=[{itemData}, {itemData}, ...]
+userId={userId}&projectId={projectId}&platform={platform}&store={store}&userData={userData}&itemId=[{itemData}, {itemData}, ...]
 ```
 
 | Attribute | Type            | Description                                                  |
@@ -69,6 +69,7 @@ userId={userId}&projectId={projectId}&platform={platform}&itemId=[{itemData}, {i
 | projectId | String          | Project ID                                                   |
 | platform  | String          | 운영 Platform 정보 (Android, IOS)                            |
 | store     | String          | 스토어 정보(ios, google, one)                                |
+| userData  | String          | coupon api 호출 시 두 번째 파라미터에 넣은 값                |
 | itemId    | Array<itemData> | itemData Array<br /><br />- itemData(JSON) <br /> {"item_id" : String, "store_item_id" : String, "count" : Number} |
 
 > ex) 
