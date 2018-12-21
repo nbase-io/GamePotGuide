@@ -61,6 +61,7 @@ GAMEPOT SDK의 기본설정 값을 포함하고 있는 GamePotConfig-Info.plist 
 ```xml
 gamepot_project_id : GAMEPOT 프로젝트 아이디
 gamepot_elsa_projectid : GAMEPOT 로그 프로젝트 아이디(optional)
+gamepot_api_url : 게임팟 API URL
 ```
 
 
@@ -549,8 +550,9 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
 {
     BOOL nChannelResult = [[GamePotChannel getInstance] application:app openURL:url options:options];
-
-    return nChannelResult;
+    BOOL nNaverCafeResult = [[GamePotNaverCafe getInstance] application:app openURL:url options:options];
+    
+    return nChannelResult || nNaverCafeResult;
 }
 ```
 
@@ -629,7 +631,7 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 
 ### 호출
 
-```java
+```objc
 [[GamePot getInstance] showNoticeWebView:(UIViewController *)];
 ```
 
@@ -639,7 +641,7 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 
 ### 호출
 
-```java
+```objc
 [[GamePot getInstance] showHelpWebView:(UIViewController *)];
 ```
 
@@ -655,7 +657,7 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 
 > 리턴 값으로 전달되는 pushid는 개발사에서 관리합니다.
 
-```objective-c
+```objc
  NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
  [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
         
@@ -668,7 +670,7 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 
 푸시 등록 시 얻은 pushid를 기반으로 기존에 등록된 푸시를 취소할 수 있습니다.
 
-```objective-c
+```objc
 [[GamePot getInstance] cancelLocalPush:(int)pushId];
 ```
 
@@ -682,7 +684,7 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 
 #### 1. setup API
 
-```java
+```objc
 [[GamePot getInstance] setupWithAppStatus:^(GamePotAppStatus *status) {
         NSLog(@"Update : %@", [status toString]);
 	    // TODO : 강제 업데이트가 필요한 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
@@ -707,4 +709,3 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 ## 8. 다운로드
 
 GAMEPOT 대시보드의 **SDK 다운로드** 메뉴에서 SDK를 다운로드할 수 있습니다.
-

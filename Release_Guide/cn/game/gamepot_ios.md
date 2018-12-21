@@ -3,66 +3,61 @@ search:
   keyword: ['gamepot']
 ---
 
+## 1. 入门
 
+#### Step 1. 配置开发环境
 
-## 1. 시작하기
+为了开发 IOS APP 首先需要安装开发工具（XCode）。
 
-#### Step 1. 개발환경 구성
+在 IOS 使用 GamePot 所需要的系统环境为如下。
 
-IOS용 애플리케이션 개발을 위해서는 개발툴 (XCode)을 설치해야 합니다.
-
-IOS에서 GAMEPOT을 사용하기 위한 시스템 환경은 다음과 같습니다.
-
-[ 시스템 환경 ]
+[ 系统环境 ]
 
 - 최소사항 : IOS 9.0 이상
 - 개발 환경 : XCode
 
-#### Step 2. Freamwork 추가
+#### Step 2. 添加 Freamwork
 
 ![gamepot-1-301](./images/gamepot-1-301.png)
 
-다운로드한 iOS SDK 파일을 Xcode 프로젝트 폴더 타겟에 드래그 하여 추가합니다.
+通过拖动将下载的 IOS SDK 文件添加到 Xcode 项目文件夹目标中。
 
-#### Step 3. Dependencies 추가
+#### Step 3. 添加 Dependencies
 
-이용하고자 하는 서비스에 따라 필수 Dependencies 목록이 다릅니다.
+依照使用的功能，所需要的 Dependencies 列表有差异
 
-해당 표를 참고하시어 Dependencies를 추가합니다.
+请参考下列表格添加所需要的 Dependencies
 
-서비스 별 Dependencies
+功能别 Dependencies
 
-| Service       | Framework                                                    | Dependencies                                                 | bundle                                            |
-| ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------- |
-| 기본(Base)    | AFNetworking.framework<br />FirebaseAnalytics.framework<br />FirebaseCore.framework<br />FirebaseCoreDiagnostics.framework<br />FirebaseInstanceID.framework<br />FirebaseMessaging.framework<br />FirebaseNanoPB.framework<br />GamePot.framework<br />GoogleToolboxForMac.framework<br />nanopb.framework<br />Protobuf.framework<br /> | libz.tbd<br />WebKit.framework<br />UserNotifications.framework<br /> | GamePot.bundle<br />                              |
-| 로그인(Login) | [ Base ]<br />GamePotChannel.framework<br /><br />[ Google Sign In ]<br />GamePotGoogleSignIn.framework<br/>GoogleSignIn.framework<br />GTMOAuth2.framework<br />GTMSessionFetcher.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework<br />FBSDKLoginKit.framework<br />GamePotFacebook.framework<br /> | [ Google Sign In ]<br />SafariServices.framework<br />[ Facebook ]<br />SafariServices.framework<br /> | [ Google Sign In ]<br />GoogleSignIn.bundle<br /> |
-| 광고(AD)      | [ Base ]<br />GamePotAd.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework<br/>GamePotAdFacebook.framework<br /><br />[ Adbirx ]<br />AdBrix.framework<br />GamePotAdAdbrix.framework<br />IgaworksCore.framework<br /><br />[ Adjust ] <br />AdjustSdk.framework<br />GamePotAdAdjust.framework<br /> | [ Facebook ]<br /><br />[ Adbrix ]<br />MessageUI.framework<br />libxml2.tbd<br />iAd.framework<br />CoreTelephony.framework<br />UIKit.framework<br />CoreGraphics.framework<br />CoreText.framework<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br /><br />[ Adjust ] <br />AdSupport.framework<br /> |                                                   |
-| GameCenter    | GamePotGameCenter.framework                                  |                                                              |                                                   |
-| NaverCafe     | AFNetworking.framework<br/>GamePotNavarCafe.framework<br />NaverCafeSDK.framework<br /> | AVKit.framework<br />AVFoundation.framework<br />MediaPlayer.framework<br />CoreMedia.framework<br />AssetsLibrary.framework<br />ImageIO.framework<br />QuartzCore.framework<br />ReplayKit.framework(Optional로 설정)<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br />WebKit.framework<br />libNaverLogin.a<br/>NaverThirdPartyConstantsForApp.h<br />NaverThirdPartyLoginConnection.h<br />NLoginThirdPartyOAuth20InAppBrowserViewController.h<br />NLoginThirdPartyOAuth20InAppBrowserViewController.m<br /> | NaverAuth.bundle<br/>NaverCafeSDK.bundle<br />    |
-|               |                                                              |                                                              |                                                   |
+| Service     | Framework                                                                                                                                                                                                                                                                                                                                 | Dependencies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | bundle                                            |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
+| 基本(Base)  | AFNetworking.framework<br />FirebaseAnalytics.framework<br />FirebaseCore.framework<br />FirebaseCoreDiagnostics.framework<br />FirebaseInstanceID.framework<br />FirebaseMessaging.framework<br />FirebaseNanoPB.framework<br />GamePot.framework<br />GoogleToolboxForMac.framework<br />nanopb.framework<br />Protobuf.framework<br /> | libz.tbd<br />WebKit.framework<br />UserNotifications.framework<br />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | GamePot.bundle<br />                              |
+| 登录(Login) | [ Base ]<br />GamePotChannel.framework<br /><br />[ Google Sign In ]<br />GamePotGoogleSignIn.framework<br/>GoogleSignIn.framework<br />GTMOAuth2.framework<br />GTMSessionFetcher.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework<br />FBSDKLoginKit.framework<br />GamePotFacebook.framework<br />    | [ Google Sign In ]<br />SafariServices.framework<br />[ Facebook ]<br />SafariServices.framework<br />                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [ Google Sign In ]<br />GoogleSignIn.bundle<br /> |
+| 广告(AD)    | [ Base ]<br />GamePotAd.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework<br/>GamePotAdFacebook.framework<br /><br />[ Adbirx ]<br />AdBrix.framework<br />GamePotAdAdbrix.framework<br />IgaworksCore.framework<br /><br />[ Adjust ] <br />AdjustSdk.framework<br />GamePotAdAdjust.framework<br />     | [ Facebook ]<br /><br />[ Adbrix ]<br />MessageUI.framework<br />libxml2.tbd<br />iAd.framework<br />CoreTelephony.framework<br />UIKit.framework<br />CoreGraphics.framework<br />CoreText.framework<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br /><br />[ Adjust ] <br />AdSupport.framework<br />                                                                                                                                                                                                           |                                                   |
+| GameCenter  | GamePotGameCenter.framework                                                                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                   |
+| NaverCafe   | AFNetworking.framework<br/>GamePotNavarCafe.framework<br />NaverCafeSDK.framework<br />                                                                                                                                                                                                                                                   | AVKit.framework<br />AVFoundation.framework<br />MediaPlayer.framework<br />CoreMedia.framework<br />AssetsLibrary.framework<br />ImageIO.framework<br />QuartzCore.framework<br />ReplayKit.framework(Optional로 설정)<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br />WebKit.framework<br />libNaverLogin.a<br/>NaverThirdPartyConstantsForApp.h<br />NaverThirdPartyLoginConnection.h<br />NLoginThirdPartyOAuth20InAppBrowserViewController.h<br />NLoginThirdPartyOAuth20InAppBrowserViewController.m<br /> | NaverAuth.bundle<br/>NaverCafeSDK.bundle<br />    |
+|             |                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                   |
+
 ![gamepot-1-301](./images/gamepot-1-302.png)
 
-#### Step 4. Bundle Resource 추가
+#### Step 4. 添加 Bundle Resource
 
-이용하고자 하는 서비스에 따라 Bundle Resource 파일을 추가해야 합니다.
+根据所要使用的功能，需要添加 Bundle Resource 文件。
 
-서비스 별 Dependencies 표를 참고하여 Bundle Resource 파일을 추가합니다.
+参考功能别 Dependencies 表格，添加 Bundle Resource 文件。
 
 ![gamepot-1-302](./images/gamepot-1-303.png)
 
-#### Step 5. InfoPlist 추가
+#### Step 5. 添加 InfoPlist
 
 ![gamepot-1-303](./images/gamepot-1-304.png)
 
-GAMEPOT SDK는 기본적으로 Google Firebase를 사용합니다. 따라서 Google Firebase를 설정하여 생성된
+基本上 GamePot SDK 使用 Google Firebase。所以需要在项目添加设置 Google Firebase 后生成的 GoogleService-Info.plist。
 
-GoogleService-Info.plist를 프로젝트에 추가합니다.
+也需要添加包含着 GamePot SDK 的默认设置值的 GamePotConfig-Info.plist 文件。
 
-GAMEPOT SDK의 기본설정 값을 포함하고 있는 GamePotConfig-Info.plist 파일도 추가합니다.
-
-GamePotConfig-Info.plist 파일이 없다면 동일한 파일명으로 생성 후 해당 키에 해당하는 값을 넣습니다.
-
-**GamePotConfig-Info.plist 설정**
+**GamePotConfig-Info.plist 设置**
 
 ![gamepot-1-303](./images/gamepot-1-305.png)
 
@@ -72,51 +67,49 @@ gamepot_elsa_projectid : GAMEPOT 로그 프로젝트 아이디 (optional)
 gamepot_api_url : 게임팟 API URL
 ```
 
+#### Step 6. 添加 Build 选项
 
-
-#### Step 6. 빌드 옵션 추가
-
-Build Settings -> Linking -> Other Linker Flags 섹션에 -ObjC 옵션을 추가합니다.
+Build Settings -> Linking -> Other Linker Flags 部分 添加-ObjC 选项。
 
 ![gamepot-1-304](./images/gamepot-1-306.png)
 
-#### Step 7. Google Sign In 로그인 환경 설정
+#### Step 7. Google Sign In 登录环境设置
 
-서비스 별 Dependencies 표의 Login >> Google Sign In을 참고하여 Framework 및 Dependencies를 추가합니다.
+参考功能别 Dependencies 表格中的 Login >> Google Sign In。添加 Framework 和 Dependencies。
 
-GoogleService-Info.plist 파일의 REVERSED_CLIENT_ID 값을 복사하여 Info >> URL Types에 항목을 추가하여  URL Schemes에 값을 넣습니다.
+复制 GoogleService-Info.plist 文件的 REVERSED_CLIENT_ID 的值之后，在 Info >> URL Types 新加一个项目，然后在 URL Schemes 粘贴相关值。
 
 ![gamepot-1-305](./images/gamepot-1-307.png)
 
-**GamePotConfig-Info.plist 설정**
+**GamePotConfig-Info.plist 设置**
 
 ![gamepot-1-306](./images/gamepot-1-305.png)
 
 ```xml
-gamepot_google_app_id : GoogleService-Info.plist 파일의 CLIENT_ID 값
-gamepot_google_url_schemes : GoogleService-Info.plist 파일의 REVERSED_CLIENT_ID 값
+gamepot_google_app_id : GoogleService-Info.plist 文件的 CLIENT_ID 值
+gamepot_google_url_schemes : GoogleService-Info.plist 文件的 REVERSED_CLIENT_ID 值
 ```
 
+#### Step 8. Facebook 登录环境设置
 
+参考功能别 Dependencies 表格的 Login >> Facebook。添加 Framework 和 Dependencies。
 
-#### Step 8. Facebook 로그인 환경 설정
-
-서비스 별 Dependencies 표의 Login >> Facebook을 참고하여 Framework 및 Dependencies를 추가합니다.
-
-Facebook App ID를 Info >> URL Types에  fb+Facebook App ID 형태로 추가합니다.
+将 Facebook App ID 添加到 Info >> URL Types 中，添加格式为 fb+Facebook App ID。
 
 ![gamepot-1-307](./images/gamepot-1-307.png)
 
-Info >> iOS Target Property 의 LSApplicationQueriesSchemes에 아래 항목을 추가합니다.
+Info >> iOS Target Property 的 LSApplicationQueriesSchemes 中添加以下项目。
 
+```xml
 fbapi
 fb-messenger-share-api
 fbauth2
 fbshareextension
+```
 
 ![gamepot-1-308](./images/gamepot-1-308.png)
 
-**GamePotConfig-Info.plist 설정**
+**GamePotConfig-Info.plist 设置**
 
 ![gamepot-1-309](./images/gamepot-1-305.png)
 
@@ -125,9 +118,9 @@ gamepot_facebook_app_id : Facebook App ID
 gamepot_facebook_display_name : Facebook display name
 ```
 
-## 2. 초기화
+## 2. 初始化
 
-AppDelegate 파일에 아래 부분을 추가합니다.
+AppDelegate 文件里加上以下内容。
 
 ```objective-c
 #import <GamePot/GamePot.h>
@@ -178,11 +171,9 @@ AppDelegate 파일에 아래 부분을 추가합니다.
 }
 ```
 
+## 3. 登录/退出/注销
 
-
-## 3. 로그인 / 로그아웃 / 회원 탈퇴
-
-구글 / 페이스북 / 네이버 등의 여러가지 다양한 로그인 SDK를 통합하여 사용하실 수 있습니다.
+Google/Facebook/Naver 等各种登录 SDK 可以集成使用。
 
 #### Step 1. 설정
 
@@ -190,25 +181,25 @@ AppDelegate 파일에 아래 부분을 추가합니다.
 // AppDelegate.m
 #import <GamePotChannel/GamePotChannel.h>
 
-// Google Login 사용 시
+// 使用Google Login的时候
 #import <GamePotGoogleSignIn/GamePotGoogleSignIn.h>
 
-// Facebook Login 사용 시
+// 使用Facebook Login的时候
 #import <GamePotFacebook/GamePotFacebook.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     ...
-    // GamePotSDK 채널 초기화 사용하려는 채널별로 addChannel을 사용해야만 하며,
-    // Guest 방식은 기본으로 포함됩니다.
-    // Google Login 초기화
+    // GamePotSDK频道初始化，必须要对于所使用的频道别使用 addChannel才可以。
+    // Guest方式默认包含
+    // Google Login初始化
     GamePotChannelInterface* google     = [[GamePotGoogleSignIn alloc] init];
     [[GamePotChannelManager getInstance] addChannelWithType:GOOGLE interface:google];
 
-    // Facebook 로그인 초기화
+    // Facebook登录初始化
     GamePotChannelInterface* facebook   = [[GamePotFacebook alloc] init];
     [[GamePotChannelManager getInstance] addChannelWithType:FACEBOOK interface:facebook];
 
-    // 로그인 처리를 위해 필요합니다.
+    // 处理登录所需要。
     [[GamePotChannel getInstance] application:application didFinishLaunchingWithOptions:launchOptions];
 
     ...
@@ -216,165 +207,163 @@ AppDelegate 파일에 아래 부분을 추가합니다.
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
 {
-    // 로그인 처리를 위해 필요합니다.
+    // 处理登录所需要。
     BOOL nChannelResult = [[GamePotChannel getInstance] application:app openURL:url options:options];
     return nChannelResult;
 }
 ```
 
-#### Step 2. 로그인
+#### Step 2. 登录
 
-로그인 버튼 클릭 시에 연동합니다.
+点击登录按钮的时候调用
 
 ```objective-c
 #import <GamePotChannel/GamePotChannel.h>
-// 로그인 타입 정의
+// 定义登录类型
 // GamePotChannelType.GOOGLE
 // GamePotChannelType.FACEBOOK
 // GamePotChannelType.GUEST
 
-// 구글 로그인 버튼 클릭 시에 호출
+// 点击Google登录按钮的时候调用
 [[GamePotChannel getInstance] Login:GOOGLE viewController:self success:^(GamePotUserInfo* userInfo) {
-    // 로그인 완료
+    // 登录完成
 } cancel:^{
-    // 로그인 시도 중 유저가 취소 하였을 때
+    // 登录过程中用户取消登录
 } fail:^(NSError *error) {
-    // 로그인 중 오류 발생
-    // TODO : 게임 팝업으로 실패 원인에 대한 문구를 노출시켜 주세요.
-    // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
+    // 登录过程中出现错误
+    // TODO : 使用游戏内弹窗提示失败原因。
+    // TODO : 提示请使用[error localizedDescription]
+
 }];
 
 ```
 
-#### Step 3. 자동 로그인
+#### Step 3. 自动登录
 
-GAMEPOT은 자동 로그인을 지원합니다.
+GamePot 支持自动登录
 
 ```objective-c
 #import <GamePotChannel/GamePotChannel.h>
 
-// 마지막 로그인된 정보를 가져와서 해당 정보로 자동로그인이 될 수 있도록 호출합니다.
-// lastLoginType : 마지막 로그인 값을 가져올 수 있습니다.
+// 获取最终登录过的信息，根据此内容尝试自动登录
+// lastLoginType : 可以获取最后登录的值
 GamePotChannelType type = [[GamePotChannel getInstance] lastLoginType];
 
 if(type != NONE)
 {
-    // 마지막에 로그인 했던 로그인 타입으로 로그인 하는 방식입니다.
-    // 자동 로그인 처리시 아래와 같이 호출해주시면 됩니다.
+    // 使用最后登录的登录类型登录的方式
+    // 处理自动登录时，请调用为如下。
     [[GamePotChannel getInstance] Login:type viewController:self success:^(GamePotUserInfo* userInfo) {
 
     } cancel:^{
 
     } fail:^(NSError *error) {
-        // TODO : 게임 팝업으로 실패 원인에 대한 문구를 노출시켜 주세요.
-        // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
+        // TODO : 使用游戏内弹窗提示失败原因
+        // TODO : 提示内容请使用[error localizedDescription]
+
     }];
 }
 else
 {
-	// 마지막 로그인 된 정보가 없음. 로그인 버튼이 있는 로그인 화면으로 이동
+    // 没有最后登录的信息。自动移动至有登录按钮的界面。
 }
 ```
 
+#### Step 4. 退出
 
-
-#### Step 4. 로그아웃
-
-현재 회원 계정을 로그아웃 시킵니다.
+退出目前所登录的账号.
 
 ```objective-c
 #import <GamePotChannel/GamePotChannel.h>
 
 [[GamePotChannel getInstance] LogoutWithSuccess:^{
-	// 로그아웃 완료 후에는 초기화면으로 이동합니다.
+	//退出完成之后移动至最初界面
 } fail:^(NSError *error) {
-    // 로그아웃 실패 오류 메시지를 보여줍니다.
-    // TODO : 게임 팝업으로 실패 원인에 대한 문구를 노출시켜 주세요.
-    // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
+    // 退出失败
+    // TODO : 请使用游戏内提示窗提示失败原因。
+    // TODO : 提示内容请使用[error localizedDescription]
 }];
 ```
 
+#### Step 5. 注销
 
-
-#### Step 5. 회원탈퇴
-
-현재 회원 계정을 탈퇴 시킵니다.
+注销目前登录的账号
 
 ```objective-c
 #import <GamePotChannel/GamePotChannel.h>
 
 [[GamePotChannel getInstance] DeleteMemberWithSuccess:^{
-	// 회원 탈퇴 성공 로그인 화면으로 이동
+	// 账号注销成功，移动至登录界面
 } fail:^(NSError *error) {
-    // 회원 탈퇴 실패
-    // TODO : 게임 팝업으로 실패 원인에 대한 문구를 노출시켜 주세요.
-    // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
+    // 账号注销失败
+    // TODO : 请使用游戏内提示窗提示失败原因。
+    // TODO : 提示内容请使用[error localizedDescription]
 }];
 
 ```
 
-## 4. 계정연동
+## 4. 账号绑定
 
-하나의 게임 계정에 복수 개의 소셜계정(구글/페이스북 등)을 연결/해제 할 수 있는 기능입니다. (최소 연동 소셜계정은 1가지입니다.)
+一个游戏账号可以绑定/解除多个社交账户（Google/FaceBook 等）的功能。（至少可以绑定一个社交账户）
 
-게임내에서 연동화면 UI를 구현하시고, 연동버튼을 누를때 아래 코드를 호출해 주세요.
+游戏内需要开发相关绑定界面。在游戏界面用户点击绑定的时候调用以下代码。
 
-#### Step 1. 계정연동
+#### Step 1. 账号绑定
 
-Google / Facebook 등의 아이디로 계정을 연동 하실 수 있습니다.
+可以使用 Google / Facebook 等账号绑定账号。
 
 ```objective-c
 #import <GamePotChannel/GamePotChannel.h>
 
-// 타입 정의
+// 定义类型
 // GamePotChannelType.GOOGLE
 // GamePotChannelType.FACEBOOK
 [[GamePotChannel getInstance] CreateLinking:GOOGLE viewController:self success:^(GamePotUserInfo *userInfo) {
-	// TODO : 연동 완료. 게임 팝업으로 연동 결과에 대한 문구를 노출시켜 주세요. (ex. 계정 연동에 성공했습니다.)
+	// TODO : 绑定完成。使用游戏内的弹窗提示绑定完成结果。 (ex. 계정 연동에 성공했습니다.)
 } cancel:^{
-	// TODO : 사용자가 취소한 경우
+	// TODO : 用户取消
 } fail:^(NSError *error) {
-    // TODO : 연동 실패. 게임 팝업으로 연동 실패 원인에 대한 문구를 노출시켜 주세요.
-    // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
+    // TODO : 绑定失败。使用游戏内的弹窗提示绑定失败原因。
+    // TODO : 提示内容请使用[error localizedDescription]。
 }];
 
 ```
 
-#### Step 2. 연동된 리스트
+#### Step 2. 被绑定的列表
 
-해당 API를 통해 계정에 대해 연동 여부를 체크 하실 수 있습니다.
+通过此 API 可以确认绑定状态
 
 ```objective-c
 #import <GamePotChannel/GamePotChannel.h>
 
-// 타입 정의
+// 定义类型
 // GamePotChannelType.GOOGLE
 // GamePotChannelType.FACEBOOK
-// 타입에 따른 연동 결과를 리턴합니다.
+// 返回定义类型的绑定结果
 BOOL isGoogleLinked = [[GamePotChannel getInstance] isLinked:GOOGLE];
 
-// 연동되어 있는 타입에 대해 JsonString 형태로 리턴합니다.
+// 对绑定的类型以JsonString返回。
 NSString* linkedList = [[GamePotChannel getInstance] getLinkedListJsonString];
 ```
 
-#### Step 3. 연동 해제
+#### Step 3. 解除绑定
 
-기존에 연동 되어 있는 계정을 해제합니다.
+解除目前已绑定的账号
 
 ```objective-c
 #import <GamePotChannel/GamePotChannel.h>
 
 [[GamePotChannel getInstance] DeleteLinking:GOOGLE success:^{
-     // TODO : 해제 완료. 게임 팝업으로 연동 결과에 대한 문구를 노출시켜 주세요. (ex. 계정 연동을 해제했습니다.)
+     // TODO : 解绑完成。使用游戏内弹窗提示解绑完成结果。 (ex. 계정 연동을 해제했습니다.)
 } fail:^(NSError *error) {
-     // TODO : 해제 실패. 게임 팝업으로 해지 실패 원인에 대한 문구를 노출시켜 주세요.
-     // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
+     // TODO : 解绑失败。使用游戏内弹窗提示解绑失败原因。
+     // TODO : 提示请使用[error localizedDescription]
 }];
 ```
 
-## 5. 광고플랫폼
+## 5. 广告平台
 
-Facebook / Adjust / Adbrix  등의 여러가지 다양한 광고 플랫폼 SDK를 통합하여 사용하실 수 있습니다.
+Facebook / Adjust / Adbrix 等各种广告平台的 SDK 可以集成使用。
 
 #### Step 1. 설정
 
@@ -382,85 +371,83 @@ Facebook / Adjust / Adbrix  등의 여러가지 다양한 광고 플랫폼 SDK�
 // AppDelegate.m
 
 #import <GamePotAd/GamePotAd.h>
-// Facebook 광고 플랫폼 사용 시
+// 使用Facebook 广告平台时
 #import <GamePotAdFacebook/GamePotAdFacebook.h>
-// Adjust 광고 플랫폼 사용 시
+// 使用Adjust 广告平台时
 #import <GamePotAdAdjust/GamePotAdAdjust.h>
-// Adbrix 광고 플랫폼 사용 시
+// 使用Adbrix 广告平台时
 #import <GamePotAdAdbrix/GamePotAdAdbrix.h>
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     ...
-    // Facebook 광고 플랫폼 초기화
-    GamePotAdInterface* adFacebook    = [[GamePotAdFacebook alloc] init];
+    // Facebook 广告平台初始化
+    GamePotAdInterface* adFacebook = [[GamePotAdFacebook alloc] init];
     [[GamePotAd getInstance] addAds:adFacebook];
 
-    // Adjust 광고 플랫폼 초기화
-    GamePotAdInterface* adAdjust      = [[GamePotAdAdjust alloc] init];
+    // Adjust 广告平台初始化
+    GamePotAdInterface* adAdjust = [[GamePotAdAdjust alloc] init];
     [[GamePotAd getInstance] addAds:adAdjust];
 
-    // Adbrix 광고 플랫폼 초기화
-    GamePotAdInterface* adAdbrix      = [[GamePotAdAdbrix alloc] init];
+    // Adbrix 广告平台初始化
+    GamePotAdInterface* adAdbrix = [[GamePotAdAdbrix alloc] init];
 	[[GamePotAd getInstance] addAds:adAdbrix];
 	...
 }
 ```
 
-#### Step 2. Facebook 광고 플랫폼 사용 시
+#### Step 2. 使用 Facebook 广告平台的时候
 
-위의 초기화 하는 부분을 제외한 특별한 추가 작업은 없습니다.
+除了上面初始化部分之外没有其他追加工作。
 
-#### Step 3. Adbrix 광고 플랫폼 사용 시
+#### Step 3. 使用 Adbrix 广告平台的时候
 
-GamePotConfig-Info.plist에 Adbrix 키 값을 넣습니다.
+在 GamePotConfig-Info.plist 放入 Adbrix 的 key 值
 
 ![gamepot-1-310](./images/gamepot-1-305.png)
 
-```
-gamepot_adbrix_appid : Adbrix 앱 ID
+```xml
+gamepot_adbrix_appid : Adbrix App ID
 gamepot_adbrix_hashkey : Adbrix Hash Key
 ```
 
-#### Step 4. EventTracking 전달
+#### Step 4. EventTracking 传达
 
-Event Tracking은 아래와 같이 경우에 따라 호출 하는 코드가 다릅니다.
+Event Tracking 如下一样按照情况下所调用的代码会不同
 
-하기 코드 참고하여 호출 해주세요.
+请参考下面代码之后调用.
 
 ```objective-c
 #import <GamePotAd/GamePotAd.h>
 
-// 일반
+// 一般情况
 TrackerEvent* event = [[TrackerEvent alloc] init];
 [event setEvent:@"test"];
-// [event setAdjustKey:@"3m586u"]; // Adjust 사용 시 해당 코드로 값을 전달해주세요.
+// [event setAdjustKey:@"3m586u"]; // 使用Adjust的化请传达相关值
 [[GamePotAd getInstance] tracking:EVENT obj:event];
 
-// 레벨 업 시
+// 角色升级的时候
 TrackerLevel* level = [[TrackerLevel alloc] init];
 [level setLevel:@"12"];
-// [level setAdjustKey:@"x7en7q"]; // Adjust 사용 시 해당 코드로 값을 전달해주세요.
+// [level setAdjustKey:@"x7en7q"]; // 使用Adjust的化请传达相关值
 [[GamePotAd getInstance] tracking:LEVEL obj:level];
 
-// 튜토리얼 완료 시
+// 完成新手教程的时候
 TrackerTutorial* tutorialEvent = [[TrackerTutorial alloc] init];
 [tutorialEvent setContentData:@"튜토리얼 완료"];
 [tutorialEvent setContentId:@"1"];
 [tutorialEvent setSuccess:YES];
-// [tutorialEvent setAdjustKey:@"byoplo"]; // Adjust 사용 시 해당 코드로 값을 전달해주세요.
+// [tutorialEvent setAdjustKey:@"byoplo"]; // 使用Adjust的化请传达相关值
 [[GamePotAd getInstance] tracking:TUTORIAL_COMPLETE obj:tutorialEvent];
 
 ```
 
 #### Step 5. Deep Link
 
-Inpo.plist >> URL types 항목에 URL Schemes를 추가합니다.
+Info.plist >> URL types 项目里请添加 URL Schemes
 
 ![gamepot-1-311](./images/gamepot-1-307.png)
 
-
-
-AppDelegate.m 파일 내에 아래와 같이 추가합니다.
+AppDelegate.m 文件里请添加为如下
 
 ```objective-c
 
@@ -470,20 +457,18 @@ AppDelegate.m 파일 내에 아래와 같이 추가합니다.
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
 {
     ...
-    // DeepLinking 사용 시 추가
+    // 使用DeepLinking的时候加上
     [[GamePotAd getInstance] application:app openURL:url options:options];
 	...
 }
 
 ```
 
+## 6. 支付
 
+#### Step 1. 设置
 
-## 6. 결제
-
-#### Step 1. 설정
-
-결제의 결과 값은 Delegate 형태로 구현되어 있습니다. 따라서 아래와 같이 Delegate를 추가 해주세요.
+支付的结果值以 Delegate 格式使用。所以请把 Delegate 添加为如下。
 
 ```objective-c
 #import <GamePot/GamePot.h>
@@ -501,58 +486,53 @@ AppDelegate.m 파일 내에 아래와 같이 추가합니다.
 
 - (void)GamePotPurchaseSuccess:(GamePotPurchaseInfo *)_info
 {
-    // 결제 성공
+    // 支付成功
 
-    // 광고 플랫폼에 결제 이벤트를 던져주기 위한 코드로 광고를 사용한다면 꼭! 삽입해 주세요.
+    //如果您使用广告作为代码在广告平台上投放付款活动，请务必！请插入它。
     [[GamePotAd getInstance] tracking:BILLING obj:_info];
 }
 
 - (void)GamePotPurchaseFail:(NSError *)_error
 {
-    // 결제 오류
-    // TODO : 게임 팝업으로 실패 원인에 대한 문구를 노출시켜 주세요.
-    // TODO : 문구는 [error localizedDescription]를 사용해 주세요.
+    // 支付错误
+    // TODO : 使用游戏内弹窗提示失败原因。
+    // TODO : 提示请使用[error localizedDescription]
 }
 
 - (void)GamePotPurchaseCancel
 {
-    // 결제 시동 중 취소
-    // 결제가 취소 되었습니다. 라는 문구를 게임팝업으로 노출합니다.
+    // 尝试支付中取消
+    // 결제가 취소 되었습니다. 支付取消的韩文提示请使用游戏内弹窗提示给用户。
 }
 @end
 ```
 
-
-
-#### Step 2. 결제 시도
+#### Step 2. 尝试支付
 
 ```objective-c
 #import <GamePot/GamePot.h>
 
-// productid는 스토어에 등록된 상품 ID를 입력해주시면 됩니다.
+// productid使用各个渠道的商品ID
 [[GamePot getInstance] purchase:productid];
 ```
 
-## 7. 기타 API
+## 7. 其他 API
 
-#### 네이버 카페 SDK
+#### Naver 论坛 SDK
 
-해당 기능을 사용하려면 네이버 카페 SDK와 선행해서 연동에 필요한 값을 획득해야 합니다.
-
-GamePotConfig-Info.plist 파일에 사용에 필요 한 값을 추가해주세요.
+为了使用此功能，首先需要对接所需要的 Naver 论坛 SDK 相关值。
+GamePotConfig-Info.plist 文件里请添加所需要的值.
 
 ![gamepot-1-312](./images/gamepot-1-305.png)
 
 ```objective-c
-gamepot_naver_cafeid // 네이버 카페 아이디
-gamepot_naver_clientid // 네이버에서 사용할 client 아이디
-gamepot_naver_secretid // 네이버에서 사용할 secret 아이디
-gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
+gamepot_naver_cafeid // Naver论坛ID
+gamepot_naver_clientid // 使用naver账号登录时所使用的client ID
+gamepot_naver_secretid // 使用naver账号登录时所使用的secret ID
+gamepot_naver_urlscheme // 使用naver账号登录时所使用的urlscheme
 ```
 
-
-
-서비스 별 Dependencies 항목의 Naver Cafe 항목을 참고하여 Framework 및 Dependencies를 추가합니다.
+参考功能别 Dependencies 表格中的 Naver Café 项目。添加 Framework 和 Dependencies。
 
 ```objective-c
 // AppDelegate.m
@@ -560,7 +540,7 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     ...
-    // 네이버 카페 초기화
+    // Naver论坛初始化
     [[GamePotNaverCafe getInstance] setup];
     ...
 }
@@ -569,12 +549,12 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 {
     BOOL nChannelResult = [[GamePotChannel getInstance] application:app openURL:url options:options];
     BOOL nNaverCafeResult = [[GamePotNaverCafe getInstance] application:app openURL:url options:options];
-    
+
     return nChannelResult || nNaverCafeResult;
 }
 ```
 
-네이버 카페 SDK는 아래와 같이 호출합니다.
+以下形式调用 Naver 论坛 SDK
 
 ```objective-c
 #import <GamePotNavarCafe/GamePotNavarCafe.h>
@@ -582,7 +562,7 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 [[GamePotNaverCafe getInstance] start:self];
 ```
 
-로그인에 성공 후, 아래 코드를 추가하면 네이버 카페 관리자 메뉴에서 회원을 식별할 수 있습니다.
+登录成功后，加上下面代码的化，可以在 Naver 论坛的管理员菜单识别用户。
 
 ```objective-c
 #import <GamePotNavarCafe/GamePotNavarCafe.h>
@@ -595,15 +575,15 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 ```objective-c
 #import <GamePot/GamePot.h>
 
-[[GamePot getInstance] coupon:/*사용자에게 입력받은 쿠폰*/ handler:^(BOOL _success, NSError *_error) {
+[[GamePot getInstance] coupon:/*用户所输入的兑换码*/ handler:^(BOOL _success, NSError *_error) {
     if(_success)
     {
-        // TODO : message에 쿠폰 사용에 대한 결과가 리턴됩니다. 게임 팝업에 이 메시지를 노출해 주세요.
+        // TODO : 通过message返回兑换码使用结果。请使用游戏内弹窗提示相关内容。
     }
     else
     {
-        // TODO : _error에 쿠폰 사용 실패 원인에 대한 정보가 리턴됩니다.
-        // [_error localizedDescription]의 내용을 게임 팝업으로 노출해 주세요.
+        // TODO : _error返回兑换码使用失败的原因。
+        // [_error localizedDescription]的内容请用游戏内弹窗提示给用户。
     }
 }];
 ```
@@ -613,29 +593,29 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 ```objective-c
 #import <GamePot/GamePot.h>
 
-// 푸쉬 수신 On / Off
+// 开关推送 On / Off
 [[GamePot getInstance] setPushEnable:YES success:^{
 
 } fail:^(NSError *error) {
 
 }];
 
-// 야간 푸쉬 수신 On / Off
+// 开关夜间推送 On / Off
 [[GamePot getInstance] setNightPushEnable:YES success:^{
 
 } fail:^(NSError *error) {
 
 }];
 
-// 광고 푸쉬 수신 On / Off
+// 开关广告推送 On / Off
 [[GamePot getInstance] setAdPushEnable:YES success:^{
 
 } fail:^(NSError *error) {
 
 }];
 
-// 푸쉬 / 야간푸쉬 / 광고푸쉬를 한번에 설정
-// 로그인 전에 푸쉬 / 야간푸쉬 / 광고푸쉬 허용 여부를 받는 게임이라면 로그인 후에 아래 코드로 필히 호출합니다.
+// 推送 / 夜间推送 / 广告推送 一并设置
+// 如果游戏在登录前收到推/夜推/广告推送，则必须在登录后使用以下代码进行调用。
 [[GamePot getInstance] setPushStatus:YES night:YES ad:YES success:^{
     <#code#>
 } fail:^(NSError *error) {
@@ -643,9 +623,6 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 }];
 ```
 
+## 8. 下载
 
-
-## 8. 다운로드
-
-GAMEPOT 대시보드 > SDK 다운로드 메뉴에서 다운로드 받을 수 있습니다.
-
+您可以从 GAMEPOT 仪表板> SDK 下载菜单下载它。
