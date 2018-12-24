@@ -428,9 +428,16 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 #### 사용내역
 
-전체 발급된 쿠폰 번호를 조회하실 수 있습니다. 쿠폰 번호 조회 시에 발급 쿠폰 사용일 아이템 정보 등을 확인하실 수 있습니다.
+전체 발급된 쿠폰 번호를 조회하실 수 있습니다. 
 
 ![gamepot-1-228](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-228.png)
+
+① 기간, 쿠폰 번호, 사용자 ID 등으로 지정하여 쿠폰 사용 여부를 검색할 수 있습니다.
+
+② 발급된 쿠폰에 대하여 사용 여부를 확인할 수 있습니다.
+
+-  성공 : 쿠폰 사용 완료 상태
+- 미사용 : 쿠폰 미사용 상태
 
 
 
@@ -512,6 +519,8 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 ④ 해시키를 입력할 수 있습니다. 
 
+
+
 ![gamepot-1-234b](./images/gamepot-1-234b.png)
 
 구글 스토어와 원 스토어와 연동하기 위해 설정하는 항목입니다.
@@ -524,6 +533,8 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 ④ 원 스토어에서 동일한 게임을 2가지 버전으로 출시할 경우(예를 들어 12세, 18세), 패키지 명을 앞에 넣고 뒤에 Public key 값을 넣습니다.
 
+
+
 ![gamepot-1-234c](./images/gamepot-1-234c.png)
 
 ① 구글 스토어 ID를 입력합니다.
@@ -531,6 +542,8 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 ② 원 스토어의 ID를 입력합니다.
 
 ③ 앱 스토어의 ID를 입력합니다.
+
+
 
 ![gamepot-1-234d](./images/gamepot-1-234d.png)
 
@@ -540,7 +553,21 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 ② 두 가지 버전으로 출시하는 경우 다른 버전의 라이선스 키를 입력합니다.(두 가지 버전이 아닌 경우 입력하지 않아도 됩니다.)
 
-![gamepot-1-234e](./images/gamepot-1-234e.png)
+
+
+![gamepot-1-234e](C:\Users\DONY\Desktop\github\GamePotGuide\Release_Guide\ko\game\images\gamepot-1-234e.png)
+
+Auth Key 항목은 구글, 페이스북 로그인 시 토큰 검증에 사용되며, 토큰 검증 실패 시 게임 유저의 로그인을 제한합니다. 로그인이 제한된 게임 유저는 이용정지 메뉴에 자동으로 등록됩니다. 
+
+① 구글의 Client ID값을 입력합니다.
+
+② 페이스북의 App ID값을 입력합니다. 
+
+③ 페이스북의 App Secret Key값을 입력합니다.
+
+
+
+![gamepot-1-234F](C:\Users\DONY\Desktop\github\GamePotGuide\Release_Guide\ko\game\images\gamepot-1-234F.png)
 
 WebHook 항목에 Purchase는 결제 성공 시 아이템 지급을 요청하는 주소를 입력합니다.
 
