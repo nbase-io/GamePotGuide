@@ -67,7 +67,7 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 
 가입된 회원 목록이 표시됩니다.
 
-![gamepot-1-208](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-208.png)
+![gamepot-1-208](./images/gamepot-1-208.png)
 
 ① 특정 날짜에 가입한 회원만을 조회할 수 있도록 회원 가입일 범위를 지정할 수 있습니다.
 
@@ -77,7 +77,7 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 
 ④ 사용자ID를 클릭하면 아래와 같은 상세페이지가 나타납니다.
 
-![gamepot-1-209](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-209.png)
+![gamepot-1-209](./images/gamepot-1-209.png)
 
 ① 회원에 대한 기본정보를 보여줍니다.
 
@@ -101,7 +101,7 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 
 기본적으로는 당일 기준 30일간의 일일 접속자 수를 출력하며, 일자 지정을 통하여 자유롭게 선택한 기간의 일일 접속자 수를 조회할 수 있습니다.
 
-![gamepot-1-210a](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-210a.png)
+![gamepot-1-210a](./images/gamepot-1-210a.png)
 
 
 
@@ -111,7 +111,7 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 
 기본적으로는 당일 기준 30일간의 일일 신규 가입자 수를 출력하며, 일자 지정을 통하여 자유롭게 선택한 기간의 일일 신규 가입자 수를 조회할 수 있습니다.
 
-![gamepot-1-210B](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-210B.png)
+![gamepot-1-210B](./images/gamepot-1-210B.png)
 
 
 
@@ -119,7 +119,7 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 
 게임에 접속한 회원의 수를 1분 단위로, 최대 3일간의 접속자 수를 동시에 조회할 수 있습니다.
 
-![gamepot-1-210](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-210.png)
+![gamepot-1-210](./images/gamepot-1-210.png)
 
 ① 지정된 3일간의 동시 접속자 수를 1분 단위의 그래프로 나타냅니다.
 
@@ -135,7 +135,7 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 
 이용정지는 회원의 사용자 ID를 기준으로 적용됩니다.
 
-![gamepot-1-210C](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-210C.png)
+![gamepot-1-210C](./images/gamepot-1-210C.png)
 
 ① 이용정지를 적용하기 위해, 추가 버튼을 이용합니다.
 
@@ -156,7 +156,7 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 
 회원이 Google Play store, APPSTORE, ONE Store에서 결제를 시도한 내역을 확인할 수 있습니다.
 
-![gamepot-1-218](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-218.png)
+![gamepot-1-218](./images/gamepot-1-218.png)
 
 ① 성공된 결제에 대해서 결제 취소 처리를 할 수 있습니다. 결제를 취소할 경우 매출 통계에서 제외됩니다.
 
@@ -167,7 +167,7 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 - Y : 결제 취소 상태
 - N : 결제 미취소 상태
 
-![gamepot-1-218D](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-218D.png)
+![gamepot-1-218D](./images/gamepot-1-218D.png)
 
 결제 상태를 클릭하여 시도된 결제에 대한 상세 내역을 확인할 수 있으며, 실패된 결제에 대해서는 재지급 버튼을 이용하여 아이템을 재지급할 수 있습니다.
 
@@ -177,7 +177,7 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 
 인앱 구매 시 상품정보를 관리하는 기능입니다. 구글플레이, 앱스토어, 원스토어 등의 상품을 모두 등록하셔야 합니다.
 
-![gamepot-1-221](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-221.png)
+![gamepot-1-221](./images/gamepot-1-221.png)
 
 ① **In-App 아이템 추가** 버튼을 클릭하면 스토어, 상품 이름, 상품 아이디를 입력하여 유료 아이템을 생성할 수 있습니다.
 
@@ -187,7 +187,7 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 
 일일 단위로 결제 금액 데이터를 그래프로 보여주는 기능입니다.
 
-![gamepot-1-239](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-239.png)
+![gamepot-1-239](./images/gamepot-1-239.png)
 
 ① 기간을 지정하여 그래프를 볼 수 있습니다.
 
@@ -199,11 +199,11 @@ NAVER CLOUD PLATFORM의 콘솔에서 대시보드 URL을 클릭하여 대시보�
 
 정상 결제건에 대해서 회원이 임의대로 결제를 취소한 경우를 알려줍니다.
 
-![gamepot-1-239B](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-239B.png)
+![gamepot-1-239B](./images/gamepot-1-239B.png)
 
 ① 임의적으로 구글 결제를 취소하는 회원의 게임 접속에 대해서, 일정 조건을 설정하여 이용정지 조치를 할 수 있습니다.
 
-![gamepot-1-239C](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-239C.png)
+![gamepot-1-239C](./images/gamepot-1-239C.png)
 
 ① 회원이 임의적으로 결제 취소를 악용한 부분에 대하여 이용 정지 여부를 결정할 수 있습니다. 활성화 시 1시간 간격으로 설정한 옵션에 따라 자동으로 결제 취소 악용자들을 이용 정지 시킵니다.
 
@@ -286,7 +286,7 @@ API 인증키가 연결되면 Object Storage의 버킷이 자동으로 생성됩
 
 점검 시간과 메시지를 입력한 뒤 저장하면 게임 내 점검 공지가 노출됩니다.
 
-![gamepot-1-230](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-230.png)
+![gamepot-1-230](./images/gamepot-1-230.png)
 
 ① 스토어를 지정하실 수 있습니다. 전체 점검일 경우 전체 스토어로 지정해 주세요.
 
@@ -302,7 +302,7 @@ API 인증키가 연결되면 Object Storage의 버킷이 자동으로 생성됩
 
 최신 버전이 아닐 경우 강제로 업데이트 안내를 보여주고 구글플레이나 애플스토어와 같은 스토어의 업데이트 화면으로 이동합니다.
 
-![gamepot-1-231](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-231.png)
+![gamepot-1-231](./images/gamepot-1-231.png)
 
 
 
@@ -380,7 +380,7 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 일반 쿠폰은 일반적으로 코드 형태로 되어 있는 쿠폰입니다. 게임 내에서 사용될 쿠폰을 쉽게 생성 및 관리 하실 수 있는 기능입니다. **+쿠폰생성**을 클릭하면 아래와 같은 팝업이 나타나고 이를 통해 쿠폰을 생성할 수 있습니다.
 
-![gamepot-1-224](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-224.png)
+![gamepot-1-224](./images/gamepot-1-224.png)
 
 ① 사용기간을 지정하여 해당 기간이외에는 쿠폰이 사용되지 않도록 합니다.
 
@@ -394,13 +394,13 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 쿠폰 생성이 완료되면 생성된 쿠폰 리스트가 아래와 같이 나타납니다.
 
-![gamepot-1-225](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-225.png)
+![gamepot-1-225](./images/gamepot-1-225.png)
 
 쿠폰의 현재 상태와 사용량 제한수량 등을 확인하실 수 있습니다.
 
 리스트에서 기존에 생성된 쿠폰 수량을 변경할 수 있어 손쉽게 쿠폰 수량을 증가시킬 수 있습니다.
 
-![gamepot-1-226](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-226.png)
+![gamepot-1-226](./images/gamepot-1-226.png)
 
 ① 리스트에서 가장 앞쪽에 파란색 아이콘을 클릭하면 쿠폰 추가 팝업이 노출됩니다.
 
@@ -414,7 +414,7 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 **+쿠폰 생성**을 클릭합니다.
 
-![gamepot-1-227](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-227.png)
+![gamepot-1-227](./images/gamepot-1-227.png)
 
 ① 쿠폰을 사용가능한 기간을 지정합니다.
 
@@ -430,7 +430,7 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 전체 발급된 쿠폰 번호를 조회하실 수 있습니다. 
 
-![gamepot-1-228](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-228.png)
+![gamepot-1-228](./images/gamepot-1-228.png)
 
 ① 기간, 쿠폰 번호, 사용자 ID 등으로 지정하여 쿠폰 사용 여부를 검색할 수 있습니다.
 
@@ -445,7 +445,7 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 아이템 메뉴에서는 쿠폰을 통해 획득 가능한  쿠폰 아이템을 생성할 수 있는 메뉴입니다. **아이템 추가** 버튼을 클릭하여 아이템을 추가할 수 있습니다.
 
-![gamepot-1-229](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-229.png)
+![gamepot-1-229](./images/gamepot-1-229.png)
 
 ① 아이템의 이름을 입력합니다.
 
@@ -483,7 +483,7 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 사전예약명은 통계 산출을 위한 ID로 활용됩니다. 
 
-![gamepot-1-500](C:/Users/DONY/Desktop/github/GamePotGuide/Release_Guide/ko/game/images/gamepot-1-500.png)
+![gamepot-1-500](./images/gamepot-1-500.png)
 
 향후 사전 예약자에게 대량 문자 발송이 가능하도록 기능을 추가할 예정입니다.
 
@@ -555,7 +555,7 @@ SMS/LMS 발송, 이력 및 결과 조회 등의 기능을 사용할 수 있습�
 
 
 
-![gamepot-1-234e](C:\Users\DONY\Desktop\github\GamePotGuide\Release_Guide\ko\game\images\gamepot-1-234e.png)
+![gamepot-1-234e](./images/gamepot-1-234e.png)
 
 Auth Key 항목은 구글, 페이스북 로그인 시 토큰 검증에 사용되며, 토큰 검증 실패 시 게임 유저의 로그인을 제한합니다. 로그인이 제한된 게임 유저는 이용정지 메뉴에 자동으로 등록됩니다. 
 
@@ -567,7 +567,7 @@ Auth Key 항목은 구글, 페이스북 로그인 시 토큰 검증에 사용되
 
 
 
-![gamepot-1-234F](C:\Users\DONY\Desktop\github\GamePotGuide\Release_Guide\ko\game\images\gamepot-1-234F.png)
+![gamepot-1-234F](./images/gamepot-1-234F.png)
 
 WebHook 항목에 Purchase는 결제 성공 시 아이템 지급을 요청하는 주소를 입력합니다.
 
