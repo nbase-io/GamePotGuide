@@ -3,8 +3,6 @@ search:
   keyword: ['gamepot']
 ---
 
-
-
 ## 1. 시작하기
 
 #### Step 1. 개발환경 구성
@@ -28,14 +26,15 @@ iOS용 애플리케이션 개발을 위해서는 개발 툴(Xcode)을 설치해�
 
 서비스별 Dependencies
 
-| Service       | Framework                                                    | Dependencies                                                 | bundle                                            |
-| ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------- |
-| 기본(Base)    | AFNetworking.framework<br />FirebaseAnalytics.framework<br />FirebaseCore.framework<br />FirebaseCoreDiagnostics.framework<br />FirebaseInstanceID.framework<br />FirebaseMessaging.framework<br />FirebaseNanoPB.framework<br />GamePot.framework<br />GoogleToolboxForMac.framework<br />nanopb.framework<br />Protobuf.framework<br /> | libz.tbd<br />WebKit.framework<br />UserNotifications.framework<br /> | GamePot.bundle<br />                              |
-| 로그인(Login) | [ Base ]<br />GamePotChannel.framework<br /><br />[ Google Sign In ]<br />GamePotGoogleSignIn.framework<br/>GoogleSignIn.framework<br />GTMOAuth2.framework<br />GTMSessionFetcher.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework<br />FBSDKLoginKit.framework<br />GamePotFacebook.framework<br /> | [ Google Sign In ]<br />SafariServices.framework<br />[ Facebook ]<br />SafariServices.framework<br /> | [ Google Sign In ]<br />GoogleSignIn.bundle<br /> |
-| 광고(AD)      | [ Base ]<br />GamePotAd.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework<br/>GamePotAdFacebook.framework<br /><br />[ Adbirx ]<br />AdBrix.framework<br />GamePotAdAdbrix.framework<br />IgaworksCore.framework<br /><br />[ Adjust ] <br />AdjustSdk.framework<br />GamePotAdAdjust.framework<br /> | [ Facebook ]<br /><br />[ Adbrix ]<br />MessageUI.framework<br />libxml2.tbd<br />iAd.framework<br />CoreTelephony.framework<br />UIKit.framework<br />CoreGraphics.framework<br />CoreText.framework<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br /><br />[ Adjust ] <br />AdSupport.framework<br /> |                                                   |
-| GameCenter    | GamePotGameCenter.framework                                  |                                                              |                                                   |
-| NaverCafe     | AFNetworking.framework<br/>GamePotNavarCafe.framework<br />NaverCafeSDK.framework<br /> | AVKit.framework<br />AVFoundation.framework<br />MediaPlayer.framework<br />CoreMedia.framework<br />AssetsLibrary.framework<br />ImageIO.framework<br />QuartzCore.framework<br />ReplayKit.framework(Optional로 설정)<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br />WebKit.framework<br />libNaverLogin.a<br/>NaverThirdPartyConstantsForApp.h<br />NaverThirdPartyLoginConnection.h<br />NLoginThirdPartyOAuth20InAppBrowserViewController.h<br />NLoginThirdPartyOAuth20InAppBrowserViewController.m<br /> | NaverAuth.bundle<br/>NaverCafeSDK.bundle<br />    |
-|               |                                                              |                                                              |                                                   |
+| Service       | Framework                                                                                                                                                                                                                                                                                                                                 | Dependencies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | bundle                                            |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------- |
+| 기본(Base)    | AFNetworking.framework<br />FirebaseAnalytics.framework<br />FirebaseCore.framework<br />FirebaseCoreDiagnostics.framework<br />FirebaseInstanceID.framework<br />FirebaseMessaging.framework<br />FirebaseNanoPB.framework<br />GamePot.framework<br />GoogleToolboxForMac.framework<br />nanopb.framework<br />Protobuf.framework<br /> | libz.tbd<br />WebKit.framework<br />UserNotifications.framework<br />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | GamePot.bundle<br />                              |
+| 로그인(Login) | [ Base ]<br />GamePotChannel.framework<br /><br />[ Google Sign In ]<br />GamePotGoogleSignIn.framework<br/>GoogleSignIn.framework<br />GTMOAuth2.framework<br />GTMSessionFetcher.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework<br />FBSDKLoginKit.framework<br />GamePotFacebook.framework<br />    | [ Google Sign In ]<br />SafariServices.framework<br />[ Facebook ]<br />SafariServices.framework<br />                                                                                                                                                                                                                                                                                                                                                                                                                                                             | [ Google Sign In ]<br />GoogleSignIn.bundle<br /> |
+| 광고(AD)      | [ Base ]<br />GamePotAd.framework<br /><br />[ Facebook ]<br />Bolts.framework<br/>FBSDKCoreKit.framework<br/>GamePotAdFacebook.framework<br /><br />[ Adbirx ]<br />AdBrix.framework<br />GamePotAdAdbrix.framework<br />IgaworksCore.framework<br /><br />[ Adjust ] <br />AdjustSdk.framework<br />GamePotAdAdjust.framework<br />     | [ Facebook ]<br /><br />[ Adbrix ]<br />MessageUI.framework<br />libxml2.tbd<br />iAd.framework<br />CoreTelephony.framework<br />UIKit.framework<br />CoreGraphics.framework<br />CoreText.framework<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br /><br />[ Adjust ] <br />AdSupport.framework<br />                                                                                                                                                                                                           |                                                   |
+| GameCenter    | GamePotGameCenter.framework                                                                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                   |
+| NaverCafe     | AFNetworking.framework<br/>GamePotNavarCafe.framework<br />NaverCafeSDK.framework<br />                                                                                                                                                                                                                                                   | AVKit.framework<br />AVFoundation.framework<br />MediaPlayer.framework<br />CoreMedia.framework<br />AssetsLibrary.framework<br />ImageIO.framework<br />QuartzCore.framework<br />ReplayKit.framework(Optional로 설정)<br />MobileCoreServices.framework<br />SystemConfiguration.framework<br />Security.framework<br />WebKit.framework<br />libNaverLogin.a<br/>NaverThirdPartyConstantsForApp.h<br />NaverThirdPartyLoginConnection.h<br />NLoginThirdPartyOAuth20InAppBrowserViewController.h<br />NLoginThirdPartyOAuth20InAppBrowserViewController.m<br /> | NaverAuth.bundle<br/>NaverCafeSDK.bundle<br />    |
+|               |                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                   |
+
 ![gamepot-1-301](./images/gamepot-1-302.png)
 
 #### Step 4. Bundle Resource 추가
@@ -63,8 +62,6 @@ gamepot_project_id : GAMEPOT 프로젝트 아이디
 gamepot_elsa_projectid : GAMEPOT 로그 프로젝트 아이디(optional)
 gamepot_api_url : 게임팟 API URL
 ```
-
-
 
 #### Step 6. 빌드 옵션 추가
 
@@ -99,10 +96,10 @@ Facebook App ID를 **Info > URL Types**에 fb+Facebook App ID 형태로 추가�
 
 **Info > iOS Target Property**의 **LSApplicationQueriesSchemes**에 아래 항목을 추가합니다.
 
-* fbapi
-* fb-messenger-share-api
-* fbauth2
-* fbshareextension
+- fbapi
+- fb-messenger-share-api
+- fbauth2
+- fbshareextension
 
 ![gamepot-1-308](./images/gamepot-1-308.png)
 
@@ -167,8 +164,6 @@ AppDelegate 파일에 아래 부분을 추가합니다.
     [[GamePotChat getInstance] stop];
 }
 ```
-
-
 
 ## 3. 로그인, 로그아웃, 회원 탈퇴
 
@@ -266,8 +261,6 @@ else
 }
 ```
 
-
-
 #### Step 4. 로그아웃
 
 현재 회원 계정을 로그아웃시킵니다.
@@ -283,8 +276,6 @@ else
     // TODO: 문구는 [error localizedDescription]를 사용해 주세요.
 }];
 ```
-
-
 
 #### Step 5. 회원 탈퇴
 
@@ -302,6 +293,12 @@ else
 }];
 
 ```
+
+#### Step 6. 검증
+
+로그인 완료 후 로그인 정보를 개발사 서버에서 GAMEPOT 서버로 전달하면 로그인 검증이 진행됩니다.
+
+자세한 설명은 `Server to server api` 매뉴에 `Authentication check` 항목을 참고해주세요.
 
 ## 4. 계정 연동
 
@@ -364,7 +361,7 @@ NSString* linkedList = [[GamePotChannel getInstance] getLinkedListJsonString];
 
 ## 5. 광고 플랫폼
 
-Facebook, Adjust, Adbrix  등의 여러가지 다양한 광고 플랫폼 SDK를 통합하여 사용하실 수 있습니다.
+Facebook, Adjust, Adbrix 등의 여러가지 다양한 광고 플랫폼 SDK를 통합하여 사용하실 수 있습니다.
 
 #### Step 1. 설정
 
@@ -463,8 +460,6 @@ AppDelegate.m 파일 내에 아래와 같이 추가합니다.
 
 ```
 
-
-
 ## 6. 결제
 
 #### Step 1. 설정
@@ -517,6 +512,12 @@ AppDelegate.m 파일 내에 아래와 같이 추가합니다.
 [[GamePot getInstance] purchase:productid];
 ```
 
+#### Step 3. 결제 아이템 지급
+
+GAMEPOT은 Server to server api를 통해 결제 스토어에 영수증 검증까지 모두 마친 후 개발사 서버에 지급 요청을 하기 때문에 불법 결제가 불가능합니다.
+
+이를 위해선 `Server to server api` 메뉴에 `Purchase` 항목을 참고하여 처리하셔야 합니다.
+
 ## 7. 기타 API
 
 #### 네이버 카페 SDK
@@ -551,7 +552,7 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 {
     BOOL nChannelResult = [[GamePotChannel getInstance] application:app openURL:url options:options];
     BOOL nNaverCafeResult = [[GamePotNaverCafe getInstance] application:app openURL:url options:options];
-    
+
     return nChannelResult || nNaverCafeResult;
 }
 ```
@@ -574,6 +575,10 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 
 #### 쿠폰
 
+사용자에게 입력받은 쿠폰을 사용할 때 아래 코드를 호출해 주세요.
+
+> 쿠폰 입력 화면 UI는 개발사에서 구현해주세요.
+
 ```objc
 #import <GamePot/GamePot.h>
 
@@ -589,6 +594,12 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
     }
 }];
 ```
+
+##### 아이템 지급
+
+쿠폰 사용이 성공하면 개발사 서버에 Server to server api를 통해 아이템 지급을 요청합니다.
+
+이를 위해선 `Server to server api` 메뉴에 `Item` 항목을 참고하여 처리하셔야 합니다.
 
 #### Push
 
@@ -660,9 +671,9 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 ```objc
  NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
  [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-        
+
  NSString* strDate = [formatter stringFromDate:[[NSDate date] dateByAddingTimeInterval:30]];
-      
+
  int pushId  = [[GamePot getInstance] sendLocalPush:@"Title" setMessage:@"Message" setDateString:strDate];
 ```
 
@@ -704,7 +715,7 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
     }];
 ```
 
-#### 
+####
 
 ## 8. 다운로드
 
