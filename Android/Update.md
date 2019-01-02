@@ -1,10 +1,16 @@
-### 최신버전 :  v1.0.12
+### 최신버전 :  v1.0.14
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_1106.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_1227.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.14 (2018-12-27)
+
+→ 내부 로직 개선
+
+<br/>
 
 #### v1.0.12 (2018-11-06)
 
