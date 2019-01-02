@@ -12,7 +12,7 @@
 
 Android SDK 다운로드
 
-- [2018-11-06] https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_1106.zip
+- [2018-12-27] https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_1227.zip
 
 iOS SDK 다운로드
 
