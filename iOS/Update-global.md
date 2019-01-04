@@ -1,10 +1,18 @@
-### Latest version: v1.0.6
+### Latest version: v1.0.8
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_1120.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_190104.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.8 (2019-01-04)
+
+→ Naver Cafe Update
+
+→ Improved internal logic
+
+<br/>
 
 #### v1.0.6 (2018-11-20)
 

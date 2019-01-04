@@ -1,10 +1,18 @@
-### 최신버전 :  v1.0.6
+### 최신버전 : v1.0.8
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_1120.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_190104.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.8 (2019-01-04)
+
+→ Naver Cafe Update
+
+→ 내부 로직 개선
+
+<br/>
 
 #### v1.0.6 (2018-11-20)
 
