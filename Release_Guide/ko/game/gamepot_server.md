@@ -158,3 +158,63 @@ data:
 | -1   | Token 검증 실패<br />Token이 조작된 경우                     |
 | -2   | MemberId 검증 실패<br />Token의 MemberId 정보와 body의 MemberId가 일치하지 않은 경우 |
 | -3   | Token 만료<br />SDK login api가 성공한 시각과 해당 Authentication check를 요청한 시각이 10분 이상 차이가 발생한 경우 |
+
+##Push notification
+
+게임서버에서 사용자에게 푸시를 보내고자 할 경우 사용할 수 있는 서버 푸시입니다.
+
+NCloud의 SENS를 통해 발송하므로 SENS관련 설정이 선행작업 되어 있어야 합니다.
+
+### Request
+
+`{API URL}`은 GAMEPOT 대시보드 주소에서 `:8080` 를 제외한 주소이고
+
+`{API KEY}`는 대시보드 - 프로젝트 설정 - NCloud - API 인증키 - Access Key를 넣어주세요.
+
+```web-idl
+POST
+url : https://{API URL}/push
+Header : 'content-type: application/json'
+Header : 'x-api-key: {API KEY}'
+data: 
+{
+	"projectId": {GamePot SDK의 projectId},
+	"message": {사용자에게 보낼 푸시 메시지},
+	"title": {사용자에게 보낼 푸시 제목},
+	"target": {푸시를 받을 사용자의 memberId 배열}
+}
+```
+
+| Attribute | Type         | Description                                                  |
+| --------- | ------------ | ------------------------------------------------------------ |
+| projectId | String       | GamePot SDK의 projectId                                      |
+| message   | String       | 사용자에게 보낼 푸시 메시지                                  |
+| title     | String       | 사용자에게 보낼 푸시 제목 (기본 값은 앱 제목)                |
+| target    | String Array | 푸시를 받을 사용자의 memberId 배열<br />["e87b3a....","d28a30...."] |
+
+### Response
+
+이 경우는 게임 진입을 제한 해주세요.
+
+```json
+{
+	"status": 1,
+	"message" : "success"
+}
+```
+
+| Attribute | Type   | Description                                   |
+| --------- | ------ | --------------------------------------------- |
+| status    | Int    | 결과값 (1: 성공, 실패는 아래 Error code 참고) |
+| message   | String | 오류 내용                                     |
+
+### Error code
+
+| Code | Description                                                  |
+| ---- | ------------------------------------------------------------ |
+| 0    | Body 혹은 헤더에 누락된 데이터가 있는 경우<br />Request에 있는 데이터를 모두 포함 했는지 확인 해주세요. |
+| -1   | Request의 target값 오류<br />String Array로 값을 넣었는지 확인 해주세요. ["e87b3a....","d28a30...."] |
+| -2   | 헤더에 X-API-KEY값 오류<br />대시보드 - 프로젝트 설정 - NCloud - API 인증키 - Access Key와 헤더에 X-API-KEY가 일치해야 합니다. |
+| -3   | 대시보드에 Access Key가 없는 경우<br />대시보드 - 프로젝트 설정 - NCloud - API 인증키 - Access Key를 넣어주세요. |
+| -4   | Request의 projectId값 오류<br />projectId값이 맞는지 확인해주세요. |
+| -5   | DB 오류<br />GamePot에 문의해주세요.                         |
