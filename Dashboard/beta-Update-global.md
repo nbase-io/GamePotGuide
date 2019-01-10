@@ -1,5 +1,25 @@
 ### Change Log
 
+#### v1.0.46 (2019-01-10)
+
+→ Add notification function to the customer when answering customer support
+
+→ Add search function to billing IAP menu
+
+→ Add search function to the coupon item menu
+
+→ Add 'All' item to store selection item when setting coupon
+
+→ Added CSV Import function when registering SMS
+
+→ Add predefine function when inputting large amount
+
+→ Add the combined amount to your billing list
+
+→ Fixed UI issue in IE
+
+→ Other bug fixes
+
 #### v1.0.45 (2018-12-05)
 
 → Add multiple languages
@@ -45,4 +65,3 @@
 → Add advance reservation function
 
 → Add more than 100,000 coupon codes
-
