@@ -190,7 +190,7 @@ data:
 | projectId | String       | GamePot SDK의 projectId                                      |
 | message   | String       | 사용자에게 보낼 푸시 메시지                                  |
 | title     | String       | 사용자에게 보낼 푸시 제목 (기본 값은 앱 제목)                |
-| target    | String Array | 푸시를 받을 사용자의 memberId 배열<br />["e87b3a....","d28a30...."] |
+| target    | String Array | 푸시를 받을 사용자의 memberId 배열<br />["e87b3a....","d28a30...."]<br />전체 유저에게 발송하려면 빈 배열 []을 넣으세요. |
 
 ### Response
 
