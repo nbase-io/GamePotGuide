@@ -1,12 +1,18 @@
-### latest version: v1.0.1
+### latest version: v1.0.1 - HotFix - v1
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2018-12-13.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16.unitypackage)
 
-[Download (Except NaverCafe)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2018-12-13-ExceptNaverCafe.unitypackage)
+[Download (Except NaverCafe)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-ExceptNaverCafe.unitypackage)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.1 - HotFix - v1 (2019-01-16)
+
+→ Fixed issue with account login created with Facebook phone number on iOS
+
+<br/>
 
 #### v1.0.1 (2018-12-13)
 
