@@ -4,6 +4,10 @@
 
 [다운로드 (NaverCafe 제외)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-ExceptNaverCafe.unitypackage)
 
+[다운로드 (IOS GameCenter 포함)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-IOS-GameCenter.unitypackage)
+
+[다운로드 (NaverCafe 제외, IOC GameCenter 포함)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-ExceptNaverCafe-IOS-GameCenter.unitypackage)
+
 <br/>
 
 ### Change Log

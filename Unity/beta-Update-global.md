@@ -4,6 +4,10 @@
 
 [Download (Except NaverCafe)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-ExceptNaverCafe.unitypackage)
 
+[Download (Incloud IOS GameCenter)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-IOS-GameCenter.unitypackage)
+
+[Download (Except NaverCafe, Incloud IOS GameCenter)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-ExceptNaverCafe-IOS-GameCenter.unitypackage)
+
 <br/>
 
 ### Change Log
