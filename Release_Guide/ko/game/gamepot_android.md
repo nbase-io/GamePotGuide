@@ -44,7 +44,7 @@ build.gradle 파일은 프로젝트 root 폴더와 app 폴더에 각각 존재�
        }
        dependencies {
           ...
-           classpath 'com.google.gms:google-services:4.0.1'
+           classpath 'com.google.gms:google-services:4.2.0'
        }
    }
 
@@ -105,20 +105,20 @@ build.gradle 파일은 프로젝트 root 폴더와 app 폴더에 각각 존재�
        compile 'com.apollographql.apollo:apollo-runtime:1.0.0-alpha2'
        compile 'com.apollographql.apollo:apollo-android-support:1.0.0-alpha2'
        compile 'com.android.billingclient:billing:1.1'
-       compile 'com.google.firebase:firebase-core:16.0.1'
-       compile 'com.google.firebase:firebase-messaging:17.1.0'
+       compile 'com.google.firebase:firebase-core:16.0.6'
+       compile 'com.google.firebase:firebase-messaging:17.3.4'
        // GamePot common [END]
 
        compile(name: 'gamepot-channel-base', ext: 'aar')
        // GamePot facebook [START]
        compile(name: 'gamepot-channel-facebook', ext: 'aar')
-       compile 'com.facebook.android:facebook-android-sdk:4.37.0'
+       compile 'com.facebook.android:facebook-android-sdk:4.39.0'
        // GamePot facebook [END]
 
        // GamePot google sigin [START]
        compile(name: 'gamepot-channel-google-signin', ext: 'aar')
-       compile "com.google.android.gms:play-services-base:15.0.1"
-       compile "com.google.android.gms:play-services-auth:15.0.1"
+       compile "com.google.android.gms:play-services-base:16.0.1"
+       compile "com.google.android.gms:play-services-auth:16.0.1"
        // GamePot google sigin [END]
    }
 
