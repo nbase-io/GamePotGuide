@@ -83,6 +83,23 @@ resValue "string", "[key]", "[value]"
 | res/drawable-xxhdpi/  | 72x72 |
 | res/drawable-xxxhdpi/ | 96x96 |
 
+##### 如何设置屏幕定向
+
+以编辑器的身份打开/Assets/Plugin/Android/AndroidManifest.xml文件。
+
+```xml
+...
+    <activity android:screenOrientation="sensorLandscape">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+          ...
+      </intent-filter>
+    </activity>
+...
+```
+
+将screenOrientation添加到Main Activity并为您的游戏输入`sensorLandscape`或`sensorPortrait`。
+
 ##### Firebase使用方法
 
 从 Google Firebase Console 下载的`google-services.json` 文件复制到 `/Assets/Plugins/Android/`里面。

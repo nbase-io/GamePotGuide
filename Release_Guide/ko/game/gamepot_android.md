@@ -558,12 +558,13 @@ public class MainActivity extends AppCompatActivity {
 
         ...
 		// GamePot 광고 초기화. 사용하려는 광고 모듈별로 addAd 해주세요.
+        GamePotAd.getInstance().setSandbox(false); // 개발버전은 true. 배포버전은 false
         GamePotAd.getInstance().setActivity(this);
-        // Facebook 초기화
+        // Facebook 초기화(사용 시 추가)
 		GamePotAd.getInstance().addAd(new GamePotAdFacebook());
-        // IGAWorks 초기화
+        // IGAWorks 초기화(사용 시 추가)
 		GamePotAd.getInstance().addAd(new GamePotAdIgaworks());
-        // Adjust 초기화
+        // Adjust 초기화(사용 시 추가)
         GamePotAd.getInstance().addAd(new GamePotAdAdjust());
         ...
     }
@@ -741,6 +742,12 @@ GamePotAd.getInstance().tracking(GamePotAdActions.LEVEL, new GamePotAdLevelBuild
 
 // 튜토리얼 완료 시
 GamePotAd.getInstance().tracking(GamePotAdActions.TUTORIAL_COMPLETE, new GamePotAdTutorialBuilder().setContentData("튜토리얼 완료").setContentId("1").setSuccess(true).build());
+
+// 결제 완료 시
+// '6. 결제 > 설정' 항목을 참고해주세요.
+
+// Adjust 이용 시
+// 각 builder에 존재하는 setAdjustKey api를 통해 adjust event key를 넣어주세요.
 ```
 
 # 6. 결제
@@ -830,6 +837,11 @@ android {
         resValue "string", "gamepot_naver_clientid", "{네아로에서 사용할 client 아이디}"
         resValue "string", "gamepot_naver_secretid", "{네아로에서 사용할 secret 아이디}"
         resValue "integer", "gamepot_naver_cafeid", "{네이버 카페 아이디}"
+        // 아래는 글로벌 사용 시 추가
+        resValue "string", "gamepot_naver_global_consumerkey", "{consumerKey}"
+        resValue "string", "gamepot_naver_global_consumersecretkey", "{consumerSecretKey}"
+        resValue "integer", "gamepot_naver_global_communityno", "{communityNo}"
+        resValue "integer", "gamepot_naver_global_loungeno", "{loungeNo}"
         ...
     }
 }
@@ -839,6 +851,7 @@ dependencies {
     // naver cafe [START]
     compile(name: 'gamepot-navercafe', ext: 'aar')
     compile(name: 'cafeSdk-4.0.4', ext: 'aar')
+    compile(name: 'sos_library-1.1.3.4', ext: 'aar')
     compile 'com.navercorp.volleyextensions:volleyer:2.0.1', {
         exclude group: 'com.mcxiaoke.volley', module: 'library'
     }

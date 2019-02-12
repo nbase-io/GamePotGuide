@@ -168,7 +168,7 @@ data:
 | projectId | String       | GamePot SDK的projectId                                       |
 | message   | String       | 推送消息发送给用户                                           |
 | title     | String       | 按标题发送给用户（默认值为app title）                        |
-| target    | String Array | 要推送的用户的memberId数组<br />["e87b3a....","d28a30...."]<br />要发送给所有用户，请放置一个空数组[]。 |
+| target    | String Array | 要推送的用户的memberId数组 **(最多100个)**<br />["e87b3a....","d28a30...."]<br />要发送给所有用户，请放置一个空数组[]。 |
 
 ### Response
 
