@@ -1,16 +1,18 @@
-### 최신버전 : v1.0.1 - HotFix - v1
+### 최신버전 : v1.0.2
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-02-12.unitypackage)
 
-[다운로드 (NaverCafe 제외)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-ExceptNaverCafe.unitypackage)
-
-[다운로드 (IOS GameCenter 포함)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-IOS-GameCenter.unitypackage)
-
-[다운로드 (NaverCafe 제외, IOS GameCenter 포함)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-ExceptNaverCafe-IOS-GameCenter.unitypackage)
+[다운로드 (NaverCafe 제외)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-02-12-ExceptNaverCafe.unitypackage)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.2 (2019-02-12)
+
+→ 라이브러리 업데이트
+
+<br/>
 
 #### v1.0.1 - HotFix - v1 (2019-01-16)
 

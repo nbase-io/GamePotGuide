@@ -1,16 +1,18 @@
-### latest version: v1.0.1 - HotFix - v1
+### latest version: v1.0.2
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-02-12.unitypackage)
 
-[Download (Except NaverCafe)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-ExceptNaverCafe.unitypackage)
-
-[Download (Incloud IOS GameCenter)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-IOS-GameCenter.unitypackage)
-
-[Download (Except NaverCafe, Incloud IOS GameCenter)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-01-16-ExceptNaverCafe-IOS-GameCenter.unitypackage)
+[Download (Except NaverCafe)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-02-12-ExceptNaverCafe.unitypackage)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.2 (2019-02-12)
+
+→ Update Library
+
+<br/>
 
 #### v1.0.1 - HotFix - v1 (2019-01-16)
 
