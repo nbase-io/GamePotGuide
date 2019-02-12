@@ -19,7 +19,6 @@ search:
 
 ![](./images/gamepot_unity_02.png)
 
-
 ### Step 3. Android
 
 ####기본 환경 설정
@@ -90,7 +89,10 @@ resValue "string", "[key]", "[value]"
 
 ### Step 4. iOS
 
-구글 파이어베이스에서 다운로드한 `GamePotConfig-Info.plist` 파일을  `/Assets/Plugins/IOS/`에 복사합니다.
+> GameCenter Login을 `사용하지 않으실 경우`에는 아래 위치해서 해당 파일을 삭제 해주세요.<br> > `Assets/Plugins/IOS/Frameworks/GamePotGameCenter.framework`<br>
+> 해당 라이브러리가 포함된 경우 `Capabilities설정에서 GameCenter를 필히 활성화` 해주셔야 합니다.<br>
+
+구글 파이어베이스에서 다운로드한 `GamePotConfig-Info.plist` 파일을 `/Assets/Plugins/IOS/`에 복사합니다.
 
 /Assets/Plugin/GamePotConfig-Info.plist 내에 필요한 환경 변수를 추가해 주세요.
 
@@ -221,7 +223,10 @@ GamePotFacebook.framework
 
 ### 게임센터 로그인
 
-iOS에만 해당하는 기능입니다.
+> iOS에만 해당하는 기능입니다.<br>
+>
+> GameCenter Login을 `사용하지 않으실 경우`에는 아래 위치해서 해당 파일을 삭제 해주세요.<br> > `Assets/Plugins/IOS/Frameworks/GamePotGameCenter.framework`<br>
+> 해당 라이브러리가 포함된 경우 `Capabilities설정에서 GameCenter를 필히 활성화` 해주셔야 합니다.<br>
 
 /Assets/Plugins/IOS/Frameworks/ 경로에 Gamekit.framwork를 복사합니다. **General > Linked Frameworks and Libraries** 내에 복사한 프레임워크를 추가합니다.
 
@@ -474,7 +479,6 @@ public void onDeleteLinkingFailure(NError error) {
 }
 ```
 
-
 #### 계정 연동 상태에 대한 결과 처리 예제
 
 createLinking / deleteLinking 결과에 따라 현재 연동 되어 있는 계정 정보를 받아와 연동상태에 대한 UI를 업데이트 합니다.
@@ -529,7 +533,6 @@ Public void UI_Update()
 ```
 
 ##결제
-
 
 ### 인앱 상품 조회
 
