@@ -81,6 +81,23 @@ resValue "string", "[key]", "[value]"
 | res/drawable-xxhdpi/  | 72x72 |
 | res/drawable-xxxhdpi/ | 96x96 |
 
+##### Screen Orienation 설정 방법
+
+/Assets/Plugin/Android/AndroidManifest.xml 파일을 에디터로 엽니다.
+
+```xml
+...
+    <activity android:screenOrientation="sensorLandscape">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+          ...
+      </intent-filter>
+    </activity>
+...
+```
+
+Main Activity에 screenOrientation을 추가 후 게임에 맞게 `sensorLandscape` 혹은 `sensorPortrait` 를 입력하세요.
+
 #####Unity Build Settings
 
 `File > Build Settings > Build System` 메뉴에서 Gradle을 선택합니다.
