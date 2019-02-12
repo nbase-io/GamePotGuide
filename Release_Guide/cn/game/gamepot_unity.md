@@ -91,7 +91,10 @@ resValue "string", "[key]", "[value]"
 
 #### STEP 4. iOS
 
-将从Google Firebase下载的`GamePotConfig-Info.plist`文件复制到`/Assets/Plugins/IOS/`。
+> 如果您不使用`GameCenter登录`，请删除以下文件。<br> > `Assets/Plugins/IOS/Frameworks/GamePotGameCenter.framework`<br>
+> 如果包含库，则必须在 `在功能设置中启用GameCenter` 中激活 GameCenter
+
+将从 Google Firebase 下载的`GamePotConfig-Info.plist`文件复制到`/Assets/Plugins/IOS/`。
 
 /Assets/Plugin/GamePotConfig-Info.plist 里添加所需要环境参数。
 
@@ -208,7 +211,9 @@ GamePotFacebook.framework
 
 #### GameCenter登录
 
-只针对iOS的功能。
+> 只针对 iOS 的功能。<br>
+> 如果您不使用`GameCenter登录`，请删除以下文件。<br> > `Assets/Plugins/IOS/Frameworks/GamePotGameCenter.framework`<br>
+> 如果包含库，则必须在 `在功能设置中启用GameCenter` 中激活 GameCenter
 
 在/Assets/Plugins/IOS/Frameworks/复制Gamekit.framwork。General -> Linked Frameworks and Libraries里添加复制的Frameworks。
 
