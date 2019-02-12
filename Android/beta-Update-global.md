@@ -1,10 +1,18 @@
-### Latest version: v1.0.14
+### Latest version: v1.0.15
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_1227.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_0212.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.15 (2019-02-12)
+
+→ Update 3rd party libraries
+
+→ Improved internal logic
+
+<br/>
 
 #### v1.0.14 (2018-12-27)
 
