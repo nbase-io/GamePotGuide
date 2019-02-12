@@ -1,4 +1,4 @@
-### 최신버전 : v1.0.2
+### 최신버전 : v1.0.3
 
 [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-02-12.unitypackage)
 
@@ -8,7 +8,7 @@
 
 ### Change Log
 
-#### v1.0.2 (2019-02-12)
+#### v1.0.3 (2019-02-12)
 
 → 라이브러리 업데이트
 
