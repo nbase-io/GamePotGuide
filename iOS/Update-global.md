@@ -1,10 +1,16 @@
-### Latest version: v1.0.8
+### Latest version: v1.0.9
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_190104.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_190212.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.9 (2019-02-12)
+
+→ Improve internal logic
+
+<br/>
 
 #### v1.0.8 (2019-01-04)
 
