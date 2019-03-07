@@ -1,5 +1,29 @@
 ### Change Log
 
+#### v1.0.47 (2019-03-07)
+
+→ Add Server to server Push API
+
+→ Add push delivery function by Android store
+
+→ Up to the maximum number of coupons: 500,000 (10,000 coupons are added)
+
+→ except for confusing characters when generating coupon (i, l, l)
+
+→ Google receipt verification V3 applied
+
+→ Add advance reservation function
+
+→ Add push message individual / full search condition
+
+→ "Project view" contents for each item in Project setting> General
+
+→ Customer Support / Members List
+
+→ Add coupon item mass input function
+
+→ Add billing IAP mass input function
+
 #### v1.0.46 (2019-01-10)
 
 → Add notification function to the customer when answering customer support
