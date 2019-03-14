@@ -1053,43 +1053,7 @@ GamePot.getInstance().cancelLocalPush(/*현재 액티비티*/, /*푸시 등록�
 
 기존에 적용된 아래 API에서 사용이 가능합니다.
 
-#### 1. setup API
-
-기존 setup API에서 두 번째 파라미터를 추가합니다.
-
-```java
-GamePot.getInstance().setup(getApplicationContext(), new GamePotAppStatusListener() {
-    @Override
-    public void onNeedUpdate(GamePotAppStatus status) {
-        // TODO: 강제 업데이트가 필요한 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
-        // TODO: Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
-        GamePot.getInstance().showAppStatusPopup(MainActivity.this, status, new GamePotAppCloseListener() {
-            @Override
-            public void onClose() {
-                // TODO: showAppStatusPopup API를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
-                // TODO: 종료 프로세스를 처리해주세요.
-                MainActivity.this.finish();
-            }
-        });
-    }
-
-    @Override
-    public void onMainternance(GamePotAppStatus status) {
-        // TODO: 점검 중인 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
-        // TODO: Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
-        GamePot.getInstance().showAppStatusPopup(MainActivity.this, status, new GamePotAppCloseListener() {
-            @Override
-            public void onClose() {
-                // TODO: showAppStatusPopup API를 호출하신 경우 앱을 종료해야 하는 상황에 호출됩니다.
-                // TODO: 종료 프로세스를 처리해주세요.
-                MainActivity.this.finish();
-            }
-        });
-    }
-});
-```
-
-#### 2. login API
+#### 1. login API
 
 기존 login API에서 listener를 `GamePotAppStatusChannelListener`로 변경합니다.
 

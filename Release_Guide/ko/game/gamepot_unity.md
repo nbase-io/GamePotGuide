@@ -109,9 +109,9 @@ Main Activity에 screenOrientation을 추가 후 게임에 맞게 `sensorLandsca
 > GameCenter Login을 `사용하지 않으실 경우`에는 아래 위치해서 해당 파일을 삭제 해주세요.<br> > `Assets/Plugins/IOS/Frameworks/GamePotGameCenter.framework`<br>
 > 해당 라이브러리가 포함된 경우 `Capabilities설정에서 GameCenter를 필히 활성화` 해주셔야 합니다.<br>
 
-구글 파이어베이스에서 다운로드한 `GamePotConfig-Info.plist` 파일을 `/Assets/Plugins/IOS/`에 복사합니다.
+구글 파이어베이스에서 다운로드한 `GoogleService-Info.plist` 파일을 `/Assets/Plugins/IOS/`에 복사합니다.
 
-/Assets/Plugin/GamePotConfig-Info.plist 내에 필요한 환경 변수를 추가해 주세요.
+`/Assets/Plugin/IOS/GamePotConfig-Info.plist` 내에 필요한 환경 변수를 추가해 주세요.
 
 ![](./images/gamepot_unity_06.png)
 
@@ -782,7 +782,19 @@ public void onCouponFailure(NError error) {
 GamePot.showNoticeWebView();
 ```
 
-## 고객센터
+## 고객지원
+
+고객이 운영자에게 문의를 등록하고 답변을 받을 수 있는 기능입니다.
+
+- 문의 등록 화면
+
+  ![gamepot_unity_13](./images/gamepot_unity_13.png)
+
+- 내 문의 내역 화면
+
+  ![gamepot_unity_14](./images/gamepot_unity_14.png)
+
+###호출
 
 ```csharp
 GamePot.showCSWebView();
@@ -811,3 +823,117 @@ int pushId = GamePot.sendLocalPush(DateTime.Parse("2018-01-01 00:00:00"), "title
 ```Java
 GamePot.cancelLocalPush(/*푸시 등록시 얻은 pushId*/);
 ```
+
+## 약관 동의
+
+'이용약관' 및 '개인정보 수집 및 이용안내' 동의를 쉽게 받을 수 있도록 UI를 제공합니다.
+
+`BLUE` 테마와  `GREEN` 테마 두 가지를 제공하며, 각 영역별로 Customizing도 가능합니다.
+
+- `BLUE` 테마 예시
+
+  ![gamepot_unity_10](./images/gamepot_unity_10.png)
+
+- `GREEN` 테마 예시
+
+  ![gamepot_unity_11](./images/gamepot_unity_11.png)
+
+### 약관 동의 호출
+
+> 약관 동의 팝업 노출 여부는 개발사에서 게임에 맞게 처리해주세요.
+>
+> '보기'버튼을 클릭 시 보여지는 내용은 대시보드에서 적용 및 수정이 가능합니다.
+
+Request:
+
+```csharp
+// 기본 호출(BLUE 테마로 적용)
+GamePot.showAgreeDialog();
+
+// GREEN 테마로 적용시
+NAgreeInfo info = new NAgreeInfo();
+info.theme = "green";
+GamePot.showAgreeDialog(info);
+```
+
+Response:
+
+```csharp
+// 약관에 동의한 경우
+public void onAgreeDialogSuccess(NAgreeResultInfo info)
+{
+    // info.agree : 필수 약관을 모두 동의한 경우 true
+    // info.agreeNight : 야간 광고성 수신 동의를 체크한 경우 true, 그렇지 않으면 false
+    // agreeNight 값은 로그인 완료 후 setPushStatus api를 통해 전달하세요.
+}
+
+// 오류 발생
+public void onAgreeDialogFailure(NError error)
+{
+	// error.message를 팝업 등으로 유저에게 알려주세요.
+}
+```
+
+### Customizing
+
+테마를 사용하지 않고 게임에 맞게 색을 변경합니다.
+
+약관 동의를 호출하기 전에 `NAgreeInfo`에서 각 영역별로 색을 지정할 수 있습니다.
+
+```c#
+NAgreeInfo info = new NAgreeInfo();
+info.theme = "green";
+info.headerBackGradient = new string[] { "0xFF00050B", "0xFF0F1B21" };
+info.headerTitleColor = "0xFFFF0000";
+info.headerBottomColor = "0xFF00FF00";
+// 미사용시 ""로 설정
+info.headerTitle = "약관 동의";
+// Android : res/drawable 객체 아이디(파일명)
+// iOS : asset 객체 아이디(파일명)
+info.headerIconDrawable = "ic_stat_gamepot_agree";
+
+info.contentBackGradient = new string[] { "0xFFFF2432", "0xFF11FF32" };
+info.contentIconColor = "0xFF0429FF";
+info.contentCheckColor = "0xFFFFADB5";
+info.contentTitleColor = "0xFF98FFC6";
+info.contentShowColor = "0xFF98B3FF";
+// Android : res/drawable 객체 아이디(파일명)
+// iOS : asset 객체 아이디(파일명)
+info.contentIconDrawable = "ic_stat_gamepot_small";
+
+info.footerBackGradient = new string[] { "0xFFFFFFFF", "0xFF112432" };
+info.footerButtonGradient = new string[] { "0xFF1E3A57", "0xFFFFFFFF" };
+info.footerButtonOutlineColor = "0xFFFF171A";
+info.footerTitleColor = "0xFFFF00D5";
+info.footerTitle = "게임 시작하기";
+// 야간 광고성 수신동의 버튼 노출 여부
+info.showNightPush = true; 
+
+GamePot.showAgreeDialog(info);
+```
+
+각각의 변수는 아래 영역에 적용됩니다.
+
+> contentIconDrawable은 AOS에만 보여지며, 기본 값은 푸시 아이콘으로 설정됩니다.
+
+![gamepot_unity_12](./images/gamepot_unity_12.png)
+
+## 이용약관
+
+이용약관 UI를 호출합니다.
+
+```c#
+GamePot.showTerms();
+```
+
+![gamepot_unity_16](./images/gamepot_unity_16.png)
+
+## 개인정보 취급방침
+
+개인정보 취급방침 UI를 호출합니다.
+
+```c#
+GamePot.showPrivacy();
+```
+
+![gamepot_unity_15](./images/gamepot_unity_15.png)

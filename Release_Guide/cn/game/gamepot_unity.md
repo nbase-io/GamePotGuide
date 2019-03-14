@@ -111,9 +111,9 @@ resValue "string", "[key]", "[value]"
 > 如果您不使用`GameCenter登录`，请删除以下文件。<br> > `Assets/Plugins/IOS/Frameworks/GamePotGameCenter.framework`<br>
 > 如果包含库，则必须在 `在功能设置中启用GameCenter` 中激活 GameCenter
 
-将从 Google Firebase 下载的`GamePotConfig-Info.plist`文件复制到`/Assets/Plugins/IOS/`。
+将从 Google Firebase 下载的`GoogleService-Info.plist`文件复制到`/Assets/Plugins/IOS/`。
 
-/Assets/Plugin/GamePotConfig-Info.plist 里添加所需要环境参数。
+`/Assets/Plugin/IOS/GamePotConfig-Info.plist` 里添加所需要环境参数。
 
 ![](./images/gamepot_unity_06.png)
 
@@ -727,19 +727,31 @@ public void onCouponFailure(NError error) {
 
 > 因为Naver论坛SDK的容量大，所以有包含的Plugin以及没有包含的Plugin两个版本。按照需求来选择使用就可以。
 
-### 公告
+##公告
 
 ```csharp
 GamePot.showNoticeWebView();
 ```
 
-### 客服中心
+##客服中心
+
+这是一项允许客户向运营商注册查询并收到回复的功能。
+
+- 联系注册屏幕
+
+  ![gamepot_unity_13](./images/gamepot_unity_13.png)
+
+- 我的查询历史屏幕
+
+  ![gamepot_unity_14](./images/gamepot_unity_14.png)
+
+### 呼叫
 
 ```csharp
 GamePot.showCSWebView();
 ```
 
-### 本地推送(Local Push notification)
+##本地推送(Local Push notification)
 
 不通过推送服务器，直接在设备自行显示推送的功能。
 
@@ -762,3 +774,117 @@ int pushId = GamePot.sendLocalPush(DateTime.Parse("2018-01-01 00:00:00"), "title
 ```Java
 GamePot.cancelLocalPush(/*注册推送时获得的 pushId*/);
 ```
+
+## 接受条款
+
+我们提供用户界面，以便轻松获取“使用条款”和“收集和使用个人信息指南”。
+
+`BLUE`主题和`GREEN`主题，每个区域都有自定义。
+
+- `BLUE`主题的例子
+
+  ![gamepot_unity_10](./images/gamepot_unity_10.png)
+
+- `GREEN`主题的例子
+
+  ![gamepot_unity_11](./images/gamepot_unity_11.png)
+
+### 征集协议
+
+> 请同意协议弹出窗口的条款由开发人员处理。
+>
+> 可以在仪表板中应用和修改“查看”按钮的内容。
+
+Request:
+
+```csharp
+// 基本调用（应用为BLUE主题）
+GamePot.showAgreeDialog();
+
+// 应用为“绿色”主题
+NAgreeInfo info = new NAgreeInfo();
+info.theme = "green";
+GamePot.showAgreeDialog(info);
+```
+
+Response:
+
+```csharp
+// 如果您同意这些条款
+public void onAgreeDialogSuccess(NAgreeResultInfo info)
+{
+    // info.agree : 如果所有必需条件都为真，则为真
+    // info.agreeNight : 如果检查晚间广告接受，则为真; 否则是假的
+    // 登录后，通过setPushStatus api传递agreeNight值。
+}
+
+// 发生了错误
+public void onAgreeDialogFailure(NError error)
+{
+	// error.message请使用弹窗告知给用户
+}
+```
+
+### 定制
+
+在不使用主题的情况下更改游戏的颜色。
+
+在调用协议之前，您可以在“NAgreeInfo”中为每个区域指定颜色。
+
+```c#
+NAgreeInfo info = new NAgreeInfo();
+info.theme = "green";
+info.headerBackGradient = new string[] { "0xFF00050B", "0xFF0F1B21" };
+info.headerTitleColor = "0xFFFF0000";
+info.headerBottomColor = "0xFF00FF00";
+// 不使用时设为“”
+info.headerTitle = "약관 동의";
+// Android : res/drawable 对象ID（文件名）
+// iOS : asset 对象ID（文件名）
+info.headerIconDrawable = "ic_stat_gamepot_agree";
+
+info.contentBackGradient = new string[] { "0xFFFF2432", "0xFF11FF32" };
+info.contentIconColor = "0xFF0429FF";
+info.contentCheckColor = "0xFFFFADB5";
+info.contentTitleColor = "0xFF98FFC6";
+info.contentShowColor = "0xFF98B3FF";
+// Android : res/drawable 对象ID（文件名）
+// iOS : asset 对象ID（文件名）
+info.contentIconDrawable = "ic_stat_gamepot_small";
+
+info.footerBackGradient = new string[] { "0xFFFFFFFF", "0xFF112432" };
+info.footerButtonGradient = new string[] { "0xFF1E3A57", "0xFFFFFFFF" };
+info.footerButtonOutlineColor = "0xFFFF171A";
+info.footerTitleColor = "0xFFFF00D5";
+info.footerTitle = "게임 시작하기";
+// 夜间广告接受按钮曝光
+info.showNightPush = true; 
+
+GamePot.showAgreeDialog(info);
+```
+
+每个变量都应用于下面的区域。
+
+> contentIconDrawable仅在AOS上显示，默认值设置为推送图标。
+
+![gamepot_unity_12](./images/gamepot_unity_12.png)
+
+## 服务条款
+
+调用使用条款UI。
+
+```c#
+GamePot.showTerms();
+```
+
+![gamepot_unity_16](./images/gamepot_unity_16.png)
+
+## 隐私声明
+
+调用隐私策略UI。
+
+```c#
+GamePot.showPrivacy();
+```
+
+![gamepot_unity_15](./images/gamepot_unity_15.png)
