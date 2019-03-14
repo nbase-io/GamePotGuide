@@ -858,7 +858,12 @@ info.footerButtonOutlineColor = "0xFFFF171A";
 info.footerTitleColor = "0xFFFF00D5";
 info.footerTitle = "게임 시작하기";
 // 夜间广告接受按钮曝光
-info.showNightPush = true; 
+info.showNightPush = true;
+
+info.allMessage = "모두 동의";
+info.termMessage = "필수) 이용약관";
+info.privacyMessage = "필수) 개인정보 취급 방침";
+info.nightPushMessage = "선택) 야간 푸시 수신 동의";
 
 GamePot.showAgreeDialog(info);
 ```
