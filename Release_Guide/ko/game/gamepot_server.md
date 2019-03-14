@@ -27,7 +27,7 @@ userId={uuid}&orderId={orderId}&projectId={projectId}&platform={platform}&produc
 | store         | String | 스토어 정보(ios, google, one)                 |
 | projectId     | String | 프로젝트ID                                    |
 | productId     | String | 구글/애플/원스토어에 등록된 상품ID            |
-| platform      | String | 운영 Platform 정보 (Android, IOS)             |
+| platform      | String | 운영 Platform 정보 (android, ios)             |
 | payment       | String | 결제 방식 ( apple, google, one, mycard, mol ) |
 | orderId       | String | 주문번호 ( 자동생성 )                         |
 | domain        | String | 게임 서버에 아이템 지급 서버의 도메인         |

@@ -23,7 +23,7 @@ userId={uuid}&orderId={orderId}&projectId={projectId}&platform={platform}&produc
 | orderId     | String | 订单号 ( 自动生成 )                                          |
 | projectId   | String | ProjectID                                                    |
 | productid   | String | Google/Apple/Onestore的商品ID                                |
-| platform    | String | 平台 Platform信息 (Android, IOS)                             |
+| platform    | String | 平台 Platform信息 (android, ios)                             |
 | store       | String | 渠道信息(ios, google, one)                                   |
 | payment     | String | 储值方式 (apple, google, one, mycard, mol)                   |
 | transaction | String | transaction id of Google/Apple/Onestore<br/>(ex. Google is “GPA.0000-0000-0000-00000”) |
