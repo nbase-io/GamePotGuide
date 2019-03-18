@@ -206,6 +206,12 @@ public class NError
 2. APK 빌드 시 사용한 Keystore의 SHA-1 값을 Google Firebase console에 추가합니다.
 3. Google Firebase Console에서 iOS용 GoogleService-Info.plist 파일을 다운로드한 후에 `/Assets/Plugins/IOS/`에 복사합니다.
 
+**구글 로그인 시 onCancel이 응답하며 로그인이 되지 않는 경우** 아래 내용을 체크해주세요.
+
+1. 위에 적용요청한 google-service.json파일을 정상적으로 적용했는지 확인
+2. 빌드 시 사용한 키스토어가 Firebase console에 등록한 sha-1를 추출한 키스토어인지 확인
+3. Firebase console에 등록한 패키지명으로 빌드를 했는지 확인
+
 ### 페이스북 로그인
 
 #### Facebook Developer Console
@@ -250,6 +256,31 @@ GamePotFacebook.framework
 Capabilities 설정에서 Game Center를 ON으로 설정합니다.(앱스토어 콘솔에서도 Game Center이 ON으로 설정되어 있어야 합니다.)
 
 ![](./images/gamepot_unity_09.png)
+
+### 네이버 로그인
+
+#### Naver Developer Console
+
+사용 API를 `네아로`로 선택 후 애플리케이션 등록
+
+#### Android
+
+mainTemplate.gradle 수정
+
+```java
+...
+defaultConfig {
+	resValue "string", "gamepot_naver_clientid", "abcdefg1234567890"
+	resValue "string", "gamepot_naver_secretid", "hijklmn"
+}
+...
+```
+
+발급받은 Client ID를 `gamepot_naver_clientid` 값에 입력하고 Client Secret은  `gamepot_naver_secretid` 값에 입력합니다.
+
+#### iOS
+
+
 
 ## 로그인/로그아웃/탈퇴/검증
 

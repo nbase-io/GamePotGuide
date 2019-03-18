@@ -191,8 +191,13 @@ public class NError
 
 1. 从Google Firebase Console下载Android专用google-service.json之后复制到 `/Assets/Plugins/Android/`。
 2. 将把编译APK时所使用的Keystore的SHA-1值添加到Google Firebase console里。
-
 3. 从Google Firebase Console下载iOS专用GoogleService-Info.plist之后复制到 `/Assets/Plugins/IOS/`。
+
+**如果onCancel在您登录Google时做出响应而您无法登录。**请在下方查看。
+
+1. 确保您已应用所请求的google-service.json文件
+2. 确认构建时使用的密钥库是在Firebase控制台中注册sha-1的密钥库
+3. 确保使用在Firebase控制台中注册的程序包名称进行构建
 
 #### Facebook登录
 
@@ -237,6 +242,33 @@ GamePotFacebook.framework
 在Capabilities设置中设置为Game Center ON。 ( 在App Store Console里也需要设置为Game Center ON。)
 
 ![](./images/gamepot_unity_09.png)
+
+### Naver登录
+
+#### Naver Developer Console
+
+选择使用API为`네아로`后注册应用程序
+
+#### Android
+
+修改mainTemplate.gradle
+
+```java
+...
+defaultConfig {
+	resValue "string", "gamepot_naver_clientid", "abcdefg1234567890"
+	resValue "string", "gamepot_naver_secretid", "hijklmn"
+}
+...
+```
+
+在“gamepot_naver_clientid”值中输入已发布的客户端ID，在“gamepot_naver_secretid”值中输入客户端密码。
+
+#### iOS
+
+
+
+
 
 ### 登录/退出/注销
 
