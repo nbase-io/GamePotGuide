@@ -744,7 +744,7 @@ public void onCouponFailure(NError error) {
 Request:
 
 ```csharp
-GamePot.showNoticeWebView();
+GamePot.showNotice();
 ```
 
 Response:
