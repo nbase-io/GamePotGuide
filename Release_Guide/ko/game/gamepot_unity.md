@@ -778,8 +778,33 @@ public void onCouponFailure(NError error) {
 
 ## 공지사항
 
+GAMEPOT 대시보드에서 '공지사항'에 추가한 이미지를 순서대로 노출하는 기능입니다.
+
+![gamepot_unity_17](./images/gamepot_unity_17.png)
+
+이미지 권장 스펙은 아래와 같습니다.
+
+- 사이즈 : 720 * 1200(Portrait) / 1280 * 640(Landscape)
+
+  > 위 사이즈를 준수하지 않을 경우 center crop으로 이미지를 처리합니다.
+
+- 용량 : 250KB 이하
+
+Request:
+
 ```csharp
-GamePot.showNoticeWebView();
+GamePot.showNotice();
+```
+
+Response:
+
+GAMEPOT 대시보드에서 `클릭액션`을 `SCHEME`으로 설정한 경우 해당 이미지를 클릭 시 `SCHEME`값을 전달드립니다.
+
+```csharp
+public void onReceiveScheme(string scheme)
+{
+    // GAMEPOT 대시보드에서 설정한 scheme값을 전달
+}
 ```
 
 ## 고객지원
@@ -909,6 +934,7 @@ info.footerTitle = "게임 시작하기";
 // 야간 광고성 수신동의 버튼 노출 여부
 info.showNightPush = true;
 
+// 문구 변경
 info.allMessage = "모두 동의";
 info.termMessage = "필수) 이용약관";
 info.privacyMessage = "필수) 개인정보 취급 방침";

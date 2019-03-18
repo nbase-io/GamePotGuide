@@ -727,10 +727,35 @@ public void onCouponFailure(NError error) {
 
 > 因为Naver论坛SDK的容量大，所以有包含的Plugin以及没有包含的Plugin两个版本。按照需求来选择使用就可以。
 
-##公告
+##公告事项
+
+此功能按顺序在GAMEPOT仪表板中公开添加到“公告事项”的图像。
+
+![gamepot_unity_17](./images/gamepot_unity_17.png)
+
+建议的图像规格如下所示。
+
+- 尺寸 : 720 * 1200(Portrait) / 1280 * 640(Landscape)
+
+  > 如果上述尺寸不匹配，请使用中心裁剪处理图像。
+
+- 文件大小 : 250KB 下面
+
+Request:
 
 ```csharp
 GamePot.showNoticeWebView();
+```
+
+Response:
+
+如果在GAMEPOT仪表板中将`click action`设置为`SCHEME`，则单击图像时将传递`SCHEME`。
+
+```csharp
+public void onReceiveScheme(string scheme)
+{
+    // 传递GAMEPOT仪表板中设置的方案值
+}
 ```
 
 ##客服中心
