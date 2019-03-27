@@ -17,20 +17,21 @@ HTTP 요청 시 정보는 아래와 같은 내용으로 전달드리고 해당 �
 
 ```java
 https://{domain}?
-userId={uuid}&orderId={orderId}&projectId={projectId}&platform={platform}&productid={productId}&store={store}&payment={payment}&transactionId={transactionId}
+userId={uuid}&orderId={orderId}&projectId={projectId}&platform={platform}&productId={productId}&store={store}&payment={payment}&transactionId={transactionId}&gamepotOrderId={gamepotOrderId}&uniqueId={uniqueId}
 ```
 
-| Attribute     | Type   | Description                                   |
-| ------------- | ------ | --------------------------------------------- |
-| userId        | String | 사용자 UID                                    |
-| transactionId | String | 주문번호(GPA-xxxx-xxxx-)                      |
-| store         | String | 스토어 정보(ios, google, one)                 |
-| projectId     | String | 프로젝트ID                                    |
-| productId     | String | 구글/애플/원스토어에 등록된 상품ID            |
-| platform      | String | 운영 Platform 정보 (android, ios)             |
-| payment       | String | 결제 방식 ( apple, google, one, mycard, mol ) |
-| orderId       | String | 주문번호 ( 자동생성 )                         |
-| domain        | String | 게임 서버에 아이템 지급 서버의 도메인         |
+| Attribute      | Type   | Description                                                  |
+| -------------- | ------ | ------------------------------------------------------------ |
+| userId         | String | 사용자 UID                                                   |
+| transactionId  | String | 주문번호(GPA-xxxx-xxxx-)                                     |
+| store          | String | 스토어 정보(ios, google, one)                                |
+| projectId      | String | 프로젝트ID                                                   |
+| productId      | String | 구글/애플/원스토어에 등록된 상품ID                           |
+| platform       | String | 운영 Platform 정보 (android, ios)                            |
+| payment        | String | 결제 방식 ( apple, google, one, mycard, mol ... )            |
+| orderId        | String | **Deprecated** Unique id (purchase api 호출 시 넣은 unique id) |
+| uniqueId       | String | Unique id (purchase api 호출 시 넣은 unique id)              |
+| gamepotOrderId | String | GAMEPOT Order id                                             |
 
 ###Response
 

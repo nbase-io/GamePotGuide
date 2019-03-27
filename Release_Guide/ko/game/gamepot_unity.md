@@ -38,9 +38,9 @@ android {
         resValue "string", "gamepot_store", "google" // required
         resValue "string", "gamepot_app_title","@string/app_name" // required (fcm)
         resValue "string", "gamepot_push_default_channel","Default" // required (fcm)
-		resValue "string", "facebook_app_id", "0" // optional (facebook)
-		resValue "string", "fb_login_protocol_scheme", "fb0" // optional (facebook)
-		// resValue "string", "gamepot_elsa_projectid", "" // optional (ncp elsa)
+				resValue "string", "facebook_app_id", "0" // optional (facebook)
+				resValue "string", "fb_login_protocol_scheme", "fb0" // optional (facebook)
+				// resValue "string", "gamepot_elsa_projectid", "" // optional (ncp elsa)
 	}
 	...
 }
@@ -651,6 +651,21 @@ GAMEPOT은 Server to server api를 통해 결제 스토어에 영수증 검증�
 
 이를 위해선 `Server to server api` 메뉴에 `Purchase Webhook` 항목을 참고하여 처리하셔야 합니다.
 
+### 외부결제
+
+외부결제를 허용하는 스토어 및 공식 스토어가 아닌 곳에서 결제를 사용할 수 있는 기능입니다.
+
+> 호출 api만 다르고 응답 및 purchase webhook등 나머지는 일반 결제와 동일합니다.
+
+Request:
+
+```csharp
+// productId : 마켓에 등록된 상품ID
+// price : 아이템 가격
+// currency : 통화
+GamePot.purchaseThirdPayments(string productId, string price, string currency);
+```
+
 ## 광고
 
 IGAWorks Unity Plugin을 기본으로 포함하고 있으므로 [IGAWorks의 가이드](http://help.igaworks.com/hc/ko/3_3/Content/Article/common_unity_aos)로 적용하시면 됩니다.
@@ -920,7 +935,7 @@ public void onAgreeDialogSuccess(NAgreeResultInfo info)
 {
     // info.agree : 필수 약관을 모두 동의한 경우 true
     // info.agreeNight : 야간 광고성 수신 동의를 체크한 경우 true, 그렇지 않으면 false
-    // agreeNight 값은 로그인 완료 후 setPushStatus api를 통해 전달하세요.
+    // agreeNight 값은 로그인 완료 후 setPushNightStatus api를 통해 전달하세요.
 }
 
 // 오류 발생
