@@ -23,6 +23,14 @@
    1. Firebase 콘솔에서 Andorid 앱에 추가한 Package name으로 빌드 여부
    2. SHA-1을 추출한 Keystore로 빌드 여부
 
+#### Q. IOS에서 구글 로그인 시 오류 (401 오류 : disabled_client)가 발생 됩니다.
+
+#### A. Firebase 콘솔 설정에 지원 이메일이 설정 되어 있지 않아 문제가 발생 할 수 있습니다. 
+
+지원 이메일을 설정 한 후 확인해주세요.
+
+![gamepot_faq_16](./images/gamepot_faq_ios_3.png)
+
 ### 구글 결제가 안 돼요!
 
 #### Q. 결제 시도시 'productid was wrong!' 문구가 노출됩니다.
@@ -107,3 +115,24 @@
 > 추가시 종류는 결제/쿠폰으로, 아이피는 단말기의 외부 네트워크 아이피를 넣어주시면 됩니다.
 
 ![gamepot_faq_07](./images/gamepot_faq_07.png)
+
+
+
+## Adbrix Remaster
+
+#### Q. Adbrix Remaster 적용 후 IOS 빌드 시 Crash가 발생되요.
+
+#### A. Adbrix Remaster는 Swift로 구현되어 있는 라이브러리로 Swift 라이브러리 적용 시 추가 설정이 필요 합니다.
+
+XCode에서 아래와 같이 설정 하신 후 빌드 해주세요.
+
+만약 빌드 해도 동일하다면 클린 빌드 한 후 확인 해주세요.
+
+![gamepot_faq_14](./images/gamepot_faq_ios_1.png)
+
+![gamepot_faq_15](./images/gamepot_faq_ios_2.png)
+
+
+
+
+
