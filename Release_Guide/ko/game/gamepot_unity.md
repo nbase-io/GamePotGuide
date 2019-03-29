@@ -280,7 +280,26 @@ defaultConfig {
 
 #### iOS
 
+GamePotConfig-Info.plist 파일에 아래 항목을 추가하여 해당 값을 입력 합니다.
 
+```
+gamepot_naver_clientid // 네이버에서 사용할 client 아이디
+gamepot_naver_secretid // 네이버에서 사용할 secret 아이디
+gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
+```
+
+GamePotConfig-Info.plist 파일을 SourceCode로 볼 때는 아래와 같이 추가
+
+```xml
+...
+<key>gamepot_naver_clientid</key>
+<string>xxxxxx</string>
+<key>gamepot_naver_secretid</key>
+<string>xxxxxx</string>
+<key>gamepot_naver_urlscheme</key>
+<string>xxxxxx</string>
+...
+```
 
 ## 로그인/로그아웃/탈퇴/검증
 
@@ -553,7 +572,7 @@ public void onCreateLinkingFailure(NError error)
 	UI_Update();
 }
 public void onDeleteLinkingSuccess(NUserInfo userInfo)
-{	
+{
 	UI_Update();
 }
 public void onDeleteLinkingFailure(NError error)
@@ -567,10 +586,10 @@ Public void UI_Update()
 	CreateLinkManager.instance._IOS_google_state  = false;
 	CreateLinkManager.instance._IOS_gamecenter_state  = false;
 
-	List<NLinkingInfo> linkedList = GamePot.getLinkedList(); 
+	List<NLinkingInfo> linkedList = GamePot.getLinkedList();
 	foreach ( NLinkingInfo item in linkedList)
 	{
-		case NCommon.LinkingType.GOOGLE : 
+		case NCommon.LinkingType.GOOGLE :
 			CreateLinkManager.instance._IOS_google_state  = true;
 		break;
 		case NCommon.LinkingType.GAMECENTER :
@@ -584,7 +603,7 @@ Public void UI_Update()
 
 ### 인앱 상품 조회
 
-스토어에 등록된 상품 정보를 전달 합니다. 
+스토어에 등록된 상품 정보를 전달 합니다.
 
 이 기능을 활용하면 사용자에 맞게 가격, 통화, 상품명이 다르게 표시됩니다.
 

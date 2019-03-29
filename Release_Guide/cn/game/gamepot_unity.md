@@ -266,9 +266,26 @@ defaultConfig {
 
 #### iOS
 
+将以下项添加到 GamePotConfig-Info.plist 文件中并输入适当的值。
 
+```
+gamepot_naver_clientid // client id
+gamepot_naver_secretid // secret id
+gamepot_naver_urlscheme // urlscheme
+```
 
+当您将 GamePotConfig-Info.plist 文件视为 SourceCode 时，请按如下所示添加它。
 
+```xml
+...
+<key>gamepot_naver_clientid</key>
+<string>xxxxxx</string>
+<key>gamepot_naver_secretid</key>
+<string>xxxxxx</string>
+<key>gamepot_naver_urlscheme</key>
+<string>xxxxxx</string>
+...
+```
 
 ### 登录/退出/注销
 
