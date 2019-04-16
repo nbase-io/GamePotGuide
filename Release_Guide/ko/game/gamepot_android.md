@@ -94,7 +94,7 @@ build.gradle 파일은 프로젝트 root 폴더와 app 폴더에 각각 존재�
        compile('io.socket:socket.io-client:1.0.0') {
            exclude group: 'org.json', module: 'json'
        }
-       compile('com.github.ihsanbal:LoggingInterceptor:2.0.5') {
+       compile('com.github.ihsanbal:LoggingInterceptor:3.0.0') {
            exclude group: 'org.json', module: 'json'
        }
        compile "com.github.nisrulz:easydeviceinfo:2.4.1"
@@ -710,7 +710,7 @@ dependencies {
 
     // FACEBOOK 이용 시 추가 [START]
     compile(name: 'gamepot-ad-facebook', ext: 'aar')
-    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.facebook.android:facebook-android-sdk:4.39.0'
     // FACEBOOK 이용 시 추가 [END]
 
     // IGAWorks 이용 시 추가 [START]
