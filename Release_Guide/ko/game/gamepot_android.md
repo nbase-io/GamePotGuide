@@ -13,7 +13,7 @@ Android에서 GAMEPOT을 사용하기 위한 시스템 환경은 다음과 같�
 
 [ 시스템 환경 ]
 
-- 최소사항: API 15 (IceCreamSandwich, 4.0.3) 이상, gradle 2.3.0 이상
+- 최소사항: API 17 (Jelly Bean, 4.2) 이상, gradle 2.3.0 이상
 - 개발 환경: Android Studio
 
 ### 프로젝트 생성

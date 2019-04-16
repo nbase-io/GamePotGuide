@@ -23,6 +23,10 @@ search:
 
 ####기본 환경 설정
 
+```d
+minSdkVersion : API 17 (Jelly Bean, 4.2) 
+```
+
 #####Gradle 환경 설정 방법
 
 /Assets/Plugin/Android/mainTemplate.gradle 파일을 에디터로 엽니다.
@@ -81,7 +85,7 @@ resValue "string", "[key]", "[value]"
 | res/drawable-xxhdpi/  | 72x72 |
 | res/drawable-xxxhdpi/ | 96x96 |
 
-##### Screen Orienation 설정 방법
+##### Screen Orientation 설정 방법
 
 /Assets/Plugin/Android/AndroidManifest.xml 파일을 에디터로 엽니다.
 
