@@ -813,13 +813,51 @@ import io.gamepot.common.GamePot;
 GamePot.getInstance().purchase("product id");
 ```
 
+## 결제 아이템 리스트 획득
+
+스토어에서 전달하는 인앱 아이템 리스트를 획득할 수 있습니다.
+
+```java
+import io.gamepot.common.GamePot;
+
+GamePotPurchaseDetailList details = GamePot.getInstance().getPurchaseDetailList();
+```
+
 ##결제 아이템 지급
 
 GAMEPOT은 Server to server api를 통해 결제 스토어에 영수증 검증까지 모두 마친 후 개발사 서버에 지급 요청을 하기 때문에 불법 결제가 불가능합니다.
 
 이를 위해선 `Server to server api` 메뉴에 `Purchase` 항목을 참고하여 처리하셔야 합니다.
 
-# 7. 기타 API
+# 7. 외부결제
+
+원스토어의 경우 기본 스토어 결제 모듈이 아닌 제 3의 결제모듈을 허용하고 있습니다.
+
+## 설정
+
+대시보드에 외부결제 항목을 참고하여 대시보드 설정을 먼저 진행하세요.
+
+`7. 결제` 항목을 먼저 구현했다면 추가로 설정할 부분은 없습니다.
+
+## 결제 시도
+
+```java
+import io.gamepot.common.GamePot;
+
+// activity : 현재 액티비티
+// product id : 대시보드에 등록한 결제 아이디
+GamePot.getInstance().purchaseThirdPayments(activity, product id);
+```
+
+## 결제 아이템 리스트 획득
+
+```java
+import io.gamepot.common.GamePot;
+
+GamePotPurchaseDetailList thirdPaymentsDetailList = GamePot.getInstance().getPurchaseThirdPaymentsDetailList();
+```
+
+# 8. 기타 API
 
 ## 네이버 카페 SDK
 
@@ -850,7 +888,7 @@ dependencies {
     ...
     // naver cafe [START]
     compile(name: 'gamepot-navercafe', ext: 'aar')
-    compile(name: 'cafeSdk-4.0.4', ext: 'aar')
+    compile(name: 'cafeSdk-4.2.1', ext: 'aar')
     compile(name: 'sos_library-1.1.3.4', ext: 'aar')
     compile 'com.navercorp.volleyextensions:volleyer:2.0.1', {
         exclude group: 'com.mcxiaoke.volley', module: 'library'
@@ -958,21 +996,9 @@ GamePot.getInstance().setNightPushEnable(/*true or false*/, new GamePotCommonLis
     }
 });
 
-// 광고 푸시 수신 On/Off
-// 광고성 푸시 설정
-GamePot.getInstance().setAdPushEnable(/*true or false*/, new GamePotCommonListener() {
-    @Override
-    public void onSuccess() {
-    }
-
-    @Override
-    public void onFailure(GamePotError error) {
-    }
-});
-
-// 푸시, 야간푸시, 광고푸시를 한번에 설정
-// 로그인 전에 푸시, 야간푸시, 광고푸시 허용 여부를 받는 게임이라면 로그인 후에 아래 코드로 필히 호출합니다.
-GamePot.getInstance().setPushEnable(/*true or false*/, /*true or false*/, /*true or false*/, new GamePotCommonListener() {
+// 푸시, 야간푸시를 한번에 설정
+// 로그인 전에 푸시, 야간푸시 허용 여부를 받는 게임이라면 로그인 후에 아래 코드로 필히 호출합니다.
+GamePot.getInstance().setPushEnable(/*true or false*/, /*true or false*/, true, new GamePotCommonListener() {
     @Override
     public void onSuccess() {
     }
@@ -991,8 +1017,7 @@ import org.json.JSONObject;
 
 // enable: 전체푸시
 // night: 야간푸시
-// ad: 광고성푸시
-// {"enable":true, "night":true, "ad":false}
+// {"enable":true, "night":true}
 JSONObject status = GamePot.getInstance().getPushStatus();
 ```
 
@@ -1003,7 +1028,12 @@ JSONObject status = GamePot.getInstance().getPushStatus();
 ### 호출
 
 ```java
-GamePot.getInstance().showNoticeWebView(/*현재 액티비티*/);
+GamePot.getInstance().showNotice(/*현재 액티비티*/, new GamePotNoticeDialog.onSchemeListener() {
+    @Override
+    public void onReceive(String scheme) {
+        // TODO : scheme 처리
+    }
+});
 ```
 
 ## 고객센터
@@ -1104,5 +1134,123 @@ GamePotChannel.getInstance().login(this, GamePotChannelType.GOOGLE, new GamePotA
 });
 ```
 
+## 약관 동의
 
+'이용약관' 및 '개인정보 수집 및 이용안내' 동의를 쉽게 받을 수 있도록 UI를 제공합니다.
+
+`BLUE` 테마와  `GREEN` 테마 두 가지를 제공하며, 각 영역별로 Customizing도 가능합니다.
+
+- `BLUE` 테마 예시
+
+  ![gamepot_unity_10](./images/gamepot_unity_10.png)
+
+- `GREEN` 테마 예시
+
+  ![gamepot_unity_11](./images/gamepot_unity_11.png)
+
+### 약관 동의 호출
+
+> 약관 동의 팝업 노출 여부는 개발사에서 게임에 맞게 처리해주세요.
+>
+> '보기'버튼을 클릭 시 보여지는 내용은 대시보드에서 적용 및 수정이 가능합니다.
+
+Request:
+
+```csharp
+// 기본 호출(BLUE 테마로 적용)
+GamePot.getInstance().showAgreeDialog(/*activity*/, new GamePotAgreeBuilder(), new GamePotListener<GamePotAgreeInfo>() {
+    @Override
+    public void onSuccess(GamePotAgreeInfo data) {
+        // data.agree : 필수 약관을 모두 동의한 경우 true
+        // data.agreeNight : 야간 광고성 수신 동의를 체크한 경우 true, 그렇지 않으면 false
+        // agreeNight 값은 로그인 완료 후 setPushNightStatus api를 통해 전달하세요.
+    }
+
+    @Override
+    public void onFailure(GamePotError error) {
+	    // error.message를 팝업 등으로 유저에게 알려주세요.
+    }
+});
+
+// GREEN 테마로 적용시
+GamePotAgreeBuilder bulider = new GamePotAgreeBuilder(GamePotAgreeBuilder.THEME.GREEN);
+GamePot.getInstance().showAgreeDialog(/*activity*/, bulider, new GamePotListener<GamePotAgreeInfo>() {
+  ....
+}
+```
+
+### Customizing
+
+테마를 사용하지 않고 게임에 맞게 색을 변경합니다.
+
+약관 동의를 호출하기 전에 `GamePotAgreeBuilder`에서 각 영역별로 색을 지정할 수 있습니다.
+
+```c#
+GamePotAgreeBuilder agreeBuilder= new GamePotAgreeBuilder();
+agreeBuilder.setHeaderBackGradient(new int[] {0xFF00050B,0xFF0F1B21});
+agreeBuilder.setHeaderTitleColor(0xFFFF0000);
+agreeBuilder.setHeaderBottomColor(0xFF00FF00);
+// 미사용시 ""로 설정
+agreeBuilder.setHeaderTitle("약관 동의");
+// res/drawable 객체 아이디
+agreeBuilder.setHeaderIconDrawable(R.drawable.ic_stat_gamepot_agree);
+
+agreeBuilder.setContentBackGradient(new int[] { 0xFFFF2432, 0xFF11FF32 });
+agreeBuilder.setContentIconColor(0xFF0429FF);
+agreeBuilder.setContentCheckColor(0xFFFFADB5);
+agreeBuilder.setContentIconColor(0xFF98FFC6);
+agreeBuilder.setContentShowColor(0xFF98B3FF);
+// res/drawable 객체 아이디
+agreeBuilder.setContentIconDrawable(R.drawable.ic_stat_gamepot_small);
+
+agreeBuilder.setFooterBackGradient(new int[] { 0xFFFFFFFF, 0xFF112432 });
+agreeBuilder.setFooterButtonGradient(new int[] { 0xFF1E3A57, 0xFFFFFFFF });
+agreeBuilder.setFooterButtonOutlineColor(0xFFFF171A);
+agreeBuilder.setFooterTitleColor(0xFFFF00D5);
+agreeBuilder.setFooterTitle("게임 시작하기");
+// 야간 광고성 수신동의 버튼 노출 여부
+agreeBuilder.setShowNightPush(true);
+
+// 문구 변경
+agreeBuilder.setAllMessage("모두 동의");
+agreeBuilder.setTermMessage("필수) 이용약관");
+agreeBuilder.setPrivacyMessage("필수) 개인정보 취급 방침");
+agreeBuilder.setNightPushMessage("선택) 야간 푸시 수신 동의");
+
+GamePot.getInstance().showAgreeDialog(/*activity*/, agreeBuilder, new GamePotListener<GamePotAgreeInfo>() {
+  ....
+}
+```
+
+각각의 변수는 아래 영역에 적용됩니다.
+
+> contentIconDrawable의 기본 이미지는 푸시 아이콘으로 설정됩니다.
+
+![gamepot_unity_12](./images/gamepot_unity_12.png)
+
+## 이용약관
+
+이용약관 UI를 호출합니다.
+
+> 대시보드 - 고객지원 - 이용약관 설정 항목에 내용을 먼저 입력하세요.
+
+```java
+import io.gamepot.common.GamePot;
+
+// activity : 현재 액티비티
+GamePot.getInstance().showTerms(activity);
+```
+
+## 개인정보 취급방침
+
+개인정보 취급방침 UI를 호출합니다.
+
+> 대시보드 - 고객지원 - 개인정보취급방침 설정 항목에 내용을 먼저 입력하세요.
+
+```java
+import io.gamepot.common.GamePot;
+
+// activity : 현재 액티비티
+GamePot.getInstance().showPrivacy(activity);
+```
 

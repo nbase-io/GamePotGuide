@@ -675,14 +675,23 @@ GAMEPOT은 Server to server api를 통해 결제 스토어에 영수증 검증�
 외부결제를 허용하는 스토어 및 공식 스토어가 아닌 곳에서 결제를 사용할 수 있는 기능입니다.
 
 > 호출 api만 다르고 응답 및 purchase webhook등 나머지는 일반 결제와 동일합니다.
+>
+> 기능을 사용하기 위해선 설정이 필요합니다. 대시보드 메뉴얼에 '외부결제' 항목을 참고하세요.
 
 Request:
 
 ```csharp
 // productId : 마켓에 등록된 상품ID
-// price : 아이템 가격
-// currency : 통화
-GamePot.purchaseThirdPayments(string productId, string price, string currency);
+GamePot.purchaseThirdPayments(string productId);
+```
+
+외부결제 이용 시 상품 정보 리스트는 아래 api를 사용하세요.
+
+Request:
+
+```csharp
+// 리턴되는 데이터 포멧은 getPurchaseItems()와 동일합니다.
+GamePot.getPurchaseThirdPaymentsItems();
 ```
 
 ## 광고
@@ -700,7 +709,7 @@ IGAWorks Unity Plugin을 기본으로 포함하고 있으므로 [IGAWorks의 가
 
 ## Push on/off
 
-전체푸시, 야간푸시, 광고 푸시 3가지 종류의 푸시를 각각 on/off를 처리 할 수 있습니다.
+푸시, 야간푸시를 각각 on/off를 처리 할 수 있습니다.
 
 > on/off설정하는 UI는 개발사에서 구현해주세요.
 
@@ -748,36 +757,14 @@ public void onPushNightFailure(NError error) {
 }
 ```
 
-### 광고 푸시 설정
+### 푸시 / 야간푸시 한번에 설정
+
+로그인 전에 푸시 / 야간푸시 허용 여부를 받는 게임이라면 로그인 후에 아래 코드로 필히 호출합니다.
 
 Request:
 
 ```csharp
-GamePot.setPushADStatus(bool adPushEnable);
-```
-
-Response:
-
-```csharp
-/// 광고 푸시 상태 변경에 대한 서버 통신 성공
-public void onPushAdSuccess() {
-}
-
-/// 광고 푸시 상태 변경에 대한 서버 통신 실패
-public void onPushAdFailure(NError error) {
-	// 광고 푸시 상태 변경을 실패하는 경우
-	// error.message를 팝업 등으로 유저에게 알려주세요.
-}
-```
-
-### 푸시 / 야간푸시 / 광고 상태를 한번에 설정
-
-로그인 전에 푸시 / 야간푸시 / 광고푸시 허용 여부를 받는 게임이라면 로그인 후에 아래 코드로 필히 호출합니다.
-
-Request:
-
-```csharp
-GamePot.setPushStatus(bool pushEnable, bool nightPushEnable, bool adPushEnable);
+GamePot.setPushStatus(bool pushEnable, bool nightPushEnable, true);
 ```
 
 Response:
@@ -800,7 +787,6 @@ public void onPushStatusFailure(NError error) {
 NPushInfo pushInfo = GamePot.getPushStatus();
 // pushInfo.enable  푸시 허용 여부
 // pushInfo.night   야간 푸시 허용 여부
-// pushInfo.ad      광고 푸시 허용 여부
 ```
 
 ## 쿠폰
@@ -1018,6 +1004,8 @@ GamePot.showAgreeDialog(info);
 
 이용약관 UI를 호출합니다.
 
+> 대시보드 - 고객지원 - 이용약관 설정 항목에 내용을 먼저 입력하세요.
+
 ```c#
 GamePot.showTerms();
 ```
@@ -1027,6 +1015,8 @@ GamePot.showTerms();
 ## 개인정보 취급방침
 
 개인정보 취급방침 UI를 호출합니다.
+
+> 대시보드 - 고객지원 - 개인정보취급방침 설정 항목에 내용을 먼저 입력하세요.
 
 ```c#
 GamePot.showPrivacy();
