@@ -512,7 +512,18 @@ AppDelegate.m 파일 내에 아래와 같이 추가합니다.
 [[GamePot getInstance] purchase:productid];
 ```
 
-#### Step 3. 결제 아이템 지급
+#### Step 3. **결제 아이템 리스트 획득** 
+
+스토어에서 전달하는 인앱 아이템 리스트를 획득할 수 있습니다.
+
+```objective-c
+NSArray<SKProduct*>* itemList = [[GamePot getInstance] getDetails];
+
+// Device설정에 따른 통화 가격 얻어올때
+[[GamePot getInstance] getLocalizePrice:[product productIdentifier]];
+```
+
+#### Step 4. 결제 아이템 지급
 
 GAMEPOT은 Server to server api를 통해 결제 스토어에 영수증 검증까지 모두 마친 후 개발사 서버에 지급 요청을 하기 때문에 불법 결제가 불가능합니다.
 
@@ -620,15 +631,8 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 
 }];
 
-// 광고푸시 수신 On/Off
-[[GamePot getInstance] setAdPushEnable:YES success:^{
-
-} fail:^(NSError *error) {
-
-}];
-
-// 푸시/야간푸시/광고푸시를 한번에 설정
-// 로그인 전에 푸시/야간푸시/광고푸시 허용 여부를 받는 게임이라면 로그인 후에 아래 코드를 반드시 호출합니다.
+// 푸시/야간푸시를 한번에 설정
+// 로그인 전에 푸시/야간푸시 허용 여부를 받는 게임이라면 로그인 후에 아래 코드를 반드시 호출합니다.
 [[GamePot getInstance] setPushStatus:YES night:YES ad:YES success:^{
     <#code#>
 } fail:^(NSError *error) {
@@ -643,7 +647,9 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 ### 호출
 
 ```objc
-[[GamePot getInstance] showNoticeWebView:(UIViewController *)];
+[[GamePot getInstance] showNotice:/*viewController*/ setSchemeHandler:^(NSString *scheme) {
+	NSLog(@"scheme = %@", scheme);
+}];
 ```
 
 ## 고객센터
@@ -693,29 +699,137 @@ gamepot_naver_urlscheme // 네이버에서 사용할 urlscheme
 
 기존에 적용된 아래 API에서 사용이 가능합니다.
 
-#### 1. setup API
+#### 1. Login API
 
 ```objc
-[[GamePot getInstance] setupWithAppStatus:^(GamePotAppStatus *status) {
-        NSLog(@"Update : %@", [status toString]);
-	    // TODO : 강제 업데이트가 필요한 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
-        // TODO : Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
-        [[GamePot getInstance] showAppStatusPopup:self setAppStatus:status setCloseHandler:^{
-           // TODO : showAppStatusPopup API를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
-           // TODO : 종료 프로세스를 처리해주세요.
+[[GamePotChannel getInstance] Login:GAMECENTER viewController:self 		    
+    success:^(GamePotUserInfo* userInfo) {
+    		// 로그인 완료. 게임 로직에 맞게 처리해주세요.
+    } cancel:^{
+    		// 사용자가 로그인을 취소한 상황.
+    } fail:^(NSError *error) {
+    		// 로그인 실패. [error localizedDescription]를 이용해서 오류 메시지를 보여주세요.
+    } update:^(GamePotAppStatus *appStatus) {
+        // TODO: 강제 업데이트가 필요한 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+        // TODO: Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
+        [[GamePot getInstance] showAppStatusPopup:self setAppStatus:appStatus 
+         setCloseHandler:^{
+            // TODO: showAppStatusPopup API를 호출하신 경우 앱을 종료해야 하는 상황에 호출됩니다.
+            // TODO: 종료 프로세스를 처리해주세요.
         }];
-    } setMaintenance:^(GamePotAppStatus *status) {
-        NSLog(@"Maintenance : %@", [status toString]);
-	    // TODO : 점검 중인 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
-        // TODO : Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
-        [[GamePot getInstance] showAppStatusPopup:self setAppStatus:status setCloseHandler:^{
-            // TODO : showAppStatusPopup API를 호출하신 경우 앱을 종료해야하는 상황에 호출됩니다.
-            // TODO : 종료 프로세스를 처리해주세요.
+    } maintenance:^(GamePotAppStatus *appStatus) {
+  	    // TODO: 점검 중인 경우. 아래 API를 호출하면 SDK 자체에서 팝업을 띄울 수 있습니다.
+	      // TODO: Customizing을 하고자 하는 경우 아래 API를 호출하지 말고 Customizing을 하면 됩니다.
+        [[GamePot getInstance] showAppStatusPopup:self setAppStatus:appStatus 
+         setCloseHandler:^{
+						// TODO: showAppStatusPopup API를 호출하신 경우 앱을 종료해야 하는 상황에 호출됩니다.
+            // TODO: 종료 프로세스를 처리해주세요.
         }];
     }];
 ```
 
-####
+## 약관 동의
+
+'이용약관' 및 '개인정보 수집 및 이용안내' 동의를 쉽게 받을 수 있도록 UI를 제공합니다.
+
+`BLUE` 테마와  `GREEN` 테마 두 가지를 제공하며, 각 영역별로 Customizing도 가능합니다.
+
+\- `BLUE` 테마 예시
+
+![gamepot_unity_10](./images/gamepot_unity_10.png)
+
+\- `GREEN` 테마 예시  ![gamepot_unity_11](./images/gamepot_unity_11.png)
+
+### 약관 동의 호출
+
+> 약관 동의 팝업 노출 여부는 개발사에서 게임에 맞게 처리해주세요.
+>
+> '보기'버튼을 클릭 시 보여지는 내용은 대시보드에서 적용 및 수정이 가능합니다.
+
+```objective-c
+// 블루테마 [[GamePotAgreeOption alloc] init:BLUE]; 
+// 그린테마 [[GamePotAgreeOption alloc] init:GREEN];
+GamePotAgreeOption* option = [[GamePotAgreeOption alloc] init:BLUE]; 
+[[GamePot getInstance] showAgreeView:self option:option handler:^(GamePotAgreeInfo *result) {
+   // [result agree] : 필수 약관을 모두 동의한 경우 true
+   // [result agreeNight] : 야간 광고성 수신 동의를 체크한 경우 true, 그렇지 않으면 false
+   // agreeNight 값은 로그인 완료 후 [[GamePot getInstance] setNightPushEnable]; api를 
+   // 통해 전달하세요.
+}];
+```
+
+
+
+### Customizing
+
+테마를 사용하지 않고 게임에 맞게 색을 변경합니다.
+
+약관 동의를 호출하기 전에 `GamePotAgreeOption`에서 각 영역별로 색을 지정할 수 있습니다.
+
+```objective-c
+ GamePotAgreeOption* option = [[GamePotAgreeOption alloc] init:GREEN];
+    
+[option setHeaderBackGradient:@[@0xFF00050B,@0xFF0F1B21]];
+[option setHeaderTitleColor:0xFF042941];
+[option setContentBackGradient:@[@0xFF112432,@0xFF112432]];
+[option setContentIconColor:0xFF042941];
+[option setContentCheckColor:0xFF91adb5];
+[option setContentTitleColor:0xFF98b3c6];
+[option setContentShowColor:0xFF98b3c6];
+[option setFooterBackGradient:@[@0xFF112432,@0xFF112432]];
+[option setFooterButtonGradient:@[@0xFF1E3A57,@0xFF57B2E2]];
+[option setFooterButtonOutlineColor:0xFF0b171a];
+[option setFooterTitleColor:0xFFFFFFD5];
+
+// 문구 변경
+[option setAllMessage:@"모두 동의"];
+[option setTermMessage:@"필수) 이용약관"];
+[option setPrivacyMessage:@"필수) 개인정보 취급 방침"];
+[option setNightPushMessage:@"선택) 약간 푸쉬 수신 동의"];
+[option setFooterTitle:@"게임 시작하기"];
+
+// 미사용시 @""로 설정
+[option setHeaderTitle:@"약관 동의"];
+
+// 야간 광고성 수신동의 버튼 노출 여부
+[option setShowNightPush:YES];
+```
+
+
+
+각각의 변수는 아래 영역에 적용됩니다.
+
+> contentIconDrawable의 이미지는 IOS에는 노출 되지 않습니다.
+
+![gamepot_unity_12](./images/gamepot_unity_12.png)
+
+## 이용약관
+
+이용약관 UI를 호출합니다.
+
+> 대시보드 - 고객지원 - 이용약관 설정 항목에 내용을 먼저 입력하세요.
+
+```java
+#import <GamePot/GamePot.h>
+
+[[GamePot getInstance] showTerms:/*ViewController*/];
+```
+
+![gamepot_unity_16](./images/gamepot_unity_16.png)
+
+## 개인정보 취급방침
+
+개인정보 취급방침 UI를 호출합니다.
+
+> 대시보드 - 고객지원 - 개인정보취급방침 설정 항목에 내용을 먼저 입력하세요.
+
+```java
+#import <GamePot/GamePot.h>
+
+[[GamePot getInstance] showPrivacy:/*ViewController*/];
+```
+
+![gamepot_unity_15](./images/gamepot_unity_15.png)
 
 ## 8. 다운로드
 

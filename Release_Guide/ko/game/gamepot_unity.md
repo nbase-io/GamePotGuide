@@ -305,6 +305,12 @@ GamePotConfig-Info.plist 파일을 SourceCode로 볼 때는 아래와 같이 추
 ...
 ```
 
+Targets >> Info >> URL Types에 네이버아이디로 로그인 설정에 등록한 URL Schemes를 추가합니다.
+
+URL Schemes를 생성 할 때는 `소문자`,`.`,`_`이외의 문자를 사용하면 인식이 안될 수 있으니 주의 부탁드립니다.
+
+
+
 ## 로그인/로그아웃/탈퇴/검증
 
 ### 로그인
