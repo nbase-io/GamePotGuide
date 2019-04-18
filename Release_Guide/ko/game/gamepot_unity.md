@@ -129,10 +129,24 @@ Main Activity에 screenOrientation을 추가 후 게임에 맞게 `sensorLandsca
 | gamepot_google_url_schemes       | GoogleService-Info 파일의 REVERSED_CLIENT_ID 값  |
 | gamepot_elsa_projectid           | NCLOUD ELSA 사용시 프로젝트ID                        |
 
-
 scenes를 추가한 후에 **File > Build Settings > Build And Run**을 실행하면 완료됩니다.
 
 ![](./images/gamepot_unity_07.png)
+
+
+
+XCode 빌드 후 
+
+Targets >> Info >> Custom iOS Target Properties 내에 아래 `사용자 권한 획득 옵션을 추가` 부탁드립니다.
+
+해당 사용자 권한은 GamePot 고객센터 내의 파일 업로드 기능에서 사용 됩니다. 
+
+```
+NSCameraUsageDescription
+NSPhotoLibraryUsageDescription
+```
+
+#### 
 
 ## 초기화
 

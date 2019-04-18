@@ -69,7 +69,22 @@ gamepot_api_url : 게임팟 API URL
 
 ![gamepot-1-304](./images/gamepot-1-306.png)
 
-#### Step 7. Google Sign In 로그인 환경 설정
+
+
+#### Step 7. Info.plist 수정
+
+Targets >> Info >> Custom iOS Target Properties 내에 아래 사용자 권한 획득 옵션을 추가 부탁드립니다.
+
+해당 사용자 권한은 GamePot 고객센터 내의 파일 업로드 기능에서 사용 됩니다. 
+
+```
+NSCameraUsageDescription
+NSPhotoLibraryUsageDescription
+```
+
+
+
+#### Step 8. Google Sign In 로그인 환경 설정
 
 서비스별 Dependencies 표의 **Login > Google Sign In**을 참고하여 Framework 및 Dependencies를 추가합니다.
 
@@ -86,7 +101,7 @@ gamepot_google_app_id : GoogleService-Info.plist 파일의 CLIENT_ID 값
 gamepot_google_url_schemes : GoogleService-Info.plist 파일의 REVERSED_CLIENT_ID 값
 ```
 
-#### Step 8. Facebook 로그인 환경 설정
+#### Step 9. Facebook 로그인 환경 설정
 
 서비스별 Dependencies 표의 **Login > Facebook**을 참고하여 Framework 및 Dependencies를 추가합니다.
 
