@@ -1,5 +1,21 @@
 ### Change Log
 
+#### v1.0.48 (2019-05-02)
+
+→ External payment support
+
+→ Added function to allow user to evaluate the answer satisfaction after termination of inquiry.
+
+→ Notice Improvement of function and performance (image cache and change order, add app scheme)
+
+→ Add the recommended update function
+
+→ Add the function of agreement UI (Terms of use / Privacy policy can be entered)
+
+→ Add image upload function in Customer Center
+
+→ Modified to check whether push notifications are sent when CS answer is completed.
+
 #### v1.0.47 (2019-03-07)
 
 → Add Server to server Push API
