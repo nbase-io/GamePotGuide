@@ -28,7 +28,7 @@ userId={uuid}&orderId={orderId}&projectId={projectId}&platform={platform}&produc
 | projectId      | String | 프로젝트ID                                                   |
 | productId      | String | 구글/애플/원스토어에 등록된 상품ID                           |
 | platform       | String | 운영 Platform 정보 (android, ios)                            |
-| payment        | String | 결제 방식 ( apple, google, one, mycard, mol ... )            |
+| payment        | String | 결제 방식 ( apple, google, one, danal, mycard, mol ... )     |
 | orderId        | String | **Deprecated** Unique id (purchase api 호출 시 넣은 unique id) |
 | uniqueId       | String | Unique id (purchase api 호출 시 넣은 unique id)              |
 | gamepotOrderId | String | GAMEPOT Order id                                             |
