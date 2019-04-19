@@ -23,6 +23,12 @@ import所确认的插件，项目就会被添加。
 
 #### STEP 3. Android
 
+#####默認首選項
+
+```d
+minSdkVersion : API 17 (Jelly Bean, 4.2) 
+```
+
 ##### 如何设置Gradle首选项
 
 /Assets/Plugin/Android/mainTemplate.gradle文件请使用编辑器打开。
@@ -38,9 +44,9 @@ android {
         resValue "string", "gamepot_store", "google" // required
         resValue "string", "gamepot_app_title","@string/app_name" // required (fcm)
         resValue "string", "gamepot_push_default_channel","Default" // required (fcm)
-		resValue "string", "facebook_app_id", "0" // optional (facebook)
-		resValue "string", "fb_login_protocol_scheme", "fb0" // optional (facebook)
-		// resValue "string", "gamepot_elsa_projectid", "" // optional (ncp elsa)
+				resValue "string", "facebook_app_id", "0" // optional (facebook)
+				resValue "string", "fb_login_protocol_scheme", "fb0" // optional (facebook)
+				// resValue "string", "gamepot_elsa_projectid", "" // optional (ncp elsa)
 	}
 	...
 }
@@ -132,6 +138,18 @@ resValue "string", "[key]", "[value]"
 File -> Build Settings -> Build And Run 就完成。
 
 ![](./images/gamepot_unity_07.png)
+
+在XCode構建之後
+
+請在目標>>信息>>自定義iOS目標屬性中添加以下`獲取用戶授權`選項。
+
+GamePot客戶中心內的文件上傳功能使用此用戶權限。
+
+```
+NSCameraUsageDescription
+NSPhotoLibraryUsageDescription
+```
+
 ### 初始化
 
 将把以下代码添加到游戏开始时加载的第一个场景中所使用的对象中。
@@ -286,6 +304,10 @@ gamepot_naver_urlscheme // urlscheme
 <string>xxxxxx</string>
 ...
 ```
+
+使用Naver ID下的Targets >> Info >> URL Types將註冊的URL Schemes添加到登錄設置。
+
+請注意，在創建URL方案時，如果使用除`小寫`，`.`,`_`以外的任何字符，則可能無法識別。
 
 ### 登录/退出/注销
 
@@ -628,6 +650,54 @@ public void onPurchaseCancel() {
 }
 ```
 
+### NPurchaseInfo定義
+
+是成功支付之後支付了的項目的信息。 您可以將它用作參考。
+
+```csharp
+public class NPurchaseInfo
+{
+    public string price { get; set; }  							// 支付項目的價格
+    public string productId { get; set; }           // 付款項目ID
+    public string currency { get; set; }            // 結算價格貨幣（KRW / USD）
+    public string orderId { get; set; }             // 存儲訂單ID
+    public string productName { get; set; }         // 付款項目名稱
+    public string uniqueId { get; set; }            // 調用purchase api時的第二個參數值
+    public string signature { get; set; }           // 付款簽名
+    public string originalJSONData { get; set; }    // 收據數據
+}
+```
+
+###付款項目付款
+
+GAMEPOT無法非法支付，因為它通過服務器到服務器api完成對支付商店收據的驗證後向開發者服務器發出支付請求。
+
+要執行此操作，請參閱`server to server api`菜單中的`購買Webhook`項目。
+
+###外部付款
+
+允許您在商店和官方商店之外使用接受外部付款的付款功能。
+
+> 呼叫api不同，響應和購買webhook與常規計費相同。
+>
+> 使用該功能需要設置。 請參閱儀表板手冊中的“外部付款”部分。
+
+Request:
+
+```csharp
+// productId : 產品ID在Market中註冊
+GamePot.purchaseThirdPayments(string productId);
+```
+
+使用外部付款時，請使用下面的api獲取項目列表。
+
+Request:
+
+```csharp
+//返回的數據格式與getPurchaseItems（）相同。
+GamePot.getPurchaseThirdPaymentsItems();
+```
+
 ### 广告
 
 基本包含着 IGAWorks Unity Plugin，所以接入[IGAWorks的指南](http://help.igaworks.com/hc/ko/3_3/Content/Article/common_unity_aos)即可。
@@ -687,28 +757,6 @@ public void onPushNightSuccess() {
 /// 对于更改夜间推送状态服务器通信失败
 public void onPushNightFailure(NError error) {
 	// 如果更改夜间推送状态失败
-	// error.message请使用弹窗告知给用户
-}
-```
-
-#### 设置广告推送
-
-Request:
-
-```csharp
-GamePot.setPushADStatus(bool adPushEnable);
-```
-
-Response:
-
-```csharp
-/// 对于更改广告推送状态服务器通信成功
-public void onPushAdSuccess() {
-}
-
-/// 对于更改广告推送状态服务器通信失败
-public void onPushAdFailure(NError error) {
-	// 如果更改广告推送状态失败
 	// error.message请使用弹窗告知给用户
 }
 ```
@@ -889,7 +937,7 @@ public void onAgreeDialogSuccess(NAgreeResultInfo info)
 {
     // info.agree : 如果所有必需条件都为真，则为真
     // info.agreeNight : 如果检查晚间广告接受，则为真; 否则是假的
-    // 登录后，通过setPushStatus api传递agreeNight值。
+    // 登录后，通过setPushNightStatus api传递agreeNight值。
 }
 
 // 发生了错误
@@ -952,6 +1000,8 @@ GamePot.showAgreeDialog(info);
 
 调用使用条款UI。
 
+> 儀表板 - 客戶支持 - 首先在條款和條件部分輸入您的內容。
+
 ```c#
 GamePot.showTerms();
 ```
@@ -961,6 +1011,8 @@ GamePot.showTerms();
 ## 隐私声明
 
 调用隐私策略UI。
+
+> 儀表板 - 客戶支持 - 首先輸入您的隱私策略設置。
 
 ```c#
 GamePot.showPrivacy();
