@@ -1,12 +1,24 @@
-### 최신버전 : v1.0.3
+### 최신버전 : v1.0.9
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-02-12.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-04-26.unitypackage)
 
-[다운로드 (NaverCafe 제외)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-02-12-ExceptNaverCafe.unitypackage)
+[다운로드 (NaverCafe 제외)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-04-26-ExceptNaverCafe.unitypackage)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.9 (2019-04-26)
+
+→ 라이브러리 업데이트
+
+→ Adbrix RM 적용
+
+→ Android 외부결제 적용
+
+→ Notice View 수정 및 Scheme 기능 적용
+
+<br/>
 
 #### v1.0.3 (2019-02-12)
 
