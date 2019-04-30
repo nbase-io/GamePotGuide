@@ -106,6 +106,14 @@ resValue "string", "[key]", "[value]"
 
 将screenOrientation添加到Main Activity并为您的游戏输入`sensorLandscape`或`sensorPortrait`。
 
+**危險的權限**
+
+GAMEPOT不包括[危險許可](https://developer.android.com/guide/topics/permissions/overview)，但如果您使用下面的庫，則可能會添加它。
+
+| 圖書館名稱     | 指南                                                     |
+| -------------- | -------------------------------------------------------- |
+| Naver Cafe SDK | [鏈接](https://github.com/naver/cafe-sdk-android#usages) |
+
 ##### Firebase使用方法
 
 从 Google Firebase Console 下载的`google-services.json` 文件复制到 `/Assets/Plugins/Android/`里面。

@@ -623,6 +623,101 @@ gamepot_naver_urlscheme // 使用naver账号登录时所使用的urlscheme
 }];
 ```
 
+## 接受条款
+
+我们提供用户界面，以便轻松获取“使用条款”和“收集和使用个人信息指南”。
+
+`BLUE`主题和`GREEN`主题，每个区域都有自定义。
+
+* `BLUE`主题的例子![gamepot_unity_10](./images/gamepot_unity_10.png)
+* `GREEN`主题的例子![gamepot_unity_11](./images/gamepot_unity_11.png)
+
+### 征集协议
+
+> 请同意协议弹出窗口的条款由开发人员处理。
+>
+> 可以在仪表板中应用和修改“查看”按钮的内容。
+
+```objective-c
+// BLUE主题 [[GamePotAgreeOption alloc] init:BLUE]; 
+// GREEN主题 [[GamePotAgreeOption alloc] init:GREEN];
+GamePotAgreeOption* option = [[GamePotAgreeOption alloc] init:BLUE]; 
+[[GamePot getInstance] showAgreeView:self option:option handler:^(GamePotAgreeInfo *result) {
+   // [result agree] : 如果所有必需条件都为真，则为真
+   // [result agreeNight] : 如果检查晚间广告接受，则为真; 否则是假的
+   // 登录后，通过[[GamePot getInstance] setNightPushEnable]; api传递agreeNight值。
+}];
+```
+
+### 定制
+
+在不使用主题的情况下更改游戏的颜色。
+
+在调用协议之前，您可以在“GamePotAgreeOption”中为每个区域指定颜色。
+
+```objective-c
+ GamePotAgreeOption* option = [[GamePotAgreeOption alloc] init:GREEN];
+    
+[option setHeaderBackGradient:@[@0xFF00050B,@0xFF0F1B21]];
+[option setHeaderTitleColor:0xFF042941];
+[option setContentBackGradient:@[@0xFF112432,@0xFF112432]];
+[option setContentIconColor:0xFF042941];
+[option setContentCheckColor:0xFF91adb5];
+[option setContentTitleColor:0xFF98b3c6];
+[option setContentShowColor:0xFF98b3c6];
+[option setFooterBackGradient:@[@0xFF112432,@0xFF112432]];
+[option setFooterButtonGradient:@[@0xFF1E3A57,@0xFF57B2E2]];
+[option setFooterButtonOutlineColor:0xFF0b171a];
+[option setFooterTitleColor:0xFFFFFFD5];
+
+// 更改文字
+[option setAllMessage:@"모두 동의"];
+[option setTermMessage:@"필수) 이용약관"];
+[option setPrivacyMessage:@"필수) 개인정보 취급 방침"];
+[option setNightPushMessage:@"선택) 약간 푸쉬 수신 동의"];
+[option setFooterTitle:@"게임 시작하기"];
+
+// 不使用时设为@“”
+[option setHeaderTitle:@"약관 동의"];
+
+// 夜间广告接受按钮曝光
+[option setShowNightPush:YES];
+```
+
+每个变量都应用于下面的区域。
+
+> contentIconDrawable中的圖像不會向IOS公開。
+
+![gamepot_unity_12](./images/gamepot_unity_12.png)
+
+## 服务条款
+
+调用使用条款UI。
+
+> 儀表板 - 客戶支持 - 首先在條款和條件部分輸入您的內容。
+
+```java
+#import <GamePot/GamePot.h>
+
+[[GamePot getInstance] showTerms:/*ViewController*/];
+```
+
+![gamepot_unity_16](./images/gamepot_unity_16.png)
+
+## 隐私声明
+
+调用隐私策略UI。
+
+> 儀表板 - 客戶支持 - 首先輸入您的隱私策略設置。
+
+```java
+#import <GamePot/GamePot.h>
+
+[[GamePot getInstance] showPrivacy:/*ViewController*/];
+```
+
+![gamepot_unity_15](./images/gamepot_unity_15.png)
+
 ## 8. 下载
 
 您可以从 GAMEPOT 仪表板> SDK 下载菜单下载它。

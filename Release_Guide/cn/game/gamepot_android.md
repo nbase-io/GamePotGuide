@@ -219,6 +219,14 @@ build.gradle文件同时存在于项目root文件夹和app文件夹中
 
 4. 将图像文件名更改为`ic_stat_gamepot_small`
 
+**危險的權限**
+
+GAMEPOT不包括[危險許可](https://developer.android.com/guide/topics/permissions/overview)，但如果您使用下面的庫，則可能會添加它。
+
+| 圖書館名稱     | 指南                                                     |
+| -------------- | -------------------------------------------------------- |
+| Naver Cafe SDK | [鏈接](https://github.com/naver/cafe-sdk-android#usages) |
+
 # 2. 初始化
 
 在MainActivity.java文件里添加下面内容。
@@ -1111,5 +1119,127 @@ GamePotChannel.getInstance().login(this, GamePotChannelType.GOOGLE, new GamePotA
 });
 ```
 
+## 接受条款
 
+我们提供用户界面，以便轻松获取“使用条款”和“收集和使用个人信息指南”。
+
+`BLUE`主题和`GREEN`主题，每个区域都有自定义。
+
+- `BLUE`主题的例子
+
+  ![gamepot_unity_10](./images/gamepot_unity_10.png)
+
+- `GREEN`主题的例子
+
+  ![gamepot_unity_11](./images/gamepot_unity_11.png)
+
+### 征集协议
+
+> 请同意协议弹出窗口的条款由开发人员处理。
+>
+> 可以在仪表板中应用和修改“查看”按钮的内容。
+
+Request:
+
+```csharp
+// 基本调用（应用为BLUE主题）
+GamePot.getInstance().showAgreeDialog(/*activity*/, new GamePotAgreeBuilder(), new GamePotListener<GamePotAgreeInfo>() {
+    @Override
+    public void onSuccess(GamePotAgreeInfo data) {
+    	// info.agree : 如果所有必需条件都为真，则为真
+  	  // info.agreeNight : 如果检查晚间广告接受，则为真; 否则是假的
+	    // 登录后，通过setPushNightStatus api传递agreeNight值。
+    }
+
+    @Override
+    public void onFailure(GamePotError error) {
+			// error.message请使用弹窗告知给用户
+    }
+});
+
+// 应用为“绿色”主题
+GamePotAgreeBuilder bulider = new GamePotAgreeBuilder(GamePotAgreeBuilder.THEME.GREEN);
+GamePot.getInstance().showAgreeDialog(/*activity*/, bulider, new GamePotListener<GamePotAgreeInfo>() {
+  ....
+}
+```
+
+### 定制
+
+在不使用主题的情况下更改游戏的颜色。
+
+在调用协议之前，您可以在“GamePotAgreeBuilder”中为每个区域指定颜色。
+
+```c#
+GamePotAgreeBuilder agreeBuilder= new GamePotAgreeBuilder();
+agreeBuilder.setHeaderBackGradient(new int[] {0xFF00050B,0xFF0F1B21});
+agreeBuilder.setHeaderTitleColor(0xFFFF0000);
+agreeBuilder.setHeaderBottomColor(0xFF00FF00);
+// 不使用时设为“”
+agreeBuilder.setHeaderTitle("약관 동의");
+// res/drawable 对象ID（文件名）
+agreeBuilder.setHeaderIconDrawable(R.drawable.ic_stat_gamepot_agree);
+
+agreeBuilder.setContentBackGradient(new int[] { 0xFFFF2432, 0xFF11FF32 });
+agreeBuilder.setContentIconColor(0xFF0429FF);
+agreeBuilder.setContentCheckColor(0xFFFFADB5);
+agreeBuilder.setContentIconColor(0xFF98FFC6);
+agreeBuilder.setContentShowColor(0xFF98B3FF);
+// res/drawable 对象ID（文件名）
+agreeBuilder.setContentIconDrawable(R.drawable.ic_stat_gamepot_small);
+
+agreeBuilder.setFooterBackGradient(new int[] { 0xFFFFFFFF, 0xFF112432 });
+agreeBuilder.setFooterButtonGradient(new int[] { 0xFF1E3A57, 0xFFFFFFFF });
+agreeBuilder.setFooterButtonOutlineColor(0xFFFF171A);
+agreeBuilder.setFooterTitleColor(0xFFFF00D5);
+agreeBuilder.setFooterTitle("게임 시작하기");
+// 夜间广告接受按钮曝光
+agreeBuilder.setShowNightPush(true);
+
+// 更改文字
+agreeBuilder.setAllMessage("모두 동의");
+agreeBuilder.setTermMessage("필수) 이용약관");
+agreeBuilder.setPrivacyMessage("필수) 개인정보 취급 방침");
+agreeBuilder.setNightPushMessage("선택) 야간 푸시 수신 동의");
+
+GamePot.getInstance().showAgreeDialog(/*activity*/, agreeBuilder, new GamePotListener<GamePotAgreeInfo>() {
+  ....
+}
+```
+
+每个变量都应用于下面的区域。
+
+> contentIconDrawable仅在AOS上显示，默认值设置为推送图标。
+
+![gamepot_unity_12](./images/gamepot_unity_12.png)
+
+## 服务条款
+
+调用使用条款UI。
+
+> 儀表板 - 客戶支持 - 首先在條款和條件部分輸入您的內容。
+
+```java
+import io.gamepot.common.GamePot;
+
+// activity : 當前Activity
+GamePot.getInstance().showTerms(activity);
+```
+
+![gamepot_unity_16](./images/gamepot_unity_16.png)
+
+## 隐私声明
+
+调用隐私策略UI。
+
+> 儀表板 - 客戶支持 - 首先輸入您的隱私策略設置。
+
+```java
+import io.gamepot.common.GamePot;
+
+// activity : 當前Activity
+GamePot.getInstance().showPrivacy(activity);
+```
+
+![gamepot_unity_15](./images/gamepot_unity_15.png)
 
