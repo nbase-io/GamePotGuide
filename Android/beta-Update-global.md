@@ -18,6 +18,8 @@
 
 → Improve internal logic
 
+<br/>
+
 #### v1.0.15 (2019-02-12)
 
 → Update 3rd party libraries

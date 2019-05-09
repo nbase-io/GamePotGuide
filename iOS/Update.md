@@ -1,10 +1,18 @@
-### 최신버전 : v1.0.9
+### 최신버전 : v1.0.21
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_190212.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_190426.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.0.21 (2019-04-26)
+
+→ 내부 로직 개선
+
+→ Notice View Native 형태로 변경
+
+<br/>
 
 #### v1.0.9 (2019-02-12)
 
