@@ -1,6 +1,6 @@
 ### 최신버전 :  v1.0.21
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_0426.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_0612.zip)
 
 <br/>
 
