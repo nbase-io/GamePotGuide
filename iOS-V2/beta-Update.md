@@ -1,6 +1,6 @@
 ### 최신버전 : v2.0.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_IOS_190426.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDKV2_IOS_20191017.zip)
 
 <br/>
 
