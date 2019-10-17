@@ -1,8 +1,6 @@
 ### latest version: v2.0.0
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-04-26.unitypackage)
-
-[Download (Except NaverCafe)](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPlugIn-2019-04-26-ExceptNaverCafe.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamepotUnityPlugInV2_20191017.unitypackage)
 
 <br/>
 
