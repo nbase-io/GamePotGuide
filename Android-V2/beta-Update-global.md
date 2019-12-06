@@ -1,4 +1,4 @@
-### Latest version: v2.0.1
+### Latest version: v2.0.2
 
 #### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_1205.zip)
 
@@ -6,7 +6,7 @@
 
 ### Change Log
 
-#### v2.0.1 (2019-12-05)
+#### v2.0.2 (2019-12-05)
 
 - Galaxy Store payment support
 - MyCard payment support

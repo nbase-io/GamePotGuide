@@ -1,4 +1,4 @@
-### 최신버전 : v2.0.1
+### 최신버전 : v2.0.2
 
 #### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_1205.zip)
 
@@ -6,7 +6,7 @@
 
 ### Change Log
 
-#### v2.0.1 (2019-12-05)
+#### v2.0.2 (2019-12-05)
 
 - 갤럭시 스토어 결제 지원
 - MyCard 결지 지원

@@ -1,4 +1,4 @@
-### 최신버전 : v2.0.1
+### 최신버전 : v2.0.2
 
 [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_20191205.unitypackage)
 
@@ -6,7 +6,7 @@
 
 ### Change Log
 
-#### v2.0.1 (2019-12-05)
+#### v2.0.2 (2019-12-05)
 
 - Sign in With Apple 지원
 - 게임 캐릭터 로그 기능 추가
