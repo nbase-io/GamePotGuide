@@ -1,6 +1,6 @@
 ### Latest version: v2.0.2
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_1205.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_191219.zip)
 
 <br/>
 
