@@ -1,10 +1,17 @@
-### latest version: v2.0.2
+### latest version: v2.1.0
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_20191205.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_20200326.unitypackage)
 
 <br/>
 
 ### Change Log
+
+#### v2.1.0 (2020-03-26)
+
+- SDK source dll packing processing
+- Added items including currency when calling the payment item list API
+- Gamepot SDK application tool added
+- Enhanced security
 
 #### v2.0.2 (2019-12-05)
 
