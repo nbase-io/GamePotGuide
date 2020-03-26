@@ -2,6 +2,7 @@
 
 [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_20200326.unitypackage)
 
+[UniTools Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools_Beta_20200326.unitypackage)
 <br/>
 
 ### Change Log

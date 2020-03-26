@@ -2,6 +2,7 @@
 
 [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_20200326.unitypackage)
 
+[UniTools 다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools_Beta_20200326.unitypackage)
 <br/>
 
 ### Change Log
