@@ -2,7 +2,7 @@
 
 #### v2.1.0 (2020-03-26)
 
-**[Functional improvement]**
+**Functional improvement**
 
 - Improved display when an error occurs in the payment details screen
 - Addition and improvement of the use stop classification setting function
@@ -15,7 +15,7 @@
 - Improved to be able to register a member ID when registering a white user
 - Coupon usage statistics (recovery rate) function added
 
-**[New Features]**
+**New Features**
 
 - Added a function to designate a customer support representative
 - Automatic block / cancellation function for canceled payment abusers
