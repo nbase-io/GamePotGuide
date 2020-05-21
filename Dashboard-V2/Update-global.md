@@ -1,5 +1,13 @@
 ### Change Log
 
+#### v2.1.1 (2020-05-21)
+
+- Reflect the payment amount exchange rate
+- Reflects the standard currency correction function
+- Open API function support
+- Overall UI improvements
+- User index / sales index limited to search for up to 90 days
+
 #### v2.1.0 (2020-03-26)
 
 **Functional improvement**
