@@ -1,10 +1,15 @@
-### Latest version: v2.1.0
+### Latest version: v2.1.1
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20200326.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20200521.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.1.1 (2020-05-21)
+
+-Improved line login function and added exception handling
+-Added exception handling when it works abnormally during test payment
 
 #### v2.1.0 (2020-03-26)
 
