@@ -1,10 +1,15 @@
-### 최신버전 : v2.1.0
+### 최신버전 : v2.1.1
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_200326.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_200521.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.1.1 (2020-05-21)
+
+- 다국어 처리 개선
+- Webview alert 인터페이스 구현
 
 #### v2.1.0 (2020-03-26)
 

@@ -1,10 +1,15 @@
-### Latest version: v2.1.0
+### Latest version: v2.1.1
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_200326.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_200521.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.1.1 (2020-05-21)
+
+- Improved multilingual processing
+- Webview alert interface implementation
 
 #### v2.1.0 (2020-03-26)
 
