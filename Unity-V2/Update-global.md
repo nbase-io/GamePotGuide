@@ -1,11 +1,18 @@
-### latest version: v2.1.0
+### latest version: v2.1.1
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_20200424.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_v2.1.1_20200525.unitypackage)
 
 [UniTools Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools_Beta_20200326.unitypackage)
 <br/>
 
 ### Change Log
+
+#### v2.1.1 (2020-05-21)
+
+- Improved multilingual processing
+- Webview alert interface implementation
+- Improved line login function and added exception handling
+- Added exception handling when it works abnormally during test payment
 
 #### v2.1.0 (2020-03-26)
 
