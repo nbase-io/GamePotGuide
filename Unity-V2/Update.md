@@ -1,6 +1,11 @@
 ### 최신버전 : v2.1.1
 
+유니티 엔진 버전 : 2019.2.X  or 그 이하 버전 :
 [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_v2.1.1_20200525.unitypackage)
+
+유니티 엔진 버전 : 2019.3.X 이상의 버전 :
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2.1.0_for2019.03_20200525.unitypackage)
+
 
 [UniTools 다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools_Beta_20200326.unitypackage)
 <br/>
