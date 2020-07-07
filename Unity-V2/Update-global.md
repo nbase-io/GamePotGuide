@@ -4,7 +4,7 @@ Use Unity Version 2019.2.X  or earlier :
 [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_v2.1.1_20200525.unitypackage)
 
 Use Unity Version 2019.3.X  or new :
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2.1.0_for2019.03_20200525.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2.1.1_for2019.03Over_20200702.unitypackage)
 
 
 [UniTools Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools_Beta_20200326.unitypackage)
