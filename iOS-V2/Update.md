@@ -1,10 +1,15 @@
-### 최신버전 : v2.1.1
+### 최신버전 : v2.1.2
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20200521.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20200716.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.1.2 (2020-07-16)
+
+- 접속 국가 정보 API 추가
+- 안정성 강화
 
 #### v2.1.1 (2020-05-21)
 

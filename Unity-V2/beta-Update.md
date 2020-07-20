@@ -1,16 +1,18 @@
-### 최신버전 : v2.1.1
+### 최신버전 : v2.1.2
 
-유니티 엔진 버전 : 2019.2.X  or 그 이하 버전 :
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_v2.1.1_20200525.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v2.1.2_20200716.unitypackage)
 
-유니티 엔진 버전 : 2019.3.X 이상의 버전 :
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2.1.1_for2019.03Over_20200702.unitypackage)
+[GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
-
-[UniTools 다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools_Beta_20200326.unitypackage)
 <br/>
 
 ### Change Log
+
+#### v2.1.2 (2020-07-16)
+
+- 버전 통합 진행
+- 코드 안정화
+- 접속 국가 정보 API 추가
 
 #### v2.1.1 (2020-05-21)
 

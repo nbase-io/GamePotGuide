@@ -1,10 +1,17 @@
-### 최신버전 : v2.1.1
+### 최신버전 : v2.1.2
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_200521.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_200716.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.1.2 (2020-07-16)
+
+- 회원 국가 코드 및 아이피 주소 getter api 추가
+- 강제 업데이트 기능에 url 데이터 연동
+- 갤럭시 인앱 SDK 6.0 적용
+- 푸시 메시지 예외처리 추가
 
 #### v2.1.1 (2020-05-21)
 

@@ -1,10 +1,15 @@
-### Latest version: v2.1.1
+### Latest Version: v2.1.2
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20200521.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20200716.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.1.2 (2020-07-16)
+
+-Added access country information API
+-Enhanced stability
 
 #### v2.1.1 (2020-05-21)
 

@@ -1,16 +1,18 @@
-### latest version: v2.1.1
+### Latest Version: v2.1.2
 
-Use Unity Version 2019.2.X  or earlier :
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2_v2.1.1_20200525.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v2.1.2_20200716.unitypackage)
 
-Use Unity Version 2019.3.X  or new :
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotUnityPluginV2.1.1_for2019.03Over_20200702.unitypackage)
+[GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
-
-[UniTools Download](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools_Beta_20200326.unitypackage)
 <br/>
 
 ### Change Log
+
+#### v2.1.2 (2020-07-16)
+
+- Version integration progress
+- Code stabilization
+- Added access country information API
 
 #### v2.1.1 (2020-05-21)
 

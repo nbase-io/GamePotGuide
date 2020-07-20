@@ -1,10 +1,17 @@
-### Latest version: v2.1.1
+### Latest version: v2.1.2
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_200521.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_200716.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.1.2 (2020-07-16)
+
+- Add member country code and IP address getter api
+- Linking url data to the forced update function
+- Galaxy In-app SDK 6.0 applied
+- Added push message exception handling
 
 #### v2.1.1 (2020-05-21)
 

@@ -14,7 +14,7 @@
 
 **New Features**
 
-- Provides translation function through Papago MNT solution for customer support inquiries and answers for global launch users
+- Provides translation function through Papago NMT solution for customer support inquiries and answers for global launch users
 - Supports the function to set the time zone for the global launch user
 - Google API test page added
 - ‘Failure View’ filter added to payment list / coupon usage menu
