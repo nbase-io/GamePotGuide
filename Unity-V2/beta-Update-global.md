@@ -4,6 +4,8 @@
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
+[Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v2.1.1 or earlier to V2.1.2.
+
 <br/>
 
 ### Change Log

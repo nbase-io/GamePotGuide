@@ -4,6 +4,8 @@
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
+v2.1.1 이하 버전에서 V2.1.2 버전으로 업데이트 진행시 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) 작업이 필요합니다. 
+
 <br/>
 
 ### Change Log
