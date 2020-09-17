@@ -1,10 +1,18 @@
-### Latest version: v2.1.2
+### Latest version: v2.2.0
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_200716.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SAMPLE_0917.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.2.0 (2020-09-17)
+
+- Apply date information delivery during inspection
+- Classification applied when calling showNotice
+- Google Achievement Unlock popup improvement
+- Apple ID login function added
+- SDK stability improvement
 
 #### v2.1.2 (2020-07-16)
 

@@ -1,10 +1,18 @@
-### 최신버전 : v2.1.2
+### 최신버전 : v2.2.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotSDK_Android_200716.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SAMPLE_0917.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.2.0 (2020-09-17)
+
+- 점검 시 날짜 정보 전달 적용
+- showNotice 호출 시 분류 적용
+- Google Achievement Unlock popup 개선
+- Apple ID 로그인 기능 추가
+- SDK 안정성 개선
 
 #### v2.1.2 (2020-07-16)
 

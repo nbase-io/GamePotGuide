@@ -1,14 +1,25 @@
-### Latest Version: v2.1.2
+### Latest Version: v2.2.0
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v2.1.2_20200716.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v2.2.0_20200917.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
-[Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v2.1.1 or earlier to V2.1.2.
+[Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v2.1.1 or earlier to the latest version.
 
 <br/>
 
 ### Change Log
+
+#### v2.2.0 (2020-09-17)
+
+- Apply date information delivery during inspection
+- iOS 14 IDFA value allow popup applied
+- Classification applied when calling showNotice
+- Google Achievement Unlock popup improvement
+- Apple ID login function added
+- Overall reorganization of sample scene layout
+- Standalone (PC for Unity) SDK (Beta) added
+- Stability enhancement
 
 #### v2.1.2 (2020-07-16)
 

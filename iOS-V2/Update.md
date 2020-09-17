@@ -1,10 +1,17 @@
-### 최신버전 : v2.1.2
+### 최신버전 : v2.2.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20200716.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20200917.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.2.0 (2020-09-17)
+
+- 점검 시 날짜 정보 전달 적용
+- iOS 14 IDFA 값 허용 팝업 적용
+- showNotice 호출 시 분류 적용
+- 안정성 강화
 
 #### v2.1.2 (2020-07-16)
 

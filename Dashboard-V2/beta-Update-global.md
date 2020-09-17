@@ -1,5 +1,21 @@
 ### Change Log
 
+#### v2.2.0 (2020-09-17)
+
+**Functional improvement**
+
+- Added function to delete multiple IAP items
+- Add Device ID condition to blocking access
+- Added multiple selection and repayment of failed payment history
+- Improved data export performance
+- Announcement country / category added
+- Revenue by item product name exposed
+
+**New feature**
+
+- Add advertisement function
+- Added Apple ID Login function to Android
+
 #### v2.1.2 (2020-07-16)
 
 **Functional Improvement**

@@ -1,10 +1,17 @@
-### Latest Version: v2.1.2
+### Latest Version: v2.2.0
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20200716.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20200917.zip)
 
 <br/>
 
 ### Change Log
+
+#### v2.2.0 (2020-09-17)
+
+- Apply date information delivery during inspection
+- iOS 14 IDFA value allow popup applied
+- Classification applied when calling showNotice
+- Stability enhancement
 
 #### v2.1.2 (2020-07-16)
 

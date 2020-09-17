@@ -1,14 +1,25 @@
-### 최신버전 : v2.1.2
+### 최신버전 : v2.2.0
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v2.1.2_20200716.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v2.2.0_20200917.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
-v2.1.1 이하 버전에서 V2.1.2 버전으로 업데이트 진행시 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) 작업이 필요합니다. 
+v2.1.1 이하 버전에서 V2.1.2 버전으로 업데이트 진행시 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) 작업이 필요합니다.
 
 <br/>
 
 ### Change Log
+
+#### v2.2.0 (2020-09-17)
+
+- 점검 시 날짜 정보 전달 적용
+- iOS 14 IDFA 값 허용 팝업 적용
+- showNotice 호출 시 분류 적용
+- Google Achievement Unlock popup 개선
+- Apple ID 로그인 기능 추가
+- 샘플씬 레이아웃 전면 개편
+- Standalone(PC for Unity) SDK(Beta) 추가
+- 안정성 강화
 
 #### v2.1.2 (2020-07-16)
 
