@@ -1,5 +1,26 @@
 ### Change Log
 
+#### v3.0.0 (2020-11-18)
+
+**Functional improvement**
+
+- Enhanced search function by page
+- UI modified to show the project name at the top
+- NBP company name changed
+- External inquiry mail template improvement
+- Added support language for customer inquiry page
+- Added bulk response function for customer inquiries
+- Improved function to be able to access through FAQ Web URL
+- Change the national flag to the country name in the member list
+- Added country to notice exposure conditions
+
+**New feature**
+
+- Second login authentication (mobile phone, OTP) added
+- Added login IP restriction
+- Added GAMEPOT notice menu
+- Apple sandbox payment automatically added test payment processing
+
 #### v2.2.0 (2020-09-17)
 
 **Functional improvement**
