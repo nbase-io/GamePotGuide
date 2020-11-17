@@ -1,11 +1,18 @@
 ### Latest version: v2.2.0
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SAMPLE_0917.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_1118.zip)
 
 <br/>
 
 ### Change Log
 
+#### v3.0.0 (2020-11-18)
+
+- SDK Login UI provided
+- Apply GDPR allow popup
+- Terms of use design theme added
+- Add in-app list request async API
+-
 #### v2.2.0 (2020-09-17)
 
 - Apply date information delivery during inspection

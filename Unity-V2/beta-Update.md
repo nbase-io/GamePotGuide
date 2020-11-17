@@ -1,6 +1,6 @@
-### 최신버전 : v2.2.0
+### 최신버전 : v3.0.0
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v2.2.0_20200917.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.0.0_20201118.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
@@ -9,6 +9,15 @@ v2.1.1 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration
 <br/>
 
 ### Change Log
+
+#### v3.0.0 (2020-11-18)
+
+- SDK Login UI 제공
+- GDPR 허용 팝업 적용
+- 이용약관 디자인 테마 추가
+- 인앱리스트 요청 async API 추가
+
+<br/>
 
 #### v2.2.0 (2020-09-17)
 
