@@ -1,4 +1,4 @@
-### Latest Version: v2.2.0
+### Latest Version: v3.0.0
 
 [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.0.0_20201118.unitypackage)
 

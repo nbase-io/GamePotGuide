@@ -1,4 +1,4 @@
-### Latest version: v2.2.0
+### Latest version: v3.0.0
 
 #### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_1118.zip)
 
