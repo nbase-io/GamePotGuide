@@ -12,7 +12,7 @@
 - Apply GDPR allow popup
 - Terms of use design theme added
 - Add in-app list request async API
--
+
 #### v2.2.0 (2020-09-17)
 
 - Apply date information delivery during inspection
