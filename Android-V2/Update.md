@@ -1,10 +1,17 @@
-### 최신버전 : v2.2.0
+### 최신버전 : v3.0.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SAMPLE_0917.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_1118.zip)
 
 <br/>
 
 ### Change Log
+
+#### v3.0.0 (2020-11-18)
+
+- SDK Login UI 제공
+- GDPR 허용 팝업 적용
+- 이용약관 디자인 테마 추가
+- 인앱리스트 요청 async API 추가
 
 #### v2.2.0 (2020-09-17)
 

@@ -1,6 +1,6 @@
 ### Change Log
 
-#### v3.0.0 (2020-11-18)
+#### v2.3.0 (2020-11-18)
 
 **Functional improvement**
 
