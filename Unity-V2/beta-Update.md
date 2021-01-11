@@ -1,6 +1,6 @@
-### 최신버전 : v3.0.0
+### 최신버전 : v3.1.0
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.0.0_20201118.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.1.0_20210121.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
@@ -9,6 +9,10 @@ v2.1.1 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration
 <br/>
 
 ### Change Log
+
+#### v3.1.0 (2021-01-21)
+
+- 이용약관 팝업에 Push 약관 옵션 추가
 
 #### v3.0.0 (2020-11-18)
 
