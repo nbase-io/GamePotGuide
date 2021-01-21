@@ -1,5 +1,10 @@
 ### Change Log
 
+#### v2.4.0 (2020-01-21)
+**New feature**
+- Added an option to stop sending webhooks when making a test payment through SDK
+- Added option to expose phone number / email collection items in SDK customer inquiry UI
+
 #### v2.3.0 (2020-11-18)
 
 **Functional improvement**

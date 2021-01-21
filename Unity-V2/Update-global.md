@@ -1,6 +1,6 @@
-### Latest Version: v3.0.0
+### Latest Version: v3.1.0
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.0.0_20201118.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.1.0_20210121.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
@@ -9,6 +9,10 @@
 <br/>
 
 ### Change Log
+
+#### v3.1.0 (2021-01-21)
+
+- Push terms option added to the terms of use popup
 
 #### v3.0.0 (2020-11-18)
 

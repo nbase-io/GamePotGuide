@@ -1,10 +1,14 @@
-### 최신버전 : v3.0.0
+### 최신버전 : v3.1.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_1118.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210121.zip)
 
 <br/>
 
 ### Change Log
+
+#### v3.1.0 (2021-01-21)
+
+- 이용약관 팝업에 Push 약관 옵션 추가
 
 #### v3.0.0 (2020-11-18)
 

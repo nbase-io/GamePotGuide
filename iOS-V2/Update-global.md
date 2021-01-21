@@ -1,10 +1,14 @@
-### Latest Version: v3.0.0
+### Latest Version: v3.1.0
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20201118.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210121.zip)
 
 <br/>
 
 ### Change Log
+
+#### v3.1.0 (2021-01-21)
+
+- Push terms option added to the terms of use popup
 
 #### v3.0.0 (2020-11-18)
 
