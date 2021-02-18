@@ -6,8 +6,8 @@
 -Improvement of function to be able to set click action by language of notice
 -Improved to expose login history and authorization to audit items
 -Change the menu location
-   -Existing: Others >> Remote configuration, log> Change: Others >> Remote configuration, log
-   -Existing: Others >> Task Management, Administrator> Change: Settings >> Task Management, Administrator
+   -Existing: Others >> Remote configuration, log -> Change: Others >> Remote configuration, log
+   -Existing: Others >> Task Management, Administrator -> Change: Settings >> Task Management, Administrator
 
 **New feature**
 -Customer Inquiry >> Notification and Inquiry Settings >> Mail Settings by Language Added
