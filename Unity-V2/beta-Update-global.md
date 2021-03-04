@@ -2,7 +2,7 @@
 
 [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.2.0_20210304.unitypackage)
 
-[GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
+[GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v2.0.0.unitypackage)
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v2.1.1 or earlier to the latest version.
 
