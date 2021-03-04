@@ -1,10 +1,18 @@
-### Latest Version: v3.1.0
+### Latest Version: v3.2.0
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210121.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210304.zip)
 
 <br/>
 
 ### Change Log
+
+#### v3.2.0 (2021-03-04)
+
+- Added function to expose details of agreement to terms and conditions when inquiring
+- Added pop-up to reset input information when changing customer inquiry category
+- Customer inquiry email tab select box added
+- Add customer inquiry video file upload (maximum 100MB)
+- Facebook SDK 8.0 update
 
 #### v3.1.0 (2021-01-21)
 

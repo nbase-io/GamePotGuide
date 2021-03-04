@@ -1,6 +1,6 @@
-### Latest Version: v3.1.0
+### Latest Version: v3.2.0
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.1.0_20210121.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.2.0_20210304.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
@@ -9,6 +9,15 @@
 <br/>
 
 ### Change Log
+
+#### v3.2.0 (2021-03-04)
+
+- Added function to expose details of agreement to terms and conditions when inquiring
+- Added pop-up to reset input information when changing customer inquiry category
+- Customer inquiry email tab select box added
+- Add customer inquiry video file upload (maximum 100MB)
+- Facebook SDK 8.0 update
+- **AndroidX application and support** (AndroidX must be applied from the corresponding version.)
 
 #### v3.1.0 (2021-01-21)
 
