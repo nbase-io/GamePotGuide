@@ -2,21 +2,21 @@
 
 #### v2.5.0 (2020-03-04)
 **Functional improvements**
--Improved function to display warning pop-up when browser refresh or other page is moved during customer inquiry input
--Improvement of function to be able to set click action by language of notice
--Improved to expose login history and authorization to audit items
--Change the menu location
-   -Existing: Others >> Remote configuration, log -> Change: Others >> Remote configuration, log
-   -Existing: Others >> Task Management, Administrator -> Change: Settings >> Task Management, Administrator
+- Improved function to display warning pop-up when browser refresh or other page is moved during customer inquiry input
+- Improvement of function to be able to set click action by language of notice
+- Improved to expose login history and authorization to audit items
+- Change the menu location
+   - Existing: Others >> Remote configuration, log -> Change: Others >> Remote configuration, log
+   - Existing: Others >> Task Management, Administrator -> Change: Settings >> Task Management, Administrator
 
 **New feature**
--Customer Inquiry >> Notification and Inquiry Settings >> Mail Settings by Language Added
--Customer inquiry >> Notification and inquiry setting >> Customer inquiry phone number, email exposure setting added
--Customer Inquiry >> Classification setting >> Event terms and conditions added
--Added function to upload customer inquiry video file
--Added statistical function for each person in charge of customer inquiries
--Added daily report function for customer inquiries
--Coupon title and content function added when creating a coupon
+- Customer Inquiry >> Notification and Inquiry Settings >> Mail Settings by Language Added
+- Customer inquiry >> Notification and inquiry setting >> Customer inquiry phone number, email exposure setting added
+- Customer Inquiry >> Classification setting >> Event terms and conditions added
+- Added function to upload customer inquiry video file
+- Added statistical function for each person in charge of customer inquiries
+- Added daily report function for customer inquiries
+- Coupon title and content function added when creating a coupon
 
 #### v2.4.0 (2020-01-21)
 **New feature**

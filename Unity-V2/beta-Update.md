@@ -1,6 +1,6 @@
-### 최신버전 : v3.1.0
+### 최신버전 : v3.2.0
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.1.0_20210121.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.2.0_20210304.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_v1.0.1_Beta.unitypackage)
 
@@ -9,6 +9,14 @@ v2.1.1 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration
 <br/>
 
 ### Change Log
+
+#### v3.2.0 (2021-03-04)
+
+- 고객문의 시 약관 동의 상세 내용 노출 기능 추가
+- 고객문의 분류 변경시 입력 내용 초기화 안내 팝업 추가
+- 고객문의 이메일 탭 셀렉트 박스 추가
+- 고객문의 동영상 파일 업로드 추가 (최대 100MB)
+- **AndroidX 적용 및 지원** (해당 버전 부터 AndroidX가 필수 적용 되어야 합니다.)
 
 #### v3.1.0 (2021-01-21)
 

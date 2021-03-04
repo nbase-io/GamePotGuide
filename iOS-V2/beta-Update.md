@@ -1,10 +1,18 @@
-### 최신버전 : v3.1.0
+### 최신버전 : v3.2.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210121.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210304.zip)
 
 <br/>
 
 ### Change Log
+
+#### v3.2.0 (2021-03-04)
+
+- 고객문의 시 약관 동의 상세 내용 노출 기능 추가
+- 고객문의 분류 변경시 입력 내용 초기화 안내 팝업 추가
+- 고객문의 이메일 탭 셀렉트 박스 추가
+- 고객문의 동영상 파일 업로드 추가 (최대 100MB)
+- Facebook SDK 8.0 업데이트
 
 #### v3.1.0 (2021-01-21)
 

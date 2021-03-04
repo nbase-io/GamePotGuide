@@ -1,5 +1,14 @@
 ### Change Log
 
+#### v2.5.0 (2020-03-04)
+**Functional improvements**
+- Improved function to display warning pop-up when browser refresh or other page is moved during customer inquiry input
+- Improvement of function to be able to set click action by language of notice
+- Improved to expose login history and authorization to audit items
+- Change the menu location
+   - Existing: Others >> Remote configuration, log -> Change: Others >> Remote configuration, log
+   - Existing: Others >> Task Management, Administrator -> Change: Settings >> Task Management, Administrator
+
 #### v2.4.0 (2020-01-21)
 **New feature**
 - Added an option to stop sending webhooks when making a test payment through SDK
