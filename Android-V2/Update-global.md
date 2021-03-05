@@ -2,6 +2,8 @@
 
 #### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210304.zip)
 
+[Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
+
 <br/>
 
 ### Change Log
