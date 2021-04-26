@@ -1,6 +1,6 @@
 ### Latest Version: v1.0.0
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnrealPlugin_V1.0.0_20210325.zip)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnrealPlugin_V1.0.0_20210426.zip)
 
 <br/>
 
