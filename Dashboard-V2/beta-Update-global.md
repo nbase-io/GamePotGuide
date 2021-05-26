@@ -1,6 +1,26 @@
 ### Change Log
 
+#### v2.6.0 (2020-05-27)
+
+**Functional improvement**
+
+* Improve performance by changing pages such as terms of use/personal information processing policy to static pages
+* Details of customer inquiries-Change to a new window instead of a pop-up when viewing detailed screenshots
+* Changed so that status can be changed without response content when responding in bulk
+* Improved to control whether payment is possible in the SDK by status in'Dashboard-Payment-IAP'
+* Added currency item search filter on the project creation page
+* Specify a limit on the number of items when registering an item
+* Graph design and function improvement
+
+**New feature**
+
+* Google Store user review api integration (inquiry, leave comments on reviews)
+* Added coupon usage history tab to member details
+* Add image push function
+* Added'Notice'/'Inquiry Category Statistics' at the bottom of the first screen of the dashboard
+
 #### v2.5.0 (2020-03-04)
+
 **Functional improvements**
 - Improved function to display warning pop-up when browser refresh or other page is moved during customer inquiry input
 - Improvement of function to be able to set click action by language of notice
