@@ -7,10 +7,9 @@
 ### Change Log
 
 #### v3.3.0 (2021-05-27)
+- Add image push function
+- Improvement of terms and conditions and design renewal (including GDPR)
 - Improved loading speed of detailed page of terms and conditions
-- ImagePush function added
-- Automatically expose pop-up of terms of use and add GDPR screen function
-- Reinforced stability
 
 #### v3.2.0 (2021-03-04)
 

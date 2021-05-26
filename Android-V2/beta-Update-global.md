@@ -12,6 +12,7 @@
 
 - Add image push notification
 - Improvement of terms and conditions and design renewal (including GDPR)
+- Improved loading speed of detailed page of terms and conditions
 - Apply the latest version of ELSA SDK
 
 #### v3.2.0 (2021-03-04)
