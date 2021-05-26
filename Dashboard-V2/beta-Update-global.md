@@ -1,6 +1,6 @@
 ### Change Log
 
-#### v2.6.0 (2020-05-27)
+#### v2.6.0 (2021-05-27)
 
 **Functional improvement**
 
@@ -19,7 +19,7 @@
 * Add image push function
 * Added'Notice'/'Inquiry Category Statistics' at the bottom of the first screen of the dashboard
 
-#### v2.5.0 (2020-03-04)
+#### v2.5.0 (2021-03-04)
 
 **Functional improvements**
 - Improved function to display warning pop-up when browser refresh or other page is moved during customer inquiry input
@@ -38,7 +38,7 @@
 - Added daily report function for customer inquiries
 - Coupon title and content function added when creating a coupon
 
-#### v2.4.0 (2020-01-21)
+#### v2.4.0 (2021-01-21)
 **New feature**
 - Added an option to stop sending webhooks when making a test payment through SDK
 - Added option to expose phone number / email collection items in SDK customer inquiry UI
