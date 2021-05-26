@@ -1,10 +1,16 @@
-### 최신버전 : v3.2.0
+### 최신버전 : v3.3.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210325.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210527.zip)
 
 <br/>
 
 ### Change Log
+
+### v3.3.0 (2021-05-27)
+- 이용약관 상세 페이지 로딩 속도 개선
+- ImagePush 기능 추가
+- 이용약관 팝업 자동 노출 및 GDPR 화면 기능 추가
+- 안정성 강화
 
 #### v3.2.0 (2021-03-04)
 
