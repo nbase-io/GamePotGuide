@@ -1,12 +1,18 @@
-### 최신버전 : v3.2.0
+### 최신버전 : v3.3.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210304.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210527.zip)
 
 v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) 작업이 필요합니다.
 
 <br/>
 
 ### Change Log
+
+#### v3.3.0 (2021-05-27)
+
+- 이미지 푸시 기능 추가
+- 이용약관 기능 개선 및 디자인 리뉴얼 (GDPR 포함)
+- ELSA SDK 최신버전 적용
 
 #### v3.2.0 (2021-03-04)
 

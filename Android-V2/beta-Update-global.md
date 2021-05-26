@@ -1,12 +1,18 @@
-### Latest version: v3.2.0
+### Latest version: v3.3.0
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210304.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210527.zip)
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
 
 <br/>
 
 ### Change Log
+
+#### v3.3.0 (2021-05-27)
+
+- Add image push notification
+- Improvement of terms and conditions and design renewal (including GDPR)
+- Apply the latest version of ELSA SDK
 
 #### v3.2.0 (2021-03-04)
 
