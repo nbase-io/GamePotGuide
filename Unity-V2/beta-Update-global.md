@@ -1,6 +1,6 @@
-### Latest Version: v3.2.0
+### Latest Version: v3.3.0
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.2.0_20210408.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.3.0_20210527.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_V2.0.0_20210408.unitypackage)
 
@@ -9,6 +9,12 @@
 <br/>
 
 ### Change Log
+
+#### v3.3.0 (2021-05-27)
+
+- Add image push notification
+- Improvement of terms and conditions and design renewal (including GDPR)
+- Apply the latest version of ELSA SDK
 
 #### v3.2.0 (2021-03-04)
 
