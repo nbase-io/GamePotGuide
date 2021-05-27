@@ -1,6 +1,6 @@
-### 최신버전 : v3.2.0
+### 최신버전 : v3.3.0
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.2.0_20210408.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.3.0_20210527.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_V2.0.0_20210408.unitypackage)
 
@@ -9,6 +9,12 @@ v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration
 <br/>
 
 ### Change Log
+
+#### v3.3.0 (2021-05-27)
+
+- 이미지 푸시 기능 추가
+- 이용약관 기능 개선 및 디자인 리뉴얼 (GDPR 포함)
+- ELSA SDK 최신버전 적용
 
 #### v3.2.0 (2021-03-04)
 
