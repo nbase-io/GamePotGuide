@@ -1,10 +1,16 @@
-### Latest Version: v3.2.0
+### Latest Version: v3.3.0
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210325.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210527.zip)
 
 <br/>
 
 ### Change Log
+
+#### v3.3.0 (2021-05-27)
+
+- Add image push function
+- Improvement of terms and conditions and design renewal (including GDPR)
+- Improved loading speed of detailed page of terms and conditions
 
 #### v3.2.0 (2021-03-04)
 
