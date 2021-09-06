@@ -1,6 +1,6 @@
 ### 최신버전 : v3.4.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210527.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210916.zip)
 
 <br/>
 

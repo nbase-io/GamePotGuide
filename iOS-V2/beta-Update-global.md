@@ -1,6 +1,6 @@
 ### Latest Version: v3.4.0
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210527.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210916.zip)
 
 <br/>
 
