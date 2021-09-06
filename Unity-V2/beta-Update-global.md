@@ -1,4 +1,4 @@
-### Latest Version: v3.3.0
+### Latest Version: v3.4.0
 
 [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.3.0_20210527.unitypackage)
 
@@ -9,6 +9,12 @@
 <br/>
 
 ### Change Log
+
+#### v3.4.0 (2021-09-16)
+- Added check item for parental consent to terms of use
+- Terms and Conditions Email Verification Address DB Linkage
+- AOS Facebook 8.2.0 Update
+- Reinforcement of stability related to iOS payment
 
 #### v3.3.0 (2021-05-27)
 

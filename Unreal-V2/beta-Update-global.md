@@ -1,10 +1,17 @@
-### Latest Version: v1.1.0
+### Latest Version: v1.2.0
 
 [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnrealPlugin_V1.1.0_20210527.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.2.0 (2021-09-16)
+
+- Added check item for parental consent to terms of use
+- Terms and Conditions Email Verification Address DB Linkage
+- AOS Facebook 8.2.0 Update
+- Reinforcement of stability related to iOS payment
 
 #### v1.1.0 (2021-05-27)
 
