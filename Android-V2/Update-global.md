@@ -1,12 +1,18 @@
-### Latest version: v3.3.0
+### Latest version: v3.4.0
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210527.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210916.zip)
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
 
 <br/>
 
 ### Change Log
+
+#### 3.4.0 (2021-09-16)
+
+- Added check item for parental consent to terms of use
+- Terms and Conditions Email Verification Address DB Linkage
+- Facebook SDK version 8.2.0 applied
 
 #### v3.3.0 (2021-05-27)
 

@@ -1,5 +1,12 @@
 ### Change Log
 
+#### v2.7.0 (2021-09-16)
+
+**Functional improvement**
+
+- Add gift expiration date setting
+- Add message type when adding text message
+
 #### v2.6.0 (2021-05-27)
 
 **Functional improvement**

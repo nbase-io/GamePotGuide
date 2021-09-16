@@ -1,12 +1,18 @@
-### 최신버전 : v3.3.0
+### 최신버전 : v3.4.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210527.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210916.zip)
 
 v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) 작업이 필요합니다.
 
 <br/>
 
 ### Change Log
+
+#### v3.4.0 (2021-09-16)
+
+- 이용약관 보호자 동의 체크 항목 추가
+- 이용약관 이메일 인증 주소 디비 연동
+- Facebook SDK 8.2.0 버전 적용
 
 #### v3.3.0 (2021-05-27)
 

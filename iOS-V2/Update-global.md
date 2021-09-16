@@ -1,10 +1,15 @@
-### Latest Version: v3.3.0
+### Latest Version: v3.4.0
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210527.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210916.zip)
 
 <br/>
 
 ### Change Log
+
+#### v3.4.0 (2021-09-16)
+- Added check item for parental consent to terms of use
+- Terms and Conditions Email Verification Address DB Linkage
+- Reinforcement of payment-related safety
 
 #### v3.3.0 (2021-05-27)
 
