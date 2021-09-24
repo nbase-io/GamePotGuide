@@ -6,6 +6,8 @@
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
 
+If the Unity Version is 2019.3.X or later, please refer to [Additional Changes](https://docs.gamepot.io/english/gamepot_faq#ver-unity-2-1-1-to-ver-unity-2-1-2-or-new-version).
+
 <br/>
 
 ### Change Log
