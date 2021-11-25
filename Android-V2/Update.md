@@ -1,6 +1,6 @@
 ### 최신버전 : v3.4.0
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20210916.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20211125.zip)
 
 v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) 작업이 필요합니다.
 
