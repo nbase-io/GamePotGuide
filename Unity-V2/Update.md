@@ -1,6 +1,6 @@
-### 최신버전 : v3.4.0
+### 최신버전 : v3.4.1
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.4.0_20211125.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20211221.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_V2.0.0_20210408.unitypackage)
 
@@ -8,9 +8,14 @@ v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration
 
 Unity Version이 2019.3.X 이상 버전에서는 [추가 설정 사항](https://docs.gamepot.io/undefined/gamepot_faq#ver-unity-2.1.1-to-ver-unity-2.1.2-or-new-version)을 꼭 참고 부탁드립니다.
 
+
 <br/>
 
 ### Change Log
+
+#### v3.4.1 (2021-12-21)
+
+- Region 관련 기능 추가
 
 #### v3.4.0 (2021-09-16)
 - 이용약관 보호자 동의 체크 항목 추가

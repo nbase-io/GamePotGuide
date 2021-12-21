@@ -1,10 +1,14 @@
-### Latest Version: v3.4.0
+### Latest Version: v3.4.1
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210916.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_20211221.zip)
 
 <br/>
 
 ### Change Log
+
+#### 3.4.1 (2021-12-21)
+
+- Added region related function
 
 #### v3.4.0 (2021-09-16)
 - Added check item for parental consent to terms of use

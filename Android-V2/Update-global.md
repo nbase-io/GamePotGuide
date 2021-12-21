@@ -1,12 +1,17 @@
-### Latest version: v3.4.0
+### Latest version: v3.4.1
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20211125.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20211221.zip)
+
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
 
 <br/>
 
 ### Change Log
+
+#### 3.4.1 (2021-12-21)
+
+- Added region related function
 
 #### 3.4.0 (2021-09-16)
 
