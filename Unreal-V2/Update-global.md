@@ -6,6 +6,10 @@
 
 ### Change Log
 
+#### 1.2.1 (2021-12-21)
+
+- Added region related function
+
 #### v1.2.0 (2021-09-16)
 
 - Added check item for parental consent to terms of use

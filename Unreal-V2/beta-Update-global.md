@@ -1,10 +1,14 @@
-### Latest Version: v1.2.0
+### Latest Version: v1.2.1
 
 [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnrealPlugin_V1.1.0_20210527.zip)
 
 <br/>
 
 ### Change Log
+
+#### 1.2.1 (2021-12-21)
+
+- Added region related function
 
 #### v1.2.0 (2021-09-16)
 

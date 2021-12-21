@@ -1,10 +1,14 @@
-### 최신버전 : v1.2.0
+### 최신버전 : v1.2.1
 
 [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnrealPlugin_V1.1.0_20210527.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.2.1 (2021-12-21)
+
+- Region 관련 기능 추가
 
 #### v1.2.0 (2021-09-16)
 
