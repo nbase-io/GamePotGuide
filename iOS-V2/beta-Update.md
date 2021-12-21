@@ -1,10 +1,14 @@
-### 최신버전 : v3.4.0
+### 최신버전 : v3.4.1
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamepotSDK_IOS_20210916.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_20211221.zip)
 
 <br/>
 
 ### Change Log
+
+#### v3.4.1 (2021-12-21)
+
+- Region 관련 기능 추가
 
 #### v3.4.0 (2021-09-16)
 - 이용약관 보호자 동의 체크 항목 추가

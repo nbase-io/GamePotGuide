@@ -1,6 +1,6 @@
-### Latest Version: v3.4.0
+### Latest Version: v3.4.1
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnityPluginV2_v3.4.0_20211125.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20211221.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_V2.0.0_20210408.unitypackage)
 
@@ -9,6 +9,11 @@
 <br/>
 
 ### Change Log
+
+#### 3.4.1 (2021-12-21)
+
+- Added region related function
+
 
 #### v3.4.0 (2021-09-16)
 - Added check item for parental consent to terms of use
