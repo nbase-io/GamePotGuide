@@ -1,4 +1,4 @@
-### Latest Version: v3.4.1
+### Latest Version: v3.4.2
 
 [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20211221.unitypackage)
 
@@ -11,6 +11,10 @@ If the Unity Version is 2019.3.X or later, please refer to [Additional Changes](
 <br/>
 
 ### Change Log
+#### v3.4.2 (2022-02-17)
+
+- Added setUserData / getUserData function
+- Added e-mail update function for social login
 
 #### 3.4.1 (2021-12-21)
 

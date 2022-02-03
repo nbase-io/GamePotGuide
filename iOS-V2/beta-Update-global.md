@@ -1,10 +1,15 @@
-### Latest Version: v3.4.1
+### Latest Version: v3.4.2
 
 #### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_20211221.zip)
 
 <br/>
 
 ### Change Log
+
+#### v3.4.2 (2022-02-17)
+
+- Added setUserData / getUserData function
+- Added e-mail update function for social login
 
 #### 3.4.1 (2021-12-21)
 
