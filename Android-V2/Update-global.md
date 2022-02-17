@@ -1,6 +1,6 @@
-### Latest version: v3.4.1
+### Latest version: v3.4.2
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20211221.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20220217.zip)
 
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
@@ -8,6 +8,11 @@
 <br/>
 
 ### Change Log
+
+#### v3.4.2 (2022-02-17)
+
+- Added setUserData / getUserData function
+- Added e-mail update function for social login
 
 #### 3.4.1 (2021-12-21)
 

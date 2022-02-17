@@ -1,10 +1,15 @@
-### Latest Version: v1.2.0
+### Latest Version: v1.2.2
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnrealPlugin_V1.2.0_20210916.zip)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_20220217.zip)
 
 <br/>
 
 ### Change Log
+
+#### v1.2.2 (2022-02-17)
+
+- Added setUserData / getUserData function
+- Added e-mail update function for social login
 
 #### 1.2.1 (2021-12-21)
 
