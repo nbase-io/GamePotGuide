@@ -1,6 +1,6 @@
 ### 최신버전 : v1.2.2
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GamePotUnrealPlugin_V1.1.0_20210527.zip)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_20220217.zip)
 
 <br/>
 

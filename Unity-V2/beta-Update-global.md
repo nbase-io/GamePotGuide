@@ -1,6 +1,6 @@
 ### Latest Version: v3.4.2
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20211221.unitypackage)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20220217.unitypackage)
 
 [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_V2.0.0_20210408.unitypackage)
 
