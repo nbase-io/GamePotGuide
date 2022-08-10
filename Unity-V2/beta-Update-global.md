@@ -2,13 +2,10 @@
 
 [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20220217.unitypackage)
 
-<!-- [GamepotTools](https://xyuditqzezxs1008973.cdn.ntruss.com/GamePotTools/GamePotTools_V2.0.0_20210408.unitypackage) -->
-
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
 
 If the Unity Version is 2019.3.X or later, please refer to [Additional Changes](https://docs.gamepot.io/undefined/gamepot_faq#ver-unity-2.1.1-to-ver-unity-2.1.2-or-new-version).
 
-<br/>
 
 ### Change Log
 #### v3.4.2 (2022-02-17)

@@ -2,7 +2,6 @@
 
 #### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_20220217.zip)
 
-<br/>
 
 ### Change Log
 

@@ -5,7 +5,7 @@
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
 
-<br/>
+
 
 ### Change Log
 
