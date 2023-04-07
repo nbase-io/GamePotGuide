@@ -1,12 +1,19 @@
-### Latest Version: v1.2.2
+### Latest Version: v1.2.3
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_20220217.zip)
-
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_Release_230327.zip)
 
 
 ### Change Log
 
+#### v1.2.3 (2023-03-27)
+
+- Store in-app SDK update (Google V5 / One Store V7 api21)
+- Updated Android Facebook SDK library ( V13.2.0 )
+
+
 #### v1.2.2 (2022-02-17)
+
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_20220217.zip)
 
 - Added setUserData / getUserData function
 - Added e-mail update function for social login
