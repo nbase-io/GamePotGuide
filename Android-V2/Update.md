@@ -1,13 +1,19 @@
-### 최신버전 : v3.5.0
+### 최신버전 : v3.5.1
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_230327.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_Release_230420.zip)
 
 v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) 작업이 필요합니다.
 
 
 ### Change Log
 
+#### v3.5.1 (2023-05-25)
+
+- 게스트 로그인 로직 변경 : [변경 사항 설명](https://docs.gamepot.io/undefined/gamepot_faq#ver-3.5.1)
+
 #### v3.5.0 (2023-03-27)
+
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_230327.zip)
 
 - 스토어 인앱 SDK 업데이트 ( 구글 V5 / 원스토어 V7 api21) 
 - Facebook SDK 라이브러리 업데이트 ( V13.2.0 )

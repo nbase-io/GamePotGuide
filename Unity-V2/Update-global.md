@@ -1,6 +1,6 @@
-### Latest Version: v3.5.0
+### Latest Version: v3.5.1
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230331.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230525.unitypackage)
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
 
@@ -9,7 +9,17 @@ If the Unity Version is 2019.3.X or later, please refer to [Additional Changes](
 
 ### Change Log
 
+#### v3.5.1 (2023-05-25)
+
+- Guest login process has changed : [Change description](https://docs.gamepot.io/english/gamepot_faq#ver-3.5.1-changes)
+- Android minSdkVersion 19 (Firebase Message SDK library is minSdkVersion 19)
+- apply unity-jar-resolver-1.2.176
+
+
+
 #### v3.5.0 (2023-03-27)
+
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230331.unitypackage)
 
 - Store in-app SDK update (Google V5 / One Store V7 api21)
 - Updated Facebook SDK library ( V13.2.0 )

@@ -1,6 +1,6 @@
-### Latest version: v3.5.0
+### Latest version: v3.5.1
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_230327.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_Release_230420.zip)
 
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
@@ -9,7 +9,9 @@
 
 ### Change Log
 
-#### v3.5.0 (2023-03-27)
+#### v3.5.1 (2023-05-25)
+
+- Guest login process has changed : [Change description](https://docs.gamepot.io/english/gamepot_faq#ver-3.5.1-changes)
 
 - Store in-app SDK update (Google V5 / One Store V7 api21)
 - Updated Facebook SDK library ( V13.2.0 )

@@ -1,11 +1,17 @@
-### 최신버전 : v3.5.0
+### 최신버전 : v3.5.1
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230327.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230420.zip)
 
 
 ### Change Log
 
+#### v3.5.1 (2023-05-25)
+
+- 게스트 로그인 로직 변경 : [변경 사항 설명](https://docs.gamepot.io/undefined/gamepot_faq#ver-3.5.1)
+
 #### v3.5.0 (2023-03-27)
+
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230327.zip)
 
 - Facebook SDK 라이브러리 업데이트 ( V13.2.0 )
 

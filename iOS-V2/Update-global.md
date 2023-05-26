@@ -1,11 +1,17 @@
-### Latest Version: v3.5.0
+### Latest Version: v3.5.1
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230327.zip)
+#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230420.zip)
 
 
 ### Change Log
 
+#### v3.5.1 (2023-05-25)
+
+- Guest login process has changed : [Change description](https://docs.gamepot.io/english/gamepot_faq#ver-3.5.1-changes)
+
 #### v3.5.0 (2023-03-27)
+
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230327.zip)
 
 - Updated Facebook SDK library ( V13.2.0 )
 
