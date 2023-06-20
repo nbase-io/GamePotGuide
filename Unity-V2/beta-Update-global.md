@@ -1,6 +1,6 @@
 ### Latest Version: v3.5.1
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230525.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230620.unitypackage)
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
 
