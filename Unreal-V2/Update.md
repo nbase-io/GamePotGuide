@@ -1,13 +1,10 @@
-### 최신버전 : v1.2.4
+### 최신버전 : v1.2.3
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_Release_230420.zip)
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_Release_230327.zip)
 
 
 ### Change Log
 
-#### v1.2.4 (2023-05-25)
-
-- 게스트 로그인 로직 변경 : [변경 사항 설명](https://docs.gamepot.io/undefined/gamepot_faq#ver-3.5.1)
   
 #### v1.2.3 (2023-03-27)
 

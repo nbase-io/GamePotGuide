@@ -1,13 +1,10 @@
-### Latest Version: v1.2.4
+### Latest Version: v1.2.3
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_Release_230420.zip)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_Release_230327.zip)
 
 
 ### Change Log
 
-#### v1.2.4 (2023-05-25)
-
-- Guest login process has changed : [Change description](https://docs.gamepot.io/english/gamepot_faq#ver-3.5.1-changes)
 
 #### v1.2.3 (2023-03-27)
 
