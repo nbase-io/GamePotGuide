@@ -11,10 +11,6 @@
 
 #### v3.5.1 (2023-05-25)
 
-<!--
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230420.zip)
--->
-
 - Guest login process has changed : [Change description](https://docs.gamepot.io/english/gamepot_faq#ver-3.5.1-changes)
 
 #### v3.5.0 (2023-03-27)

@@ -13,10 +13,6 @@ v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration
 
 #### v3.5.1 (2023-05-25)
 
-<!--
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_Release_230420.zip)
--->
-
 - 게스트 로그인 로직 변경 : [변경 사항 설명](https://docs.gamepot.io/undefined/gamepot_faq#ver-3.5.1)
 
 #### v3.5.0 (2023-03-27)
