@@ -1,11 +1,19 @@
-### 최신버전 : v3.5.1
+### 최신버전 : v3.5.3
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230420.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230717.zip)
 
 
 ### Change Log
 
+#### v3.5.3 (2023-07-17)
+
+- 보안 이슈로 인해 Gamepot3.5.0 시점의 게스트 로그인 방식으로 로직 변경
+
 #### v3.5.1 (2023-05-25)
+
+<!--
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230420.zip)
+-->
 
 - 게스트 로그인 로직 변경 : [변경 사항 설명](https://docs.gamepot.io/undefined/gamepot_faq#ver-3.5.1)
 

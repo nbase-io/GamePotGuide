@@ -1,13 +1,21 @@
-### 최신버전 : v3.5.1
+### 최신버전 : v3.5.3
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_Release_230420.zip)
+#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_Release_230717.zip)
 
 v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) 작업이 필요합니다.
 
 
 ### Change Log
 
+#### v3.5.3 (2023-07-17)
+
+- 보안이슈로 인해 게스트 로그인 로직 변경사항  
+
 #### v3.5.1 (2023-05-25)
+
+<!--
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_Release_230420.zip)
+-->
 
 - 게스트 로그인 로직 변경 : [변경 사항 설명](https://docs.gamepot.io/undefined/gamepot_faq#ver-3.5.1)
 

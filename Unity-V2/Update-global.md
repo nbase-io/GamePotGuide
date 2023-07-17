@@ -1,6 +1,6 @@
-### Latest Version: v3.5.1
+### Latest Version: v3.5.0
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230620.unitypackage)
+[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230331.unitypackage)
 
 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
 
@@ -9,13 +9,21 @@ If the Unity Version is 2019.3.X or later, please refer to [Additional Changes](
 
 ### Change Log
 
+<!--
+#### v3.5.3 (2023-07-17)
+
+- 보안 이슈로 인해 Gamepot3.5.0 시점의 게스트 로그인 방식으로 로직 변경
+
 #### v3.5.1 (2023-05-25)
+
+
+[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230620.unitypackage)
 
 - Guest login process has changed : [Change description](https://docs.gamepot.io/english/gamepot_faq#ver-3.5.1-changes)
 - Android minSdkVersion 19 (Firebase Message SDK library is minSdkVersion 19)
 - apply unity-jar-resolver-1.2.176
 
-
+-->
 
 #### v3.5.0 (2023-03-27)
 
