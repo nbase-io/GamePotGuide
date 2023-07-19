@@ -7,7 +7,7 @@
 
 #### v3.5.3 (2023-07-17)
 
-- Logic changed to guest login method at the time of Gamepot 3.5.0 due to security issues
+- Logic of the Guest login functionality reverted to Gamepot 3.5.0’s due to security issue.
 
 #### v3.5.1 (2023-05-25)
 
