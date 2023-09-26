@@ -7,7 +7,7 @@
 
 #### v3.5.1 (2023-05-25)
 
-- 게스트 로그인 로직 변경 : [변경 사항 설명](https://docs.gamepot.io/undefined/gamepot_faq#ver-3.5.1)
+- 게스트 로그인 로직 변경 : [변경 사항 설명](https://nbase.atlassian.net/wiki/spaces/gamepotGuide/pages/44269698/Ver+3.5.1+-?atlOrigin=eyJpIjoiZjYxMTU2NDA4NGQ0NDZmYmFmNjQwNDY1OTIwZTdhOTkiLCJwIjoiYyJ9)
 
 #### v3.5.0 (2023-03-27)
 

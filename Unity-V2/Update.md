@@ -2,9 +2,7 @@
 
 [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230717.unitypackage)
 
-v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) 작업이 필요합니다.
-
-Unity Version이 2019.3.X 이상 버전에서는 [추가 설정 사항](https://docs.gamepot.io/undefined/gamepot_faq#ver-unity-2.1.1-to-ver-unity-2.1.2-or-new-version)을 꼭 참고 부탁드립니다.
+Unity Version이 2019.3.X 이상 버전에서는 [추가 설정 사항](https://nbase.atlassian.net/wiki/spaces/gamepotGuide/pages/44269716/Ver+Unity+2.1.1+To+Ver+Unity+2.1.2+Or+New+Version)을 꼭 참고 부탁드립니다.
 
 
 ### Change Log
@@ -15,7 +13,7 @@ Unity Version이 2019.3.X 이상 버전에서는 [추가 설정 사항](https://
 
 #### v3.5.1 (2023-05-25)
 
-- 게스트 로그인 로직 변경 : [변경 사항 설명](https://docs.gamepot.io/undefined/gamepot_faq#ver-3.5.1)
+- 게스트 로그인 로직 변경 : [변경 사항 설명](https://nbase.atlassian.net/wiki/spaces/gamepotGuide/pages/44269698/Ver+3.5.1+-?atlOrigin=eyJpIjoiZjYxMTU2NDA4NGQ0NDZmYmFmNjQwNDY1OTIwZTdhOTkiLCJwIjoiYyJ9)
 - Android minSdkVersion 19 (Firebase Message SDK  라이브러리가 minSdkVersion 19)
 - unity-jar-resolver-1.2.176 적용
 

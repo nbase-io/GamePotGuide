@@ -2,16 +2,11 @@
 
 #### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_Release_230420.zip)
 
-
-[Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
-
-
-
 ### Change Log
 
 #### v3.5.1 (2023-05-25)
 
-- Guest login process has changed : [Change description](https://docs.gamepot.io/english/gamepot_faq#ver-3.5.1-changes)
+- Guest login process has changed : [Change description](https://nbase.atlassian.net/wiki/spaces/gamepotGuide/pages/45350925/Ver+3.5.1+Changes+-+Banned+version)
 
 - Store in-app SDK update (Google V5 / One Store V7 api21)
 - Updated Facebook SDK library ( V13.2.0 )

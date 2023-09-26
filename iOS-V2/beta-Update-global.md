@@ -7,7 +7,7 @@
 
 #### v3.5.1 (2023-05-25)
 
-- Guest login process has changed : [Change description](https://docs.gamepot.io/english/gamepot_faq#ver-3.5.1-changes)
+- Guest login process has changed : [Change description](https://nbase.atlassian.net/wiki/spaces/gamepotGuide/pages/45350925/Ver+3.5.1+Changes+-+Banned+version)
 
 #### v3.5.0 (2023-03-27)
 

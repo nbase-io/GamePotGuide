@@ -2,8 +2,6 @@
 
 #### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_Release_230717.zip)
 
-v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) 작업이 필요합니다.
-
 
 ### Change Log
 
@@ -13,7 +11,7 @@ v3.1.0 이하 버전에서 최신 버전으로 업데이트 진행시 [Migration
 
 #### v3.5.1 (2023-05-25)
 
-- 게스트 로그인 로직 변경 : [변경 사항 설명](https://docs.gamepot.io/undefined/gamepot_faq#ver-3.5.1)
+- 게스트 로그인 로직 변경 : [변경 사항 설명](https://nbase.atlassian.net/wiki/spaces/gamepotGuide/pages/44269698/Ver+3.5.1+-?atlOrigin=eyJpIjoiZjYxMTU2NDA4NGQ0NDZmYmFmNjQwNDY1OTIwZTdhOTkiLCJwIjoiYyJ9)
 
 #### v3.5.0 (2023-03-27)
 

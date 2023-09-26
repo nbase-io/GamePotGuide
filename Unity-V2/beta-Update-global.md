@@ -2,16 +2,14 @@
 
 [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230620.unitypackage)
 
-[Migration](https://docs.gamepot.io/undefined/gamepot_faq#migration) is required when updating from v3.1.0 or earlier to the latest version.
-
-If the Unity Version is 2019.3.X or later, please refer to [Additional Changes](https://docs.gamepot.io/undefined/gamepot_faq#ver-unity-2.1.1-to-ver-unity-2.1.2-or-new-version).
+If the Unity Version is 2019.3.X or later, please refer to [Additional Changes](https://nbase.atlassian.net/wiki/spaces/gamepotGuide/pages/45154544/Ver+Unity+2.1.1+To+Ver+Unity+2.1.2+Or+New+Version+en).
 
 
 ### Change Log
 
 #### v3.5.1 (2023-05-25)
 
-- Guest login process has changed : [Change description](https://docs.gamepot.io/english/gamepot_faq#ver-3.5.1-changes)
+- Guest login process has changed : [Change description](https://nbase.atlassian.net/wiki/spaces/gamepotGuide/pages/45350925/Ver+3.5.1+Changes+-+Banned+version)
 - Android minSdkVersion 19 (Firebase Message SDK library is minSdkVersion 19)
 - apply unity-jar-resolver-1.2.176
 
