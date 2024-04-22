@@ -1,6 +1,6 @@
 ### Latest Version: v3.5.1
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230420.zip)
+#### [Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_IOS_SDK_Release230420.zip)
 
 
 ### Change Log
@@ -11,13 +11,13 @@
 
 #### v3.5.0 (2023-03-27)
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_Release230327.zip)
+[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_IOS_SDK_Release230327.zip)
 
 - Updated Facebook SDK library ( V13.2.0 )
 
 #### v3.4.2 (2022-02-17)
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_IOS_SDK_20220217.zip)
+[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_IOS_SDK_20220217.zip)
 
 - Added setUserData / getUserData function
 - Added e-mail update function for social login

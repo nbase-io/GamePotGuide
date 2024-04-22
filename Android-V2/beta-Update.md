@@ -1,6 +1,6 @@
 ### 최신버전 : v3.5.1
 
-#### [다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_Release_230420.zip)
+#### [다운로드](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_AOS_SDK_Release_230420.zip)
 
 
 ### Change Log
@@ -17,7 +17,7 @@
 
 #### v3.4.2 (2022-02-17)
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20220217.zip)
+[다운로드](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_AOS_SDK_20220217.zip)
 
 - setUserData / getUserData 기능 추가
 - Social Login 시 이메일 업데이트 기능 추가

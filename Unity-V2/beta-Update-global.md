@@ -1,6 +1,6 @@
 ### Latest Version: v3.5.1
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230620.unitypackage)
+[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_UNITY_SDK_20230620.unitypackage)
 
 If the Unity Version is 2019.3.X or later, please refer to [Additional Changes](https://nbase.atlassian.net/wiki/spaces/gamepotGuide/pages/45154544/Ver+Unity+2.1.1+To+Ver+Unity+2.1.2+Or+New+Version+en).
 
@@ -16,7 +16,7 @@ If the Unity Version is 2019.3.X or later, please refer to [Additional Changes](
 
 #### v3.5.0 (2023-03-27)
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230331.unitypackage)
+[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_UNITY_SDK_20230331.unitypackage)
 
 - Store in-app SDK update (Google V5 / One Store V7 api21)
 - Updated Facebook SDK library ( V13.2.0 )
@@ -24,7 +24,7 @@ If the Unity Version is 2019.3.X or later, please refer to [Additional Changes](
 
 #### v3.4.2 (2022-02-17)
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20220217.unitypackage)
+[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_UNITY_SDK_20220217.unitypackage)
 
 - Added setUserData / getUserData function
 - Added e-mail update function for social login

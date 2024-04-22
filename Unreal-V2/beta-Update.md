@@ -1,6 +1,6 @@
 ### 최신버전 : v1.2.4
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_Release_230420.zip)
+[다운로드](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_Unreal_SDK_Release_230420.zip)
 
 
 ### Change Log
@@ -11,7 +11,7 @@
 
 #### v1.2.3 (2023-03-27)
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_Release_230327.zip)
+[다운로드](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_Unreal_SDK_Release_230327.zip)
 
 - 스토어 인앱 SDK 업데이트 ( 구글 V5 / 원스토어 V7 api21) 
 - Android Facebook SDK 라이브러리 업데이트 ( V13.2.0 )
@@ -19,7 +19,7 @@
 
 #### v1.2.2 (2022-02-17)
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_Unreal_SDK_20220217.zip)
+[다운로드](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_Unreal_SDK_20220217.zip)
 
 
 - setUserData / getUserData 기능 추가
