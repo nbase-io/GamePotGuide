@@ -1,6 +1,6 @@
 ### 최신버전 : v3.5.3
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230717.unitypackage)
+[다운로드](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_UNITY_SDK_20230717.unitypackage)
 
 Unity Version이 2019.3.X 이상 버전에서는 [추가 설정 사항](https://nbase.atlassian.net/wiki/spaces/gamepotGuide/pages/44269716/Ver+Unity+2.1.1+To+Ver+Unity+2.1.2+Or+New+Version)을 꼭 참고 부탁드립니다.
 
@@ -19,7 +19,7 @@ Unity Version이 2019.3.X 이상 버전에서는 [추가 설정 사항](https://
 
 #### v3.5.0 (2023-03-27)
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20230331.unitypackage)
+[다운로드](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_UNITY_SDK_20230331.unitypackage)
 
 - 스토어 인앱 SDK 업데이트 ( 구글 V5 / 원스토어 V7 api21) 
 - Facebook SDK 라이브러리 업데이트 ( V13.2.0 )
@@ -27,7 +27,7 @@ Unity Version이 2019.3.X 이상 버전에서는 [추가 설정 사항](https://
 
 #### v3.4.2 (2022-02-17)
 
-[다운로드](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_UNITY_SDK_20220217.unitypackage)
+[다운로드](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_UNITY_SDK_20220217.unitypackage)
 
 - setUserData / getUserData 기능 추가
 - Social Login 시 이메일 업데이트 기능 추가
