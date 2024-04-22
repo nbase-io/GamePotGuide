@@ -1,6 +1,6 @@
 ### Latest version: v3.5.3
 
-#### [Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_Release_230717.zip)
+#### [Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_AOS_SDK_Release_230717.zip)
 
 
 
@@ -17,14 +17,14 @@
 
 #### v3.5.0 (2023-03-27)
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_230327.zip)
+[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_AOS_SDK_230327.zip)
 
 - Store in-app SDK update (Google V5 / One Store V7 api21)
 - Updated Facebook SDK library ( V13.2.0 )
 
 #### v3.4.2 (2022-02-17)
 
-[Download](https://xyuditqzezxs1008973.cdn.ntruss.com/sdk/GAMEPOT_AOS_SDK_20220217.zip)
+[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_AOS_SDK_20220217.zip)
 
 - Added setUserData / getUserData function
 - Added e-mail update function for social login
