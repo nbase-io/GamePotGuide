@@ -1,14 +1,14 @@
-### Latest Version: v1.2.3
+### Latest Version: v1.2.4
 
-[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_Unreal_SDK_Release_230327.zip)
+[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_Unreal_SDK_Release_230420.zip)
 
 
 ### Change Log
 
 
-#### v1.2.3 (2023-03-27)
+#### v1.2.4 (2023-04-20)
 
-[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_Unreal_SDK_Release_230327.zip)
+[Download](https://kr.object.ncloudstorage.com/gamepot/sdk/GAMEPOT_Unreal_SDK_Release_230420.zip)
 
 - Store in-app SDK update (Google V5 / One Store V7 api21)
 - Updated Android Facebook SDK library ( V13.2.0 )
